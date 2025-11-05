@@ -1,29 +1,41 @@
+/* =========================================
+   RESET E STRUTTURA BASE
+========================================= */
+
 html, body, #root, .app {
   margin: 0;
   padding: 0;
   width: 100%;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* scroll fluido per gli anchor link */
+  font-family: system-ui, sans-serif;
+  background-color: #f5f5f5; /* 👈 sfondo grigio chiaro uniforme */
+  color: black;
 }
 
-
-
-.footer {
-  width: 100%;
-}
-
-
+/* per debugging visivo (rimuovi quando hai finito di sistemare il layout) */
 * {
-    outline: solid 1px red;;
+  outline: solid 1px red;
 }
+
+
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('../assets/fonts/DepartureMono-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* home a sinistra, gli altri a destra */
+  justify-content: space-between; /* home a sinistra, altri link a destra */
   align-items: center;
   padding: 1rem 2rem;
   background-color: white;
   border-bottom: 1px solid #ddd;
-  font-family: system-ui, sans-serif;
 }
 
 .navbar a {
@@ -42,14 +54,35 @@ html, body, #root, .app {
   gap: 1.5rem; /* spaziatura tra i link */
 }
 
+.navbar {
+  background-color: #f5f5f5; /* stesso grigio dello sfondo */
+  border: none; /* opzionale, se vuoi togliere le linee */
+}
+
+
+/* =========================================
+   LAYOUT PRINCIPALE
+========================================= */
+
 .main-content {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
+.heading-mono {
+  font-family: 'Departure Mono', monospace;
+  color: white;
+    text-shadow:
+    -2px -1px 0 black,
+     1px -1px 0 black,
+    -2px  1px 0 black,
+     1px  1px 0 black; /* 👈 crea il bordo simulato */
+}
+
+
 .section {
-  min-height: 100vh; /* ogni sezione occupa l’intera altezza della finestra */
+  min-height: 100vh; /* ogni sezione occupa tutta l’altezza viewport */
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
@@ -57,11 +90,11 @@ html, body, #root, .app {
 }
 
 .section:nth-child(odd) {
-  background-color: #f7f7f7;
+  background-color: transparent;
 }
 
 .section:nth-child(even) {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .section h2 {
@@ -74,6 +107,20 @@ html, body, #root, .app {
   line-height: 1.6;
 }
 
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  width: 100%;
+  background-color: #f5f5f5; /* stesso grigio dello sfondo */
+  border: none; /* opzionale, se vuoi togliere le linee */
+}
+
+/* =========================================
+   SEZIONE CONTATTI
+========================================= */
+
 .contact a {
   color: #0070f3;
   text-decoration: none;
@@ -83,7 +130,9 @@ html, body, #root, .app {
   text-decoration: underline;
 }
 
-
+/* =========================================
+   LISTA ARTICOLI
+========================================= */
 
 .articles-list {
   display: flex;
@@ -117,19 +166,9 @@ html, body, #root, .app {
   color: #777;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* =========================================
+   LISTA PROGETTI (data journalism + web dev)
+========================================= */
 
 .projects-list {
   display: flex;
@@ -174,4 +213,66 @@ html, body, #root, .app {
 .project-card .meta {
   font-size: 0.9rem;
   color: #777;
+}
+
+/* =========================================
+   LOGO ROWS (collaborazioni / competenze)
+========================================= */
+
+.logo-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.logo-row-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+}
+
+.logo-row-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.logo-image {
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+/* --- Hero section links --- */
+.hero-links {
+  display: flex;
+  justify-content: start; /* centra i link */
+  gap: 1.5rem; /* spazio orizzontale tra le parole */
+  margin-top: 1rem;
+}
+
+.hero-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-family: system-ui, sans-serif;
+  transition: color 0.2s ease;
+}
+
+.hero-links a:hover {
+  color: #0070f3; /* colore di evidenza al passaggio */
 }
