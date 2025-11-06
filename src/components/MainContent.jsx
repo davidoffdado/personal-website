@@ -8,6 +8,7 @@ function MainContent() {
       {/* Intro */}
       <section id="home" className="section hero">
         <div className="hero-inner">
+          
           <h1 className="hero-name">
             <span className="first-name">David</span>
             <span className="last-name">Ruffini</span>
@@ -50,10 +51,14 @@ function MainContent() {
         
         <h2 className="heading-mono">Statistico</h2>
         <p>
-          Mi occupo di analizzare dati complessi per estrarre informazioni utili e supportare decisioni basate sull’evidenza.
+          Mi occupo dell'analisi dei dati e della loro presentazione sotto forma di report interattivi o statici. Gestisco le informazioni dalla loro origine fino alla visualizzazione, mettendo le mani al database e creando procedure automatizzate per raccogliere e ripulire i dati.
         </p>
-
-
+        <p>
+          Utilizzo R e Python per l'analisi statistica, mentre SQL, SSMS e SSIS sono utilizzati per la gestione dei database; infine, progetto la visualizzazione dei risultati con Power BI, Tableau e Report Builder.
+        </p>
+        <p>
+          Da statistico e analista dati ho collaborato con aziende e università: ABB, Elettromedia, Università Politecnica delle Marche, DMBI e Reply.
+        </p>
 
       </section>
 
@@ -61,10 +66,16 @@ function MainContent() {
       <section id="sviluppatore" className="section">
         <h2 className="heading-mono">Sviluppatore</h2>
         <p>
-          Scrivo codice pulito e funzionale. Mi piace creare strumenti e siti che rendano i dati accessibili a tutti.
+          Realizzo siti web e sono specializzato nel front-end.
         </p>
         <p>
-          <Link to="/web-dev-projects" className="btn-link">Guarda i miei progetti web →</Link>
+          Utilizzo HTML, CSS e JavaScript, spesso affidandomi a framework come React. Dal lato del back-end, utilizzo Node.js con Express e database come SQL Server o PostgreSQL.
+        </p>
+        <p>
+          Spesso cerco di unire il mondo della data visualization a quello dello sviluppo web.
+        </p>
+        <p>
+          <Link to="/web-dev-projects" className="btn-link">Guarda i miei progetti →</Link>
         </p>
       </section>
 
@@ -72,7 +83,18 @@ function MainContent() {
       <section id="datajournalist" className="section">
         <h2 className="heading-mono">Data journalist</h2>
         <p>
-          Trasformo i numeri in storie. Realizzo articoli e progetti che uniscono narrazione e visualizzazione dei dati.
+          Trasformo i numeri in storie: realizzo articoli e progetti che uniscono narrazione e visualizzazione dei dati.
+        </p>
+        <p>
+          Utilizzo R e Python per la raccolta e l'analisi dei dati, spesso creando web scraper da zero per ottenere i dati necessari. Per la visualizzazione, mi affido a librerie come D3.js o a software come Flourish e Datawrapper.
+        </p>
+        <p>
+          Il mio <a href="https://davidoffdado.github.io/progetto-carceri/" target="_blank" rel="noopener noreferrer">progetto</a>di web scraping automatizzato dei dati sulle carceri italiane
+è stato selezionato tra i top 10 lavori di data journalism nel periodo dal 21
+giugno al 9 luglio, secondo il <a href="https://gijn.org/stories/europes-deadly-heatwave-middle-east-ceasefires/" target="_blank" rel="noopener noreferrer"> Global Investigative Journalism Network </a>.
+        </p>
+        <p>
+          Come data journalist, ho collaborato con Il Sole 24 Ore, Wired Italia e Aliseo Editoriale.
         </p>
         <p>
           <Link to="/articles" className="btn-link">Guarda i miei articoli →</Link>

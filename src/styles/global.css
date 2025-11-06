@@ -7,7 +7,7 @@ html, body, #root, .app {
   padding: 0;
   width: 100%;
   scroll-behavior: smooth; /* scroll fluido per gli anchor link */
-  font-family: 'Almarena', system-ui, sans-serif;
+  font-family: 'Almarena', sans-serif;
   background-color: #f5f5f5; /* 👈 sfondo grigio chiaro uniforme */
   color: black;
 }
@@ -22,8 +22,6 @@ html, body, #root, .app {
 @font-face {
   font-family: 'Almarena';
   src: url('../assets/fonts/almarena.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* =========================================
@@ -35,29 +33,42 @@ html, body, #root, .app {
   justify-content: space-between; /* home a sinistra, altri link a destra */
   align-items: center;
   padding: 1rem 2rem;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
 }
 
 .navbar a {
+  position: relative;
   text-decoration: none;
   color: black;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-  color: #0070f3; /* colore evidenza al passaggio */
+/* Linea invisibile iniziale */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* distanza dal testo */
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.5s ease;
 }
+
+/* Hover: espande la linea */
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Facoltativo: cambia colore testo al passaggio */
+.navbar a:hover {
+  color: black;
+}
+
 
 .nav-right {
   display: flex;
   gap: 1.5rem; /* spaziatura tra i link */
-}
-
-.navbar {
-  background-color: #f5f5f5; /* stesso grigio dello sfondo */
-  border: none; /* opzionale, se vuoi togliere le linee */
 }
 
 
@@ -79,22 +90,43 @@ html, body, #root, .app {
   justify-content: center;
 }
 
-.section:nth-child(odd) {
-  background-color: transparent;
-}
-
-.section:nth-child(even) {
-  background-color: transparent;
-}
-
 .section h2 {
   margin-bottom: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .section p {
-  max-width: 700px;
   line-height: 1.6;
+}
+
+.section a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+
+.section a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* distanza dal testo */
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+/* Hover: espande la linea */
+.section a:hover::after {
+  width: 100%;
+}
+
+/* Facoltativo: cambia colore testo al passaggio */
+.section a:hover {
+  color: black;
 }
 
 /* =========================================
@@ -103,8 +135,7 @@ html, body, #root, .app {
 
 .footer {
   width: 100%;
-  background-color: #f5f5f5; /* stesso grigio dello sfondo */
-  border: none; /* opzionale, se vuoi togliere le linee */
+  justify-items: center;
 }
 
 /* =========================================
@@ -112,12 +143,33 @@ html, body, #root, .app {
 ========================================= */
 
 .contact a {
-  color: #0070f3;
+  position: relative;
   text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+
+.contact a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* distanza dal testo */
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+/* Hover: espande la linea */
+.contact a:hover::after {
+  width: 100%;
+}
+
+/* Facoltativo: cambia colore testo al passaggio */
 .contact a:hover {
-  text-decoration: underline;
+  color: black;
 }
 
 /* =========================================
@@ -136,13 +188,31 @@ html, body, #root, .app {
 }
 
 .article-card a {
-  color: #0070f3;
+  position: relative;
   text-decoration: none;
-  font-weight: 600;
+  color: black;
+  transition: color 0.3s ease;
 }
 
+.article-card a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* distanza dal testo */
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+/* Hover: espande la linea */
+.article-card a:hover::after {
+  width: 100%;
+}
+
+/* Facoltativo: cambia colore testo al passaggio */
 .article-card a:hover {
-  text-decoration: underline;
+  color: black;
 }
 
 .article-card .dek {
@@ -168,8 +238,6 @@ html, body, #root, .app {
 }
 
 .project-card {
-  background: #fff;
-  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   padding: 1.5rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -186,13 +254,31 @@ html, body, #root, .app {
 }
 
 .project-card a {
-  color: #0070f3;
+  position: relative;
   text-decoration: none;
-  font-weight: 600;
+  color: black;
+  transition: color 0.3s ease;
 }
 
-.project-card a:hover {
-  text-decoration: underline;
+.project-card:hover a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* distanza dal testo */
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+/* Hover: espande la linea */
+.project-card:hover a::after {
+  width: 100%;
+}
+
+/* Facoltativo: cambia colore testo al passaggio */
+.project-card:hover a{
+  color: black;
 }
 
 .project-card .dek {
@@ -205,38 +291,63 @@ html, body, #root, .app {
   color: #777;
 }
 
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
 
+.hero a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* distanza dal testo */
+  width: 0;
+  height: 1.5px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
 
-/* PER MOBILE */
-@media (max-width: 600px) {
-  .hero-name {
-    font-size: clamp(2.5rem, 18vw, 5rem);
-  }
+/* Hover: espande la linea */
+.hero a:hover::after {
+  width: 100%;
+}
 
-  .hero-links {
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
+/* Facoltativo: cambia colore testo al passaggio */
+.hero a:hover {
+  color: black;
 }
 
 
 
 /* --- Hero section --- */
-.hero {
+
+
+.hero-inner {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f5f5f5; /* grigio chiaro */
-  padding: 4rem 2rem;
+  flex-direction: column; /* impila gli elementi in verticale */
+  align-items: stretch;   /* fa sì che tutti abbiano la stessa larghezza */
+  width: 100%;            /* occupa tutta la larghezza disponibile */
+  margin: 0 auto;         /* centra il blocco orizzontalmente */
+}
+
+.hero-name,
+.hero-subtitle,
+.hero-links {
+  width: 100%;            /* ogni elemento prende tutta la larghezza del contenitore */
 }
 
 /* Nome grande */
 .hero-name {
   font-family: "Almarena", monospace; /* se già importato */
-  font-size: clamp(5rem, 8vw, 8rem); /* responsive: minimo 3rem, massimo 6rem */
+  font-size: clamp(8rem, 8vw, 15rem); /* responsive: minimo 3rem, massimo 6rem */
   margin: 0;
   text-align: right;
 }
@@ -244,13 +355,15 @@ html, body, #root, .app {
 
 /* Sottotitolo */
 .hero-subtitle {
+  display: flex;
+  text-align: left;
   font-family: "Almarena", monospace;
-  font-size: clamp(3rem, 2.5vw, 6rem);
+  font-size: clamp(4rem, 2.5vw, 8rem);
   color: #222;
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-weight: 400;
-  text-align: left;
+  width: 100%;
 }
 
 /* Link */
@@ -260,15 +373,4 @@ html, body, #root, .app {
   gap: 1.5rem;
 }
 
-.hero-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.2s ease;
-}
-
-.hero-links a:hover {
-  color: #0070f3;
-}
 

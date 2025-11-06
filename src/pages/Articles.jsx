@@ -17,7 +17,7 @@ function Articles() {
               </h3>
               <p className="dek">{article.dek}</p>
               <p className="meta">
-                {article.role} · {article.year} · {article.tags.join(" — ")}
+                {article.tags.join(", ")}
               </p>
             </div>
           ))}

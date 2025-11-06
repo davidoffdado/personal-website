@@ -10,7 +10,6 @@ import "./styles/global.css";
 
 function App() {
   return (
-    <Router>
       <div className="app">
         <Navbar />
         <main className="main-content">
@@ -24,7 +23,6 @@ function App() {
         </main>
         <Footer />
       </div>
-    </Router>
   );
 }
 
