@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="footer">
-      <p>© 2025 Il Mio Nome. Tutti i diritti riservati.</p>
+      <p>© 2025 David Ruffini</p>
     </footer>
   );
 }

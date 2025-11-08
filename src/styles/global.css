@@ -1,27 +1,58 @@
 /* =========================================
-   RESET E STRUTTURA BASE
+   FONT E RESET BASE
 ========================================= */
 
-html, body, #root, .app {
+@font-face {
+  font-family: "Almarena";
+  src: url("../assets/fonts/AlmarenaDisplayLight.otf") format("opentype");
+}
+
+/* Reset base e impostazioni generali */
+html,
+body,
+#root,
+.app {
   margin: 0;
   padding: 0;
   width: 100%;
-  scroll-behavior: smooth; /* scroll fluido per gli anchor link */
-  font-family: 'Almarena', sans-serif;
-  background-color: #f5f5f5; /* 👈 sfondo grigio chiaro uniforme */
+  font-family: "Almarena", sans-serif;
+  background-color: #f5f5f5; /* Grigio chiaro di base */
   color: black;
+  scroll-behavior: smooth; /* Scroll fluido per link ad anchor */
 }
 
-/* per debugging visivo (rimuovi quando hai finito di sistemare il layout) */
 * {
-  outline: solid 1px red;
-  font-family: 'Almarena';
+  outline: solid 2px red;
 }
 
+/* =========================================
+   STRUTTURA GENERALE
+========================================= */
 
-@font-face {
-  font-family: 'Almarena';
-  src: url('../assets/fonts/almarena.otf') format('opentype');
+/* Contenitore principale */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Tutte le sezioni principali */
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  margin: 0;
+  overflow: hidden; /* evita che l’animazione di background sbordi */
+}
+
+/* Il contenuto dentro la sezione è sopra allo sfondo animato */
+section > div {
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================
@@ -30,11 +61,13 @@ html, body, #root, .app {
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* home a sinistra, altri link a destra */
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  font-size: 1.1rem;
 }
 
+/* Link della navbar */
 .navbar a {
   position: relative;
   text-decoration: none;
@@ -43,63 +76,146 @@ html, body, #root, .app {
   transition: color 0.3s ease;
 }
 
-/* Linea invisibile iniziale */
+/* Effetto underline animato */
 .navbar a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px; /* distanza dal testo */
+  bottom: -2px;
   width: 0;
   height: 1.5px;
   background-color: black;
   transition: width 0.5s ease;
 }
 
-/* Hover: espande la linea */
 .navbar a:hover::after {
   width: 100%;
 }
 
-/* Facoltativo: cambia colore testo al passaggio */
-.navbar a:hover {
-  color: black;
-}
-
-
+/* Contenitore dei link a destra */
 .nav-right {
   display: flex;
-  gap: 1.5rem; /* spaziatura tra i link */
+  gap: 1.5rem;
+}
+
+/* =========================================
+   SEZIONI (statistico, sviluppatore, ecc.)
+========================================= */
+
+#home {
+  min-height: 70vh; /* 👈 occuperà il 70% dell’altezza dello schermo */
+}
+
+/* Titoli principali delle sezioni */
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Paragrafi interni alle sezioni */
+section p {
+  line-height: 1.6;
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+/* Link all’interno delle sezioni */
+section a {
+  position: relative;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Linea sotto i link (visibile normalmente) */
+section a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+/* All’hover la linea “si ritira” */
+section a:hover::after {
+  width: 0;
+}
+
+/* ===============================
+   INTRO-TOP (per “i miei lavori”)
+================================= */
+
+.intro-top {
+  position: absolute;      /* 👈 si riferisce al contenitore della sezione */
+  top: 2rem;               /* distanza dal bordo superiore della sezione */
+  left: 50%;               /* centrato orizzontalmente */
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  z-index: 10;             /* sopra lo sfondo animato */
 }
 
 
 /* =========================================
-   LAYOUT PRINCIPALE
+   HERO SECTION (pagina principale)
 ========================================= */
-
-.main-content {
+.hero-inner {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-name,
+.hero-subtitle,
+.hero-links {
   width: 100%;
 }
 
-.section {
-  min-height: 100vh; /* ogni sezione occupa tutta l’altezza viewport */
-  padding: 4rem 2rem;
+/* Nome grande */
+.hero-name {
+  font-family: "Almarena", monospace;
+  font-size: clamp(12rem, 8vw, 15rem);
+  margin: 0;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sottotitolo */
+.hero-subtitle {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  font-family: "Almarena", monospace;
+  font-size: clamp(4rem, 3vw, 6rem);
+  color: #222;
+  margin: 1rem 0 2rem 0;
+  font-weight: 400;
+  z-index: 2;
+}
+
+/* Link Hero */
+.hero-links {
+  display: flex;
   justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
 }
 
-.section h2 {
-  margin-bottom: 1rem;
-  font-size: 3rem;
-}
-
-.section p {
-  line-height: 1.6;
-}
-
-.section a {
+/* Effetto underline anche nei link Hero */
+.hero a {
   position: relative;
   text-decoration: none;
   color: black;
@@ -107,26 +223,134 @@ html, body, #root, .app {
   transition: color 0.3s ease;
 }
 
-
-.section a::after {
+.hero a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -1px; /* distanza dal testo */
+  bottom: -2px;
   width: 0;
   height: 1.5px;
   background-color: black;
   transition: width 0.5s ease;
 }
 
-/* Hover: espande la linea */
-.section a:hover::after {
+.hero a:hover::after {
   width: 100%;
 }
 
-/* Facoltativo: cambia colore testo al passaggio */
-.section a:hover {
-  color: black;
+/* =========================================
+   OGGETTO ANIMATO NELLA HERO
+========================================= */
+
+@-webkit-keyframes squareToCircle {
+  0% {
+    border-radius: 0;
+    background: coral;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background: darksalmon;
+    transform: rotate(45deg);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background: indianred;
+    transform: rotate(90deg);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background: lightcoral;
+    transform: rotate(135deg);
+  }
+  100% {
+    border-radius: 50%;
+    background: darksalmon;
+    transform: rotate(180deg);
+  }
+}
+
+.oggetto {
+  width: 50px;
+  height: 50px;
+  background-color: coral;
+  -webkit-animation: squareToCircle 2s 1s infinite alternate;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* =========================================
+   TRANSIZIONE DI ENTRATA (slideUp)
+========================================= */
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scaleY(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.page,
+.hero-name,
+.hero-subtitle,
+.hero-links {
+  animation: slideUp 1.5s cubic-bezier(0.5, 0, 0.175, 1) forwards;
+  transform-origin: bottom center;
+}
+
+/* =========================================
+   LISTE ARTICOLI E PROGETTI
+========================================= */
+
+/* Contenitori */
+.articles-list,
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Card articolo o progetto */
+.article-card,
+.project-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover,
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Titoli delle card */
+.article-card h3,
+.project-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+/* Testo delle card */
+.article-card .dek,
+.project-card .dek {
+  margin: 0.75rem 0;
+  color: #333;
+}
+
+/* Metadata */
+.article-card .meta,
+.project-card .meta {
+  font-size: 0.9rem;
+  color: #777;
 }
 
 /* =========================================
@@ -135,7 +359,10 @@ html, body, #root, .app {
 
 .footer {
   width: 100%;
-  justify-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #444;
 }
 
 /* =========================================
@@ -150,227 +377,53 @@ html, body, #root, .app {
   transition: color 0.3s ease;
 }
 
+/* Cerchio decorativo ruotante */
+.circle-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 0.4em 0.8em;
+}
 
-.contact a::after {
-  content: "";
+.circle-rotate {
   position: absolute;
-  left: 0;
-  bottom: -1px; /* distanza dal testo */
-  width: 0;
-  height: 1.5px;
-  background-color: black;
-  transition: width 0.5s ease;
+  inset: 0;
+  border: 2px solid rgb(68, 64, 64);
+  border-radius: 50%;
+  transform: rotate(-5deg);
+  opacity: 0.8;
+  z-index: 0;
 }
 
-/* Hover: espande la linea */
-.contact a:hover::after {
-  width: 100%;
-}
-
-/* Facoltativo: cambia colore testo al passaggio */
-.contact a:hover {
-  color: black;
+.circle-text {
+  position: relative;
+  z-index: 1;
 }
 
 /* =========================================
-   LISTA ARTICOLI
+   MEDIA QUERY (mobile)
 ========================================= */
 
-.articles-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
+@media (max-width: 600px) {
+  .hero-name {
+    font-size: clamp(5rem, 12vw, 7rem);
+    margin: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+
+  .hero-links {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+
+  .oggetto {
+    width: 25px;
+    height: 25px;
+  }
 }
-
-.article-card h3 {
-  margin: 0;
-}
-
-.article-card a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  transition: color 0.3s ease;
-}
-
-.article-card a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px; /* distanza dal testo */
-  width: 0;
-  height: 1.5px;
-  background-color: black;
-  transition: width 0.5s ease;
-}
-
-/* Hover: espande la linea */
-.article-card a:hover::after {
-  width: 100%;
-}
-
-/* Facoltativo: cambia colore testo al passaggio */
-.article-card a:hover {
-  color: black;
-}
-
-.article-card .dek {
-  margin: 0.5rem 0;
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.article-card .meta {
-  font-size: 0.85rem;
-  color: #777;
-}
-
-/* =========================================
-   LISTA PROGETTI (data journalism + web dev)
-========================================= */
-
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.project-card {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.project-card h3 {
-  margin: 0;
-  font-size: 1.3rem;
-}
-
-.project-card a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  transition: color 0.3s ease;
-}
-
-.project-card:hover a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px; /* distanza dal testo */
-  width: 0;
-  height: 1.5px;
-  background-color: black;
-  transition: width 0.5s ease;
-}
-
-/* Hover: espande la linea */
-.project-card:hover a::after {
-  width: 100%;
-}
-
-/* Facoltativo: cambia colore testo al passaggio */
-.project-card:hover a{
-  color: black;
-}
-
-.project-card .dek {
-  margin: 0.75rem 0;
-  color: #333;
-}
-
-.project-card .meta {
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* =========================================
-   HERO SECTION
-========================================= */
-
-.hero a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-
-.hero a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px; /* distanza dal testo */
-  width: 0;
-  height: 1.5px;
-  background-color: black;
-  transition: width 0.5s ease;
-}
-
-/* Hover: espande la linea */
-.hero a:hover::after {
-  width: 100%;
-}
-
-/* Facoltativo: cambia colore testo al passaggio */
-.hero a:hover {
-  color: black;
-}
-
-
-
-/* --- Hero section --- */
-
-
-.hero-inner {
-  display: flex;
-  flex-direction: column; /* impila gli elementi in verticale */
-  align-items: stretch;   /* fa sì che tutti abbiano la stessa larghezza */
-  width: 100%;            /* occupa tutta la larghezza disponibile */
-  margin: 0 auto;         /* centra il blocco orizzontalmente */
-}
-
-.hero-name,
-.hero-subtitle,
-.hero-links {
-  width: 100%;            /* ogni elemento prende tutta la larghezza del contenitore */
-}
-
-/* Nome grande */
-.hero-name {
-  font-family: "Almarena", monospace; /* se già importato */
-  font-size: clamp(8rem, 8vw, 15rem); /* responsive: minimo 3rem, massimo 6rem */
-  margin: 0;
-  text-align: right;
-}
-
-
-/* Sottotitolo */
-.hero-subtitle {
-  display: flex;
-  text-align: left;
-  font-family: "Almarena", monospace;
-  font-size: clamp(4rem, 2.5vw, 8rem);
-  color: #222;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  width: 100%;
-}
-
-/* Link */
-.hero-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-
