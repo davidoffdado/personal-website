@@ -1,0 +1,113 @@
+
+/* ===== BASE ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: #f5f5f5;
+  color: black;
+  font-family: 'Almarena', sans-serif;
+}
+
+/* ===== MAIN SCROLL ===== */
+.about-page {
+  height: auto;                  /* ✅ non forzare 100vh */
+  scroll-snap-type: y mandatory; /* effetto snapping */
+  overflow-y: auto;
+}
+
+/* ===== OGNI SEZIONE ===== */
+.panel {
+  scroll-snap-align: start;
+  min-height: 100vh;             /* ✅ ogni sezione occupa tutto lo schermo */
+  display: grid;
+  place-items: center;
+  background: #f5f5f5;
+  padding: 0 2rem;
+}
+
+/* ===== INTRO ===== */
+.intro-content {
+  position: relative;
+  max-width: 700px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.small-text {
+  font-size: 0.85rem;
+  color: black;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: clamp(1.6rem, 4.5vw, 3rem);
+  font-weight: 400;
+  margin-left: 5rem;
+  color: black;
+  position: relative;
+}
+
+.subtitle::before {
+  content: " - ";
+  margin-right: 0.5rem;
+}
+
+.image-box {
+  position: absolute;
+  top: 5rem;
+  left: 11rem;
+  width: 240px;
+  height: 320px;
+  background-image: url('../assets/about-image.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* ===== PARAGRAFI GRANDI ===== */
+.big-paragraph {
+  max-width: min(1000px, 90vw);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+.highlight {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+/* ===== SEZIONE CONTATTI ===== */
+/* Allinea a sinistra solo la ContactSection */
+.contact-panel {
+  display: flex;               /* cambia da grid a flex */
+  justify-content: flex-start; /* allinea orizzontalmente a sinistra */
+  align-items: center;         /* ma resta centrato verticalmente */
+  padding: 6rem 10rem;         /* aumenta margini laterali se vuoi */
+  background: #f5f5f5;            /* o il colore che hai scelto */
+  color: "black";
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .subtitle { margin-left: 2rem; }
+  .image-box {
+    top: 4rem; left: 6rem;
+    width: 180px; height: 240px;
+  }
+}
