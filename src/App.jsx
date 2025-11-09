@@ -9,6 +9,7 @@ import WebDevProjects from "./pages/WebDevProjects";
 import Loader from "./components/Loader";
 import "./styles/global.css";
 import { useState } from "react";
+import CursorFollower from "./components/CursorFollower";
 
 
 
@@ -17,14 +18,16 @@ function App() {
 
   return (
     <div className="relative h-screen overflow-hidden bg-black">
+      <CursorFollower />
       {isLoading ? (
         <div className="absolute inset-0 z-20 bg-black">
           <Loader onFinish={() => setIsLoading(false)} />
         </div>
       ) : (
         <div className="page slide-up">
+          
           <div className="app min-h-screen flex flex-col bg-white">
-            <Navbar />
+            <Navbar />  
             <main className="flex-grow main-content">
               <Routes>
                 <Route path="/" element={<MainContent />} />

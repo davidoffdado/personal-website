@@ -16,13 +16,13 @@ body,
   padding: 0;
   width: 100%;
   font-family: "Almarena", sans-serif;
-  background-color: #f5f5f5; /* Grigio chiaro di base */
+  background-color: #f5f5f5;  
+  /* background-color: transparent; */
   color: black;
   scroll-behavior: smooth; /* Scroll fluido per link ad anchor */
 }
 
 * {
-  outline: solid 2px red;
 }
 
 /* =========================================
@@ -64,7 +64,7 @@ section > div {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  font-size: 1.1rem;
+  font-size: 2rem;
 }
 
 /* Link della navbar */
@@ -83,7 +83,7 @@ section > div {
   left: 0;
   bottom: -2px;
   width: 0;
-  height: 1.5px;
+  height: 1px;
   background-color: black;
   transition: width 0.5s ease;
 }
@@ -102,22 +102,15 @@ section > div {
    SEZIONI (statistico, sviluppatore, ecc.)
 ========================================= */
 
-#home {
-  min-height: 70vh; /* 👈 occuperà il 70% dell’altezza dello schermo */
-}
-
 /* Titoli principali delle sezioni */
 section h2 {
   margin-bottom: 1rem;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 6rem;
 }
 
 /* Paragrafi interni alle sezioni */
 section p {
-  line-height: 1.6;
-  margin: 0.5rem auto;
-  text-align: center;
+  font-size: 2rem;
 }
 
 /* Link all’interno delle sezioni */
@@ -144,6 +137,7 @@ section a::after {
 /* All’hover la linea “si ritira” */
 section a:hover::after {
   width: 0;
+  color: black;
 }
 
 /* ===============================
@@ -157,7 +151,6 @@ section a:hover::after {
   transform: translateX(-50%);
   color: white;
   font-size: 1.5rem;
-  font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.9;
@@ -168,6 +161,10 @@ section a:hover::after {
 /* =========================================
    HERO SECTION (pagina principale)
 ========================================= */
+#home {
+  min-height: 70vh; /* 👈 occuperà il 70% dell’altezza dello schermo */
+}
+
 .hero-inner {
   display: flex;
   flex-direction: column;
@@ -211,11 +208,11 @@ section a:hover::after {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
-/* Effetto underline anche nei link Hero */
-.hero a {
+/* Link della navbar */
+.hero-links a {
   position: relative;
   text-decoration: none;
   color: black;
@@ -223,18 +220,19 @@ section a:hover::after {
   transition: color 0.3s ease;
 }
 
-.hero a::after {
+/* Effetto underline animato */
+.hero-links a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
   width: 0;
-  height: 1.5px;
+  height: 1px;
   background-color: black;
   transition: width 0.5s ease;
 }
 
-.hero a:hover::after {
+.hero-links a:hover::after {
   width: 100%;
 }
 
@@ -244,22 +242,22 @@ section a:hover::after {
 
 @-webkit-keyframes squareToCircle {
   0% {
-    border-radius: 0;
+    border-radius: 50% 50% 50% 50%;
     background: coral;
     transform: rotate(0deg);
   }
   25% {
-    border-radius: 50% 0 0 0;
+    border-radius: 0% 50% 0% 50%;
     background: darksalmon;
     transform: rotate(45deg);
   }
   50% {
-    border-radius: 50% 50% 0 0;
+    border-radius: 0;
     background: indianred;
     transform: rotate(90deg);
   }
   75% {
-    border-radius: 50% 50% 50% 0;
+    border-radius: 50% 0% 50% 0%;
     background: lightcoral;
     transform: rotate(135deg);
   }
@@ -377,26 +375,39 @@ section a:hover::after {
   transition: color 0.3s ease;
 }
 
-/* Cerchio decorativo ruotante */
-.circle-wrapper {
-  position: relative;
-  display: inline-block;
-  padding: 0.4em 0.8em;
-}
-
 .circle-rotate {
-  position: absolute;
-  inset: 0;
-  border: 2px solid rgb(68, 64, 64);
-  border-radius: 50%;
-  transform: rotate(-5deg);
-  opacity: 0.8;
-  z-index: 0;
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgb(184, 177, 177);
+    border-radius: 50%;
+    opacity: .4;
+    z-index: 0;
+    filter: url(#chalk-noise);
+      transform: scaleX(1.1) scaleY(4) rotate(-2deg);; /* 👈 più grande */
+
 }
 
 .circle-text {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
+    color: inherit;
+}
+
+
+
+/* =========================================
+   LINK
+========================================= */
+.btn-link {
+  margin-top: 2rem;
+}
+
+.btn-link:hover {
+  color: black;
+}
+
+a:hover {
+  color: black
 }
 
 /* =========================================
@@ -426,4 +437,15 @@ section a:hover::after {
     width: 25px;
     height: 25px;
   }
+
+  section h2 {
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
 }
+
+

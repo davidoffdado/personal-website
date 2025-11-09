@@ -1,4 +1,6 @@
 import { projects } from "../data/projects";
+import { Link } from "react-router-dom";
+
 
 function Projects() {
   return (
@@ -27,6 +29,10 @@ function Projects() {
             </div>
           ))}
         </div>
+
+        <Link to="/" className="btn-link" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          ← Torna alla Home
+        </Link>
       </section>
     </main>
   );

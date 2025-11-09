@@ -1,4 +1,7 @@
 import { articles } from "../data/articles";
+import { Link } from "react-router-dom";
+
+
 
 function Articles() {
   return (
@@ -22,6 +25,10 @@ function Articles() {
             </div>
           ))}
         </div>
+
+        <Link to="/" className="btn-link" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          ← Torna alla home
+        </Link>
       </section>
     </main>
   );

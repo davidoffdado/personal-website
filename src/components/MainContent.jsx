@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 import ContactSection from "./ContactSection";
 
+
 /**
  * MainContent.jsx
  * Sezioni principali del sito con effetto scroll animato.
  */
 function MainContent() {
   return (
-    <main className="main-content overflow-x-hidden">
+    <main className="main-content overflow-x-hidden bg-transparent">
       {/* ================================
           HERO / INTRO
       ================================= */}
@@ -57,8 +58,9 @@ function MainContent() {
       {/* ================================
           STATISTICO (con effetto scroll)
       ================================= */}
-      <AnimatedSection id="statistico" color="#1e3a8a">
-        
+
+
+      <AnimatedSection id="statistico" color="#b92f2f" prevColor="white">
         <h2 className="heading-mono text-3xl font-semibold text-blue-200 text-center">
           Statistico
         </h2>
@@ -85,7 +87,7 @@ function MainContent() {
       {/* ================================
           SVILUPPATORE (con effetto scroll)
       ================================= */}
-      <AnimatedSection id="sviluppatore" color="#166534">
+      <AnimatedSection id="sviluppatore" color="#166534" prevColor="white">
         <h2 className="heading-mono">
           Sviluppatore
         </h2>
@@ -106,7 +108,8 @@ function MainContent() {
         <p>
           <Link
             to="/web-dev-projects"
-            className="btn-link text-green-300 underline"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="btn-link"
           >
             Guarda i miei progetti →
           </Link>
@@ -116,9 +119,9 @@ function MainContent() {
       {/* ================================
           DATA JOURNALIST (con effetto scroll)
       ================================= */}
-      <AnimatedSection id="datajournalist" color="#b45309">
+      <AnimatedSection id="datajournalist" color="#db6c17ff" prevColor="white">
         <h2 className="heading-mono">
-          Data Journalist
+          Data journalist
         </h2>
 
         <p>
@@ -165,7 +168,8 @@ function MainContent() {
         <p>
           <Link
             to="/articles"
-            className="btn-link text-amber-300 underline"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="btn-link"
           >
             Guarda i miei articoli →
           </Link>
@@ -174,10 +178,21 @@ function MainContent() {
         <p>
           <Link
             to="/projects"
-            className="btn-link text-amber-300 underline"
+            className="btn-link"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             Guarda i miei progetti →
           </Link>
+        </p>
+
+        <p>
+            <a
+              href="https://aalea.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Leggi la mia newsletter sulla probabilità →
+            </a>
         </p>
       </AnimatedSection>
 
