@@ -1,27 +1,25 @@
-
 .contact {
   background: inherit;
   color: "black";
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: stretch;   /* 👈 allunga il wrapper interno */
+  align-items: stretch; /* ✅ allunga i figli alla stessa altezza */
   padding: 6rem 10rem;
   font-family: 'Almarena', sans-serif;
 }
 
-/* Wrapper a due colonne */
 .contact-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch; /* ✅ le due colonne occupano tutta l’altezza */
   width: 100%;
   max-width: 1400px;
   gap: 2rem;
-  height: 100%;           /* 👈 permette alle colonne di usare tutta l’altezza */
+  height: 100%; /* ✅ molto importante */
 }
 
-/* Colonna sinistra (testo) */
+/* colonna sinistra */
 .contact-left {
   flex: 1;
   display: flex;
@@ -29,14 +27,15 @@
   justify-content: flex-start;
 }
 
-/* Colonna destra (email in basso) */
+/* colonna destra */
 .contact-right {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* destra */
-  align-items: flex-end;     /* 👈 in basso */
-  padding-bottom: 4rem;      /* distanza dal bordo inferiore */
+  justify-content: flex-end;
+  align-items: flex-end;  /* ✅ ora funziona, perché il contenitore ha altezza */
+  padding-bottom: 4rem;
 }
+
 .heading-mono {
   font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 400;
@@ -67,7 +66,8 @@
   color: "black";
 }
 
-/* Cerchio attorno all’email */
+/*
+
 .circle-wrapper {
   position: relative;
   display: inline-block;
@@ -92,6 +92,8 @@
   border-bottom: 1px solid #d9d2c7;
   padding-bottom: 0.2rem;
 }
+*/
+
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
