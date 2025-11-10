@@ -117,3 +117,35 @@ html, body {
   }
 }
 
+.with-image {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.side-image {
+  width: 70px;       /* dimensione regolabile */
+  height: auto;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.image-overlay {
+  position: relative;
+}
+
+.bg-image {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  width: 120px;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.image-overlay p {
+  position: relative;
+  z-index: 1;
+}

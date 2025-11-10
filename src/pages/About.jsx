@@ -20,7 +20,9 @@ function About() {
 
       {/* ===== SEZIONE 2 ===== */}
       <section className="panel">
-        <p className="big-paragraph"> Sono David Ruffini e sono nato a Macerata nel 1998.
+        <p className="big-paragraph">
+          
+           Sono David Ruffini e sono nato a Macerata nel 1998.
           <br />
           Analizzo <span className="highlight">dati</span>, costruisco{" "}
           <span className="highlight">siti web</span> e scrivo pezzi di 
@@ -38,7 +40,7 @@ function About() {
       {/* ===== SEZIONE 4 ===== */}
       <section className="panel">
         <p className="big-paragraph">
-          Terminati gli studi, ho iniziato a lavorare nel settore privato come <span className="highlight">data analyst</span> e a collaborare con alcune testate giornalistiche come <span className="highlight">data journalist</span>. Nel frattempo, ho ricominciato a spolverare le mie conoscenze di web development, per diventare anche uno <span className="highlight"> sviluppatore web</span> e ho lanciato <span className="highlight">àlea</span>, una newsletter in cui parlo di probabilità.
+          Terminati gli studi, ho iniziato a lavorare nel settore privato come <span className="highlight">data analyst</span> e a collaborare con alcune testate giornalistiche come <span className="highlight">data journalist</span>. Nel frattempo, ho cominciato a rispolverare le mie conoscenze di web development, per diventare anche uno <span className="highlight"> sviluppatore web</span> e ho lanciato <span className="highlight">àlea</span>, una newsletter in cui parlo di probabilità.
         </p>
       </section>
 

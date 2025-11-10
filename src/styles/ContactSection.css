@@ -48,6 +48,7 @@
   margin-top: 2rem;
   max-width: 420px;
   line-height: 1.6;
+  margin-left: 30rem;
 }
 
 
@@ -118,6 +119,11 @@
     width: 200%;
     height: 130%;
   }
+
+
+.contact-left p {
+  margin-left: 0rem;
+}
 }
 
 /* ===== SOCIAL ICONS ===== */
