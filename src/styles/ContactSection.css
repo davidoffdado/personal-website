@@ -1,0 +1,120 @@
+
+.contact {
+  background: inherit;
+  color: "black";
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;   /* 👈 allunga il wrapper interno */
+  padding: 6rem 10rem;
+  font-family: 'Almarena', sans-serif;
+}
+
+/* Wrapper a due colonne */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1400px;
+  gap: 2rem;
+  height: 100%;           /* 👈 permette alle colonne di usare tutta l’altezza */
+}
+
+/* Colonna sinistra (testo) */
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Colonna destra (email in basso) */
+.contact-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* destra */
+  align-items: flex-end;     /* 👈 in basso */
+  padding-bottom: 4rem;      /* distanza dal bordo inferiore */
+}
+.heading-mono {
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 2rem 0;
+}
+
+.contact-left p {
+  font-size: 1rem;
+  color: "black";
+  margin-top: 2rem;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+
+.contact-email {
+  display: inline-block;
+  font-size: 1.4rem;
+  color:"black";
+  text-decoration: none;
+  position: relative;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.contact-email:hover {
+  color: "black";
+}
+
+/* Cerchio attorno all’email */
+.circle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.circle-rotate::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 230%;
+  height: 140%;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  border: 2px solid #d9d2c7;
+  border-radius: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.circle-text {
+  display: inline-block;
+  border-bottom: 1px solid #d9d2c7;
+  padding-bottom: 0.2rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .contact {
+    padding: 4rem 2rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-right {
+    justify-content: flex-start; /* sotto il testo, allineato a sinistra */
+    margin-top: 3rem;
+  }
+
+  .contact-email {
+    font-size: 1.2rem;
+  }
+
+  .circle-rotate::after {
+    width: 200%;
+    height: 130%;
+  }
+}

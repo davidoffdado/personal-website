@@ -38,7 +38,7 @@ function About() {
       {/* ===== SEZIONE 4 ===== */}
       <section className="panel">
         <p className="big-paragraph">
-          Se non sono al computer sono probabilmente a leggere, al cinema, ad allenarmi, a cucinare o in giro qualche parte.
+          Se non sono al computer sono probabilmente a leggere, al cinema, ad allenarmi, a cucinare o in giro da qualche parte.
         </p>
       </section>
 
