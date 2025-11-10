@@ -119,3 +119,37 @@
     height: 130%;
   }
 }
+
+/* ===== SOCIAL ICONS ===== */
+.contact-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: flex-end;
+}
+
+.contact-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid black;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.contact-socials a:hover {
+  background: black;
+}
+
+.contact-socials svg {
+  stroke: black;
+  transition: stroke 0.3s ease;
+}
+
+.contact-socials a:hover svg {
+  stroke: white;
+}
+
+

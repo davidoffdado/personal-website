@@ -29,6 +29,17 @@ html, body {
   
 }
 
+.contact-panel {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+  background: inherit; /* usa lo sfondo del resto della pagina */
+}
+
+
+
+
 /* ===== INTRO ===== */
 .intro-content {
   position: relative;

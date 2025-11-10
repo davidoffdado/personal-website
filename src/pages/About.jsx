@@ -7,7 +7,7 @@ function About() {
       {/* ===== SEZIONE 1 ===== */}
       <section className="panel intro-panel">
         <div className="intro-content">
-          <span className="small-text">Okay, you're here</span>
+          <span className="small-text">Hey, you're here :)</span>
           <h1 className="title">
             Do you wanna<br />know something else
           </h1>
@@ -22,7 +22,7 @@ function About() {
       <section className="panel">
         <p className="big-paragraph"> Sono David Ruffini e sono nato a Macerata nel 1998.
           <br />
-          Mi occupo di analisi dei <span className="highlight">dati</span>, costruisco{" "}
+          Analizzo <span className="highlight">dati</span>, costruisco{" "}
           <span className="highlight">siti web</span> e scrivo pezzi di 
           <span className="highlight"> data journalism</span> o sulla <span className="highlight">probabilità</span>.
         </p>
@@ -31,7 +31,14 @@ function About() {
       {/* ===== SEZIONE 3 ===== */}
       <section className="panel">
         <p className="big-paragraph">
-          Ho una laurea magistrale in <span className="highlight">Statistica e Data Science</span> e molta indecisione su quello che voglio fare da <span className="highlight">grande</span>, ma forse mi sto avvicinando a capirlo.
+          Successivamente alla laurea triennale in <span className="highlight">Economia</span>, conseguita a Macerata, mi sono trasferito a Firenze per il corso magistrale in <span className="highlight">Statistica e Data Science</span>.
+        </p>
+      </section>
+
+      {/* ===== SEZIONE 4 ===== */}
+      <section className="panel">
+        <p className="big-paragraph">
+          Terminati gli studi, ho iniziato a lavorare nel settore privato come <span className="highlight">data analyst</span> e a collaborare con alcune testate giornalistiche come <span className="highlight">data journalist</span>. Nel frattempo, ho ricominciato a spolverare le mie conoscenze di web development, per diventare anche uno <span className="highlight"> sviluppatore web</span> e ho lanciato <span className="highlight">àlea</span>, una newsletter in cui parlo di probabilità.
         </p>
       </section>
 
