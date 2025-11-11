@@ -34,7 +34,7 @@ body,
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: hidden;
+
 }
 
 /* Tutte le sezioni principali */
@@ -46,7 +46,6 @@ section {
   min-height: 100vh;
   padding: 2rem 1rem;
   margin: 0;
-  overflow: hidden; /* evita che l’animazione di background sbordi */
 }
 
 /* Il contenuto dentro la sezione è sopra allo sfondo animato */
@@ -149,7 +148,7 @@ section a:hover::after {
   top: 2rem;               /* distanza dal bordo superiore della sezione */
   left: 50%;               /* centrato orizzontalmente */
   transform: translateX(-50%);
-  color: white;
+  color: #f5f5f5;
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -449,3 +448,90 @@ a:hover {
   }
 }
 
+
+.section-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 8rem; /* 👈 Spinge il contenuto verso il basso */
+}
+
+
+/* =========================================
+   DISTANZA TRA SEZIONI INTERNE (h2 e p)
+========================================= */
+
+/* distanza tra blocchi di testo e il titolo successivo */
+.section-content h2 {
+  margin-top: 6rem;  /* spazio costante sopra ogni nuovo h2 */
+  margin-bottom: 2rem;
+}
+
+/* il primo titolo dentro la sezione (es. "Statistico") non deve avere spazio sopra */
+.section-content h2:first-of-type {
+  margin-top: 0;
+}
+
+/* distanza uniforme tra paragrafi */
+.section-content p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* Contenitore principale */
+#statistico {
+  --space: 12rem; /* distanza verticale totale tra blocchi */
+  position: relative;
+  gap: var(--space); /* spazio automatico tra i figli */
+}
+
+/* Blocchi di contenuto */
+#statistico .stat,
+#statistico .svil,
+#statistico .dj {
+  width: 100%;
+  padding: 4rem 0rem;
+}
+
+  .section-content div {
+  position: relative;
+}
+
+.section-divider {
+  align-self: center;
+  width: 100%; /* ✅ serve per dare la larghezza finale */
+  height: 6px;
+  background-color: #f5f5f5;
+  border-radius: 2px;
+  opacity: 0.3;
+
+  /* ✅ posizione a metà tra i blocchi */
+  margin-block: calc(var(--space) / 2);
+
+  /* ✅ Animazione: parte da sinistra */
+  transform-origin: left center;
+  transform: scaleX(0); /* inizio invisibile */
+  animation: growLine linear both;
+  animation-timeline: view();
+  animation-range: entry 0% exit 100%;
+}
+
+
+/* ✅ Animazione: la riga cresce da sinistra verso destra */
+@keyframes growLine {
+  from {
+    transform: scaleX(0);   /* parte da sinistra */
+    opacity: 0.4;
+  }
+  to {
+    transform: scaleX(1);   /* si estende verso destra */
+    opacity: 1;
+  }
+}

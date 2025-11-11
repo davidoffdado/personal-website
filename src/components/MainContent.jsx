@@ -55,12 +55,11 @@ function MainContent() {
         </div>
       </section>
 
-      {/* ================================
-          STATISTICO (con effetto scroll)
-      ================================= */}
-
-
-      <AnimatedSection id="statistico" color="#b92f2f" prevColor="white">
+      <AnimatedSection id="statistico" color="#ff9c9cff">
+      
+      <div className="section-divider"></div>
+      
+      <div className="stat">
         <h2 className="heading-mono text-3xl font-semibold text-blue-200 text-center">
           Statistico
         </h2>
@@ -82,12 +81,11 @@ function MainContent() {
           Da statistico e analista dati ho collaborato con aziende e università:
           ABB, Elettromedia, Università Politecnica delle Marche, DMBI e Reply.
         </p>
-      </AnimatedSection>
+        </div>
 
-      {/* ================================
-          SVILUPPATORE (con effetto scroll)
-      ================================= */}
-      <AnimatedSection id="sviluppatore" color="#166534" prevColor="white">
+      <div className="section-divider"></div>
+
+      <div className="svil">
         <h2 className="heading-mono">
           Sviluppatore
         </h2>
@@ -114,12 +112,11 @@ function MainContent() {
             Guarda i miei progetti →
           </Link>
         </p>
-      </AnimatedSection>
+      </div>
 
-      {/* ================================
-          DATA JOURNALIST (con effetto scroll)
-      ================================= */}
-      <AnimatedSection id="datajournalist" color="#db6c17ff" prevColor="white">
+      <div className="section-divider"></div>
+
+      <div className="dj">
         <h2 className="heading-mono">
           Data journalist
         </h2>
@@ -194,6 +191,10 @@ function MainContent() {
               Leggi la mia newsletter sulla probabilità →
             </a>
         </p>
+      </div>
+
+      <div className="section-divider"></div>
+
       </AnimatedSection>
 
       {/* ================================
