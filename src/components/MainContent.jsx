@@ -81,9 +81,9 @@ function MainContent() {
 
         <p>Realizzo il tuo sito web, <br/>
         curandone l'indicizzazione <br/>
-        e garantendoti future modifiche.</p>
+        e garantendoti future modifiche. <br/>
 
-        <p>
+
           <Link
             to="/web-dev-projects"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -105,30 +105,24 @@ function MainContent() {
           Trasformo i numeri in storie: <br/>
           realizzo articoli e progetti che <br/>
           uniscono analisi e <br/> 
-          visualizzazione dei dati.
-        </p>
+          visualizzazione dei dati. <br/>
 
-        <p>
           <Link
             to="/articles"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="btn-link"
           >
             Guarda i miei articoli →
-          </Link>
-        </p>
+          </Link> <br/>
 
-        <p>
           <Link
             to="/projects"
             className="btn-link"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             Guarda i miei progetti →
-          </Link>
-        </p>
+          </Link> <br/>
 
-        <p>
             <a
               href="https://aalea.substack.com/"
               target="_blank"
