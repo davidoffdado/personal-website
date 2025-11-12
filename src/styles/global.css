@@ -25,6 +25,7 @@ body,
 * {
 }
 
+
 /* =========================================
    STRUTTURA GENERALE
 ========================================= */
@@ -469,6 +470,7 @@ a:hover {
 .section-content h2 {
   margin-top: 6rem;  /* spazio costante sopra ogni nuovo h2 */
   margin-bottom: 2rem;
+  justify-self: start;
 }
 
 /* il primo titolo dentro la sezione (es. "Statistico") non deve avere spazio sopra */
@@ -480,6 +482,8 @@ a:hover {
 .section-content p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  justify-self: start;
+
 }
 
 
@@ -497,7 +501,6 @@ a:hover {
 #statistico .svil,
 #statistico .dj {
   width: 100%;
-  padding: 4rem 0rem;
 }
 
   .section-content div {
@@ -508,9 +511,7 @@ a:hover {
   align-self: center;
   width: 100%; /* ✅ serve per dare la larghezza finale */
   height: 6px;
-  background-color: #f5f5f5;
-  border-radius: 2px;
-  opacity: 0.3;
+  background-color: black;
 
   /* ✅ posizione a metà tra i blocchi */
   margin-block: calc(var(--space) / 2);
@@ -528,10 +529,108 @@ a:hover {
 @keyframes growLine {
   from {
     transform: scaleX(0);   /* parte da sinistra */
-    opacity: 0.4;
+    opacity: 0;
   }
   to {
     transform: scaleX(1);   /* si estende verso destra */
     opacity: 1;
   }
 }
+
+
+
+/* =========================================
+   SCROLL-LINKED ANIMAZIONE su h2 e p
+========================================= */
+
+@supports (animation-timeline: view()) {
+
+
+
+#statistico .thematic-block h2,
+#statistico .thematic-block p {
+  position: relative;
+  display: block;
+  width: fit-content;
+  text-align: left;
+  margin-left: 0;
+  transform-origin: left center;
+
+  /* effetto di scorrimento orizzontale */
+  animation: slideText linear both;
+  animation-timeline: view();
+
+  /* 🔹 testo come maschera del background */
+  background: 
+    linear-gradient(black 0 0) 
+      50% / 75vmin no-repeat scroll
+    black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+
+  /* livello sopra l’immagine */
+  z-index: 1;
+}
+
+
+  #statistico .thematic-block h2 {
+    font-size: clamp(3rem, 8vmin, 6rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    animation-range: entry 0% exit 100%; /* parte un po’ dopo l’h2 */
+
+  }
+
+  #statistico .thematic-block p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    animation-range: entry 50% exit 100%; /* parte un po’ dopo l’h2 */
+  }
+
+  
+
+
+  /* keyframes principali */
+  @keyframes slideText {
+    from {
+      transform: translateX(20vw);
+    }
+    to {
+      transform: translateX(50vw);
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+    @keyframes slideText {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(20vw);
+    }
+  }
+}
+
+
+
+.thematic-block.stat {
+  position: relative; /* serve come riferimento per l’immagine assoluta */
+}
+
+
+.thematic-block.stat img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centra perfettamente */
+  width: 200px; /* dimensione a piacere */
+  z-index: -1;
+  opacity: 0.3; /* effetto "dietro al testo" */
+}
+      /* facoltativo, se vuoi un effetto "sfondo" */
+

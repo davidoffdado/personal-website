@@ -44,6 +44,24 @@ function About() {
         </p>
       </section>
 
+            {/* ===== SEZIONE 4 ===== */}
+      <section className="panel">
+        <p className="big-paragraph">
+          Ho realizzato uno scraper che raccoglie i dati giornalieri sulle carceri italiane e aggiorna quotidiniamente grafici e mappe:
+          il           <a
+            href="https://davidoffdado.github.io/progetto-carceri/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >progetto</a> è stato segnalato dal           <a
+            href="https://gijn.org/stories/europes-deadly-heatwave-middle-east-ceasefires/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >GIJN</a>.
+        </p>
+      </section>
+
       {/* ===== SEZIONE 4 ===== */}
       <section className="panel">
         <p className="big-paragraph">
@@ -51,10 +69,51 @@ function About() {
         </p>
       </section>
 
+{/* ===== SEZIONE 6 — COLLABORAZIONI ===== */}
+<section className="panel collaborations-panel">
+  <h2 className="collab-title">Collaborazioni da statistico</h2>
+        <div className="line"></div>
+
+  <div className="scrolling-text">
+    <div className="scrolling-inner">
+      <span>
+        <strong>ABB</strong> • <strong>Elettromedia</strong> • <strong>Università Politecnica delle Marche</strong> • <strong>DMBI</strong> • <strong>Reply</strong> •
+      </span>
+      <span>
+        <strong>ABB</strong> • <strong>Elettromedia</strong> • <strong>Università Politecnica delle Marche</strong> • <strong>DMBI</strong> • <strong>Reply</strong> 
+      </span>
+    </div>
+    <div className="line"></div>
+  </div>
+</section>
+
+{/* ===== SEZIONE 6 — COLLABORAZIONI ===== */}
+<section className="panel collaborations-panel">
+  <h2 className="collab-title">Collaborazioni da data journalist</h2>
+      <div className="line"></div>
+  <div className="scrolling-text">
+    <div className="scrolling-inner">
+      <span>
+        <strong>Il Sole 24 Ore</strong> • <strong>Wired Italia</strong> • <strong>Aliseo Editoriale</strong> • <strong>SEC Newgate</strong> •
+      </span>
+      <span>
+       <strong>Il Sole 24 Ore</strong> • <strong>Wired Italia</strong> • <strong>Aliseo Editoriale</strong> • <strong>SEC Newgate</strong> 
+      </span>
+    </div>
+        <div className="line"></div>
+  </div>
+</section>
+
+
+
+
       {/* ===== SEZIONE 5 — CONTATTI ===== */}
       <section className="panel contact-panel">
         <ContactSection />
       </section>
+
+
+
     </main>
   );
 }

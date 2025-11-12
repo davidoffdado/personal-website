@@ -108,14 +108,7 @@ html, body {
 /* Rende la sezione contatti coerente con il layout principale */
 
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .subtitle { margin-left: 2rem; }
-  .image-box {
-    top: 4rem; left: 6rem;
-    width: 180px; height: 240px;
-  }
-}
+
 
 .with-image {
   position: relative;
@@ -148,4 +141,123 @@ html, body {
 .image-overlay p {
   position: relative;
   z-index: 1;
+}
+
+/* ===== SEZIONE COLLABORAZIONI ===== */
+.collaborations-panel {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 60vh; /* come le altre sezioni */
+}
+
+.scrolling-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-inner {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: scroll-loop 40s linear infinite;
+}
+
+.scrolling-inner span {
+  display: inline-block;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 500;
+  color: black;
+  padding-right: 4rem; /* spazio tra le ripetizioni */
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ===== SEZIONE COLLABORAZIONI ===== */
+.collaborations-panel {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.collab-title {
+  font-size: clamp(2rem, 3vw, 6rem);
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.collaborations-panel {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  min-height: 10vh; /* come le altre sezioni */
+}
+
+.scrolling-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-inner {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: scroll-loop 20s linear infinite;
+}
+
+.scrolling-inner span {
+  display: inline-block;
+  font-size: clamp(6rem, 3vw, 10rem);
+  font-weight: 500;
+  color: black;
+  padding-right: 4rem; /* spazio tra le ripetizioni */
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  opacity: 0.15;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .subtitle { margin-left: 2rem; }
+  .image-box {
+    top: 4rem; left: 6rem;
+    width: 180px; height: 240px;
+  }
+  .collab-title {
+  font-size: clamp(1.2rem, 3vw, 6rem);
+}
+
+.scrolling-inner span {
+  display: inline-block;
+  font-size: clamp(3rem, 3vw, 10rem);
+  font-weight: 500;
+  color: black;
+  padding-right: 4rem; /* spazio tra le ripetizioni */
+}
+  
 }
