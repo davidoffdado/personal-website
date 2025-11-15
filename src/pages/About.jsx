@@ -22,32 +22,37 @@ function About() {
       <section className="panel">
         <p className="big-paragraph">
           
-           Sono David Ruffini e sono nato a Macerata nel 1998.
+           Sono <span className="highlight">David Ruffini</span> e sono nato a Macerata nel 1998.
           <br />
-          Analizzo <span className="highlight">dati</span>, costruisco{" "}
-          <span className="highlight">siti web</span> e scrivo pezzi di 
-          <span className="highlight"> data journalism</span> o sulla <span className="highlight">probabilità</span>.
         </p>
       </section>
 
       {/* ===== SEZIONE 3 ===== */}
       <section className="panel">
         <p className="big-paragraph">
-          Successivamente alla laurea triennale in <span className="highlight">Economia</span>, conseguita a Macerata, mi sono trasferito a Firenze per il corso magistrale in <span className="highlight">Statistica e Data Science</span>.
+          Ho una laurea triennale in <span className="highlight">Economia</span>, conseguita a Macerata. <br/>
+          Nella mia tesi ho trattato il tema della <span className="highlight">probabilità</span> e della prevedibilità dei mercati finanziari, analizzando l'ipotesi di efficienza di tre diverse borse valori.
+        </p>
+      </section>
+
+      <section className="panel">
+        <p className="big-paragraph">
+          Successivamente alla triennale, mi sono trasferito a Firenze per il corso magistrale in <span className="highlight">Statistica e Data Science</span>. <br/>
+          Qua, il mio lavoro di tesi si è rivolto ai modelli matematici utilizzati in epidemiologia, unendo <span className="highlight">teoria dei valori estremi</span> e teoria delle reti sociali alla modelizzazione delle malattie infettive.
         </p>
       </section>
 
       {/* ===== SEZIONE 4 ===== */}
       <section className="panel">
         <p className="big-paragraph">
-          Terminati gli studi, ho iniziato a lavorare nel settore privato come <span className="highlight">data analyst</span> e a collaborare con alcune testate giornalistiche come <span className="highlight">data journalist</span>. Nel frattempo, ho cominciato a rispolverare le mie conoscenze di web development, per diventare anche uno <span className="highlight"> sviluppatore web</span> e ho lanciato <span className="highlight">àlea</span>, una newsletter in cui parlo di probabilità.
+          Terminati gli studi, ho iniziato a lavorare nel settore privato come <span className="highlight">data analyst</span> e a collaborare con alcune testate giornalistiche come <span className="highlight">data journalist</span>.
         </p>
       </section>
 
             {/* ===== SEZIONE 4 ===== */}
       <section className="panel">
         <p className="big-paragraph">
-          Ho realizzato uno scraper che raccoglie i dati giornalieri sulle carceri italiane e aggiorna quotidiniamente grafici e mappe:
+          Tra i vari progetti, ho realizzato uno <span className="highlight">scraper</span> che raccoglie i dati giornalieri sulle carceri italiane e aggiorna quotidianamente i relativi grafici e mappe:
           il           <a
             href="https://davidoffdado.github.io/progetto-carceri/"
             target="_blank"
@@ -62,12 +67,6 @@ function About() {
         </p>
       </section>
 
-      {/* ===== SEZIONE 4 ===== */}
-      <section className="panel">
-        <p className="big-paragraph">
-          Se non sono al computer sono probabilmente a leggere, al cinema, ad allenarmi, a cucinare o in giro da qualche parte.
-        </p>
-      </section>
 
 {/* ===== SEZIONE 6 — COLLABORAZIONI ===== */}
 <section className="panel collaborations-panel">

@@ -7,24 +7,25 @@ function Articles() {
   return (
     <main className="main-content">
       <section className="section">
-        <h2>I miei articoli</h2>
-        <p>Ecco una selezione di lavori pubblicati come data journalist.</p>
-
+        <h2>Data journalism</h2>
+        <p>Questa è una selezione dei miei articoli.</p>
         <div className="articles-list">
           {articles.map((article, index) => (
-            <div key={index} className="article-card">
-              <h3>
-                <a href={article.url} target="_blank" rel="noopener noreferrer">
-                  {article.title}
-                </a>
-              </h3>
+            <a
+              key={index}
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="article-card"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <h3>{article.title}</h3>
               <p className="dek">{article.dek}</p>
-              <p className="meta">
-                {article.tags.join(", ")}
-              </p>
-            </div>
+              <p className="meta">{article.tags.join(", ")}</p>
+            </a>
           ))}
         </div>
+
 
         <Link to="/" className="btn-link" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           ← Torna alla home

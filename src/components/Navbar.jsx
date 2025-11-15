@@ -35,9 +35,9 @@ function Navbar() {
       </a>
 
       <div className="nav-right">
-        <a href="#statistico" onClick={handleWorkClick}>
+        {/* <a href="#statistico" onClick={handleWorkClick}>
           work
-        </a>
+        </a> */}
         <Link to="/about">about</Link>
       </div>
     </nav>

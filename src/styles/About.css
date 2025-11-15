@@ -98,10 +98,10 @@ html, body {
 }
 
 .highlight {
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
+  font-weight: 800;
+  background-color: black;
+  color: white;
+  padding: 0px 0px;
 }
 
 /* ===== SEZIONE CONTATTI ===== */

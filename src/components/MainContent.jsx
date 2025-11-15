@@ -19,14 +19,34 @@ function MainContent() {
       >
         <div className="hero-inner">
           <h1 className="hero-name">
-            <span className="first-name">David </span>
-            <span className="last-name">Ruffini</span>
+            Hello.
           </h1>
 
-          <div className="oggetto"></div>
 
-          <p className="hero-subtitle text-xl text-gray-700">
-            Statistico, sviluppatore, data journalist
+
+          <p className="">
+            Sono David, uno statistico e un data journalist. <br/>
+            Lavoro come data analyst in una società di consulenza e come data journalist, realizzando <Link
+            to="/articles"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="btn-link"
+            >
+              articoli
+            </Link> e <Link
+              to="/projects"
+              className="btn-link"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              progetti
+            </Link>. <br/>
+              A volte, costruisco <Link
+              to="/web-dev-projects"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="btn-link"
+            >
+              siti web
+            </Link>.
+
           </p>
 
           <div className="hero-links flex gap-6 text-lg">
@@ -55,87 +75,7 @@ function MainContent() {
         </div>
       </section>
 
-      <AnimatedSection id="statistico" color="#c0c0c0ff">
       
-      <div className="section-divider"></div>
-      
-      <div className="thematic-block stat">
-        <h2 className="heading-mono text-3xl font-semibold text-blue-200 text-center">
-          Statistico
-        </h2>
-
-        <p>
-          Analizzo i tuoi dati, <br/>
-          siano essi aziendali, <br/>
-          della tua tesi <br/>
-          o di altra natura.
-        </p>
-      </div>
-
-      <div className="section-divider"></div>
-
-      <div className="thematic-block stat">
-        <h2 className="heading-mono">
-          Sviluppatore
-        </h2>
-
-        <p>Realizzo il tuo sito web, <br/>
-        curandone l'indicizzazione <br/>
-        e garantendoti future modifiche. <br/>
-
-
-          <Link
-            to="/web-dev-projects"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="btn-link"
-          >
-            Guarda i miei progetti →
-          </Link>
-        </p>
-      </div>
-
-      <div className="section-divider"></div>
-
-      <div className="thematic-block dj">
-        <h2 className="heading-mono">
-          Data journalist
-        </h2>
-
-        <p>
-          Trasformo i numeri in storie: <br/>
-          realizzo articoli e progetti che <br/>
-          uniscono analisi e <br/> 
-          visualizzazione dei dati. <br/>
-
-          <Link
-            to="/articles"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="btn-link"
-          >
-            Guarda i miei articoli →
-          </Link> <br/>
-
-          <Link
-            to="/projects"
-            className="btn-link"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            Guarda i miei progetti →
-          </Link> <br/>
-
-            <a
-              href="https://aalea.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Leggi àlea →
-            </a>
-        </p>
-      </div>
-
-      <div className="section-divider"></div>
-
-      </AnimatedSection>
 
       {/* ================================
           CONTATTI
