@@ -25,7 +25,7 @@ function MainContent() {
 
 
           <p className="">
-            Sono David, uno statistico e un data journalist. <br/>
+            Sono David, uno statistico e un data journalist. <br/><br/>
             Lavoro come data analyst in una società di consulenza e come data journalist, realizzando <Link
             to="/articles"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -39,13 +39,20 @@ function MainContent() {
             >
               progetti
             </Link>. <br/>
-              A volte, costruisco <Link
+              A volte, sviluppo <Link
               to="/web-dev-projects"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="btn-link"
             >
               siti web
-            </Link>.
+            </Link>. <br/><br/>
+            Se vuoi saperne di più su di me e sulle realtà con cui ho già collaborato, visita la sezione <Link
+              to="/about"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="btn-link"
+            >
+              about
+            </Link>.<br/><br/>
 
           </p>
 

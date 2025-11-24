@@ -7,7 +7,7 @@ function ContactSection() {
         {/* Colonna sinistra */}
         <div className="contact-left">
           <h2 className="heading-mono">
-            Costruiamo<br />qualcosa<br />insieme?
+            Creiamo<br />qualcosa<br />insieme?
           </h2>
           <p>
             Contattami se pensi a una possibile collaborazione o se vuoi semplicemente chiedermi qualcosa.
