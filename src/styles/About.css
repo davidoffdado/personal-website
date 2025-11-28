@@ -98,11 +98,35 @@ html, body {
 }
 
 .highlight {
+  position: relative;
   font-weight: 800;
-  background-color: black;
-  color: white;
-  padding: 0px 0px;
+  color: black;
+  z-index: 1;
+  white-space: nowrap;
 }
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;     /* ANCORATO IN BASSO */
+  height: 40%;   /* COPRE SOLO LA PARTE BASSA */
+  background: rgb(241, 168, 168);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease-out;
+  z-index: -1;
+}
+
+.highlight.visible {
+  color: black;
+}
+
+.highlight.visible::before {
+  transform: scaleX(1);
+}
+
 
 /* ===== SEZIONE CONTATTI ===== */
 /* Rende la sezione contatti coerente con il layout principale */
@@ -213,7 +237,7 @@ html, body {
 .scrolling-inner {
   display: inline-flex;
   white-space: nowrap;
-  animation: scroll-loop 20s linear infinite;
+  animation: scroll-loop 10s linear infinite;
 }
 
 .scrolling-inner span {

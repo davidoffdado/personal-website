@@ -16,7 +16,7 @@ useEffect(() => {
       }
       return p + 1;
     });
-  }, 40);
+  }, 30);
   return () => clearInterval(interval);
 }, []);
 

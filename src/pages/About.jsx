@@ -1,7 +1,29 @@
 import ContactSection from "../components/ContactSection";
 import "../styles/About.css";
+import { useEffect } from "react";
 
 function About() {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".highlight");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="about-page">
       {/* ===== SEZIONE 1 ===== */}
@@ -30,7 +52,7 @@ function About() {
       {/* ===== SEZIONE 3 ===== */}
       <section className="panel">
         <p className="big-paragraph">
-          Ho una laurea triennale in <span className="highlight">Economia</span>, conseguita a Macerata. <br/>
+          Ho una laurea triennale in <span className="highlight">Economia</span> conseguita a Macerata. <br/>
           Nella mia tesi ho trattato il tema della <span className="highlight">probabilità</span> e della prevedibilità dei mercati finanziari, analizzando l'ipotesi di efficienza di tre diverse borse valori.
         </p>
       </section>
@@ -38,7 +60,7 @@ function About() {
       <section className="panel">
         <p className="big-paragraph">
           Successivamente alla triennale, mi sono trasferito a Firenze per il corso magistrale in <span className="highlight">Statistica e Data Science</span>. <br/>
-          Qua, il mio lavoro di tesi si è rivolto ai modelli matematici utilizzati in epidemiologia, unendo <span className="highlight">teoria dei valori estremi</span> e teoria delle reti sociali alla modelizzazione delle malattie infettive.
+          Qui, il mio lavoro di tesi si è rivolto ai modelli matematici utilizzati in <span className="highlight"> epidemiologia</span>, unendo <span className="highlight">teoria dei valori estremi</span> e <span className="highlight"> teoria delle reti sociali</span> alla modellizzazione delle malattie infettive.
         </p>
       </section>
 
@@ -52,7 +74,7 @@ function About() {
             {/* ===== SEZIONE 4 ===== */}
       <section className="panel">
         <p className="big-paragraph">
-          Tra i vari progetti, ho realizzato uno <span className="highlight">scraper</span> che raccoglie i dati giornalieri sulle carceri italiane e aggiorna quotidianamente i relativi grafici e mappe:
+          Tra i vari progetti, ho realizzato uno <span className="highlight">scraper</span> che raccoglie i dati giornalieri sulle <span className="highlight"> carceri italiane</span> e aggiorna quotidianamente i relativi grafici e mappe:
           il           <a
             href="https://davidoffdado.github.io/progetto-carceri/"
             target="_blank"
@@ -70,7 +92,7 @@ function About() {
 
 {/* ===== SEZIONE 6 — COLLABORAZIONI ===== */}
 <section className="panel collaborations-panel">
-  <h2 className="collab-title">Collaborazioni da statistico</h2>
+  <h2 className="collab-title">Collaborazioni da data analyst</h2>
         <div className="line"></div>
 
   <div className="scrolling-text">
