@@ -84,7 +84,7 @@ Qui trovi alcuni dei miei{" "}
       <div className="interests-container">
         <h2 className="interests-title">Cosa faccio</h2>
         <p className="interests-subtitle">
-          Qui è possibile vedere le mie aree di interesse e i lavori realizzati
+          Qui ci sono alcuni dei lavori che ho realizzato
         </p>
 
         <div className="interests-grid">
