@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 import ContactSection from "./ContactSection";
+import InterestsSection from "./InterestsSection";
 
 
 /**
@@ -25,34 +26,16 @@ function MainContent() {
 
 
           <p className="">
-            Sono David e sono uno statistico. <br/><br/>
-            Lavoro come data analyst in una società di consulenza e come data journalist, realizzando <Link
-            to="/articles"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="btn-link"
-            >
-              articoli
-            </Link> e <Link
-              to="/projects"
-              className="btn-link"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              progetti
-            </Link>. <br/>
-              A volte, sviluppo <Link
-              to="/web-dev-projects"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="btn-link"
-            >
-              siti web
-            </Link>. <br/><br/>
+            Sono David, sono uno statistico e questo è il mio portfolio.<br/><br/>
+
             Se vuoi saperne di più su di me e sulle realtà con cui ho già collaborato, visita la sezione <Link
               to="/about"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="btn-link"
             >
               about
-            </Link>. <br/> Se mi vuoi contattare, ti basta scorrere un po' più giù. <br/><br/>
+            </Link>. <br/><br/>
+            Se mi vuoi contattare, ti basta scorrere fino alla fine. <br/><br/>
 
           </p>
 
@@ -82,6 +65,10 @@ function MainContent() {
         </div>
       </section>
 
+      {/* ================================
+          AREE DI INTERESSE
+      ================================= */}
+      <InterestsSection />
       
 
       {/* ================================

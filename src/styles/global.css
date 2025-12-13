@@ -190,7 +190,7 @@ section a:hover::after {
   font-family: "Almarena", monospace;
   font-size: clamp(12rem, 8vw, 15rem);
   margin: 0;
-  text-align: right;
+  text-align: left;
   position: relative;
   z-index: 1;
 }
@@ -199,7 +199,7 @@ section a:hover::after {
 .hero-subtitle {
   display: flex;
   justify-content: flex-start;
-  text-align: left;
+  text-align: center;
   font-family: "Almarena", monospace;
   font-size: clamp(4rem, 3vw, 6rem);
   color: #222;
@@ -561,7 +561,7 @@ a:hover {
   position: relative;
   display: block;
   width: fit-content;
-  text-align: left;
+  text-align: center;
   margin-left: 0;
   transform-origin: left center;
 

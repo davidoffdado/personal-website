@@ -38,6 +38,9 @@ function Navbar() {
         {/* <a href="#statistico" onClick={handleWorkClick}>
           work
         </a> */}
+        <Link to="/articles">articoli</Link>
+        <Link to="/projects">progetti</Link>
+        <Link to="/web-dev-projects">sviluppo web</Link>
         <Link to="/about">about</Link>
       </div>
     </nav>

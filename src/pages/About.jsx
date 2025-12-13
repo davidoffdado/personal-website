@@ -51,6 +51,7 @@ function About() {
 
       {/* ===== SEZIONE 3 ===== */}
       <section className="panel">
+        
         <p className="big-paragraph">
           Ho una laurea triennale in <span className="highlight">Economia</span> conseguita a Macerata. <br/>
           Nella mia tesi ho trattato il tema della <span className="highlight">probabilità</span> e della prevedibilità dei mercati finanziari, analizzando l'ipotesi di efficienza di tre diverse borse valori.

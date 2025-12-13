@@ -112,7 +112,7 @@ html, body {
   right: 0;
   bottom: 0;     /* ANCORATO IN BASSO */
   height: 40%;   /* COPRE SOLO LA PARTE BASSA */
-  background: rgb(241, 168, 168);
+  background: rgb(177, 177, 250);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.6s ease-out;
@@ -263,6 +263,12 @@ html, body {
   background-color: black;
   opacity: 0.15;
 }
+
+
+:root {
+  --accent: rgb(177, 177, 250); /* stesso colore highlight */
+}
+
 
 
 /* ===== RESPONSIVE ===== */

@@ -7,7 +7,7 @@ function WebDevProjects() {
     <main className="main-content">
       <section className="section">
         <h2>Web development</h2>
-        <p>Questi sono alcuni dei lavori in web development.</p>
+        <p>Questi sono alcuni dei miei lavori di sviluppo web.</p>
 
         <div className="projects-list">
           {webDevProjects.map((proj, index) => (

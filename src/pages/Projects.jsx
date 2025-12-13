@@ -20,7 +20,7 @@ function Projects() {
       style={{ textDecoration: "none", color: "inherit" }}
     >
       <h3>{proj.title}</h3>
-      <p className="dek">{proj.dek}</p>
+      <p className="dek"> {proj.dek} </p>
 
       <p className="meta">
         {proj.role && <>{proj.role} · </>}

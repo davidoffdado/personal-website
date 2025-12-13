@@ -8,7 +8,7 @@ function Articles() {
     <main className="main-content">
       <section className="section">
         <h2>Data journalism</h2>
-        <p>Questa è una selezione dei miei articoli.</p>
+        <p>Questa è una selezione dei miei articoli di data journalism.</p>
         <div className="articles-list">
           {articles.map((article, index) => (
             <a
