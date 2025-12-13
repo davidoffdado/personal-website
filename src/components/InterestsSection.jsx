@@ -16,7 +16,7 @@ function InterestsSection() {
   const interests = [
     {
       icon: <FiTrendingUp />,
-      title: "Statistica e probabilità",
+      title: "Consulenza",
       description:
       (
         <>
@@ -49,21 +49,8 @@ Offro consulenze in ambito statistico, dalla progettazione del piano di analisi 
       description:
          (
         <>
-          Gestisco l'intero ciclo del dato: dalla sua raccolta alla sua analisi finale, passando per la sua gestione nel database.
-        </>
-      )
-    },
-    
-    {
-      icon: <FiCode />,
-      title: "Sviluppo web",
-      description:
-        (
-        <>
-          Costruisco siti e applicativi web, principamente occupandomi di data visualization. Questi sono alcuni dei miei <Link to="/web-dev-projects" className="interest-link">
-            lavori
-          </Link>.
-        </>
+Gestisco l’intero ciclo del dato, dalla raccolta alla gestione nel database, fino all’analisi e alla presentazione dei risultati.       
+ </>
       )
     },
         {
@@ -72,18 +59,32 @@ Offro consulenze in ambito statistico, dalla progettazione del piano di analisi 
       description:
               (
         <>
-          Mi occupo formazione su temi legati alla statistica e al data journalism, al fine di rendere più consapevoli su ciò che ruota intorno al mondo dei dati.
+Svolgo attività di formazione e divulgazione su statistica e data journalism, con l’obiettivo di rendere le persone più consapevoli nell’uso e nell’interpretazione dei dati.        </>
+      )
+    },
+    {
+      icon: <FiCode />,
+      title: "Sviluppo web",
+      description:
+        (
+        <>
+          Sviluppo siti e applicazioni web, con particolare attenzione alla data visualization. 
+Qui trovi alcuni dei miei{" "}
+<Link to="/web-dev-projects" className="interest-link">
+  lavori
+</Link>.
+
         </>
       )
     }
   ];
 
   return (
-    <section className="interests-section">
+    <section id="interests" className="interests-section">
       <div className="interests-container">
-        <h2 className="interests-title">Aree di interesse</h2>
+        <h2 className="interests-title">Cosa faccio</h2>
         <p className="interests-subtitle">
-          Queste sono alcune delle aree su cui mi piace lavorare
+          Qui è possibile vedere le mie aree di interesse e i lavori realizzati
         </p>
 
         <div className="interests-grid">

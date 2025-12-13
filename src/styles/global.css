@@ -177,6 +177,7 @@ section a:hover::after {
   width: 100%;
   margin: 0 auto;
   position: relative;
+
 }
 
 .hero-name,
@@ -544,7 +545,11 @@ a:hover {
   }
 }
 
-
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
 
 /* =========================================
    SCROLL-LINKED ANIMAZIONE su h2 e p

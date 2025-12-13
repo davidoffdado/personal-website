@@ -18,7 +18,7 @@ function MainContent() {
       <section
         id="home"
       >
-        <div className="hero-inner">
+        <div className="hero-inner container">
           <h1 className="hero-name">
             Hello.
           </h1>
@@ -26,7 +26,18 @@ function MainContent() {
 
 
           <p className="">
-            Sono David, sono uno statistico e questo è il mio portfolio.<br/><br/>
+            Sono David, sono uno statistico e questo è il mio <a
+  href="#interests"
+  className="btn-link"
+  onClick={(e) => {
+    e.preventDefault();
+    document
+      .getElementById("interests")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  portfolio
+</a>. <br/><br/>
 
             Se vuoi saperne di più su di me e sulle realtà con cui ho già collaborato, visita la sezione <Link
               to="/about"
@@ -34,7 +45,7 @@ function MainContent() {
               className="btn-link"
             >
               about
-            </Link>. <br/><br/>
+            </Link>.<br/><br/>
             Se mi vuoi contattare, ti basta scorrere fino alla fine. <br/><br/>
 
           </p>

@@ -3,7 +3,7 @@ import "../styles/ContactSection.css";
 function ContactSection() {
   return (
     <section id="contact" className="section contact">
-      <div className="contact-content">
+      <div className="contact-content container">
         {/* Colonna sinistra */}
         <div className="contact-left">
           <h2 className="heading-mono">
