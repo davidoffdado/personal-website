@@ -14,23 +14,13 @@ import "../styles/InterestsSection.css";
 
 function InterestsSection() {
   const interests = [
-    {
-      icon: <FiTrendingUp />,
-      title: "Consulenza",
-      description:
-      (
-        <>
-Offro consulenze in ambito statistico, dalla progettazione del piano di analisi alla corretta interpretazione dei risultati, con un approccio rigoroso e trasparente.        
-</>
-      )
-    },
         {
       icon: <FiBookOpen />,
       title: "Data journalism",
       description:
                  (
         <>
-          Racconto storie a partire dai dati, con particolare attenzione alla qualità e alla visualizzazione. 
+          Racconto storie a partire dai dati, unendo statistica, analisi e visualizzazione. 
           Qui trovi alcuni dei miei{" "}
           <Link to="/articles" className="interest-link">
             articoli
@@ -54,15 +44,6 @@ Gestisco l’intero ciclo del dato, dalla raccolta alla gestione nel database, f
       )
     },
         {
-      icon: <FiBook />,
-      title: "Formazione",
-      description:
-              (
-        <>
-Svolgo attività di formazione e divulgazione su statistica e data journalism, con l’obiettivo di rendere le persone più consapevoli nell’uso e nell’interpretazione dei dati.        </>
-      )
-    },
-    {
       icon: <FiCode />,
       title: "Sviluppo web",
       description:
@@ -75,6 +56,25 @@ Qui trovi alcuni dei miei{" "}
 </Link>.
 
         </>
+      )
+    },
+             {
+      icon: <FiTrendingUp />,
+      title: "Consulenza",
+      description:
+      (
+        <>
+Offro consulenze in ambito statistico, dalla progettazione del piano di analisi alla corretta interpretazione dei risultati, con un approccio rigoroso e trasparente.        
+</>
+      )
+    },
+        {
+      icon: <FiBook />,
+      title: "Formazione",
+      description:
+              (
+        <>
+Svolgo attività di formazione e divulgazione su statistica e data journalism, con l’obiettivo di rendere le persone più consapevoli nell’uso e nell’interpretazione dei dati.        </>
       )
     }
   ];

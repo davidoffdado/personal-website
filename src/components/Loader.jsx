@@ -23,7 +23,7 @@ useEffect(() => {
 
   return (
     <div className={`loader-screen ${isDone ? "fade-out" : ""}`}>
-      <h1 className="loader-title">my portfolio is loading: be curious :)</h1>
+      <h1 className="loader-title">my portfolio is loading</h1>
       <p className="loader-counter">{progress}%</p>
     </div>
   );
