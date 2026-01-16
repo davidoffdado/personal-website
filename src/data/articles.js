@@ -1,4 +1,13 @@
 export const articles = [
+    {
+  title: "Due proteste su tre sfidano il regime",
+  dek: "L'Iran e il dissenso",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "16.01.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/01/16/iran-la-geografia-del-dissenso-due-proteste-su-tre-sfidano-il-regime/",
+  cover: ""
+  },
   {
   title: "Dal 7 ottobre al cessate il fuoco",
   dek: "Cosa ci dicono i dati sulla Striscia?",
