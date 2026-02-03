@@ -1,5 +1,14 @@
 export const articles = [
-    {
+  {
+  title: 'Sono davvero i "worst of worst"?',
+  dek: "Gli arresti dell'ICE negli Stati Uniti",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "21.01.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/01/21/operazione-metro-surge-quando-i-numeri-smentiscono-la-retorica/?cmpid=.com",
+  cover: ""
+  },
+  {
   title: "Due proteste su tre sfidano il regime",
   dek: "L'Iran e il dissenso",
   role: "Data Journalist",

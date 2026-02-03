@@ -20,7 +20,7 @@ function InterestsSection() {
       description:
                  (
         <>
-          Racconto storie a partire dai dati, unendo statistica, analisi e visualizzazione. 
+          Racconto storie a partire dai dati, unendo raccolta, analisi e visualizzazione. 
           Qui trovi alcuni dei miei{" "}
           <Link to="/articles" className="interest-link">
             articoli
@@ -50,14 +50,14 @@ Gestisco l’intero ciclo del dato, dalla raccolta alla gestione nel database, f
         (
         <>
           Sviluppo siti e applicazioni web, con particolare attenzione alla data visualization. 
-Qui trovi alcuni dei miei{" "}
+Qui puoi vedere qualche{" "}
 <Link to="/web-dev-projects" className="interest-link">
-  lavori
+  esempio
 </Link>.
 
         </>
       )
-    },
+    }/*,
              {
       icon: <FiTrendingUp />,
       title: "Consulenza",
@@ -76,16 +76,17 @@ Offro consulenze in ambito statistico, dalla progettazione del piano di analisi 
         <>
 Svolgo attività di formazione e divulgazione su statistica e data journalism, con l’obiettivo di rendere le persone più consapevoli nell’uso e nell’interpretazione dei dati.        </>
       )
-    }
+    }*/
   ];
 
   return (
     <section id="interests" className="interests-section">
       <div className="interests-container">
         <h2 className="interests-title">Cosa faccio</h2>
-        <p className="interests-subtitle">
-          Qui ci sono alcuni dei lavori che ho realizzato
-        </p>
+
+  <p className="interests-subtitle">
+          {/* Provando a riassumere  */}
+        </p> 
 
         <div className="interests-grid">
           {interests.map((item, index) => (
