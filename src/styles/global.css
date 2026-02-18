@@ -2,15 +2,9 @@
    FONT E RESET BASE
 ========================================= */
 
-@font-face {
-  font-family: "Almarena";
-  src: url("../assets/fonts/AlmarenaDisplayLight.otf") format("opentype");
-}
 
-@font-face {
-  font-family: "Roboto";
-  src: url("../assets/fonts/Roboto.ttf") format("truetype");
-}
+/* Import Google Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
 
 /* Reset base e impostazioni generali */
 html,
@@ -20,7 +14,7 @@ body,
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: "Almarena", "Roboto",  sans-serif;
+  font-family: "Google Sans", sans-serif;
   background-color: #f5f5f5;  
   /* background-color: transparent; */
   color: black;
@@ -188,7 +182,6 @@ section a:hover::after {
 
 /* Nome grande */
 .hero-name {
-  font-family: "Almarena", monospace;
   font-size: clamp(12rem, 8vw, 15rem);
   margin: 0;
   text-align: left;
@@ -201,7 +194,6 @@ section a:hover::after {
   display: flex;
   justify-content: flex-start;
   text-align: center;
-  font-family: "Almarena", monospace;
   font-size: clamp(4rem, 3vw, 6rem);
   color: #222;
   margin: 1rem 0 2rem 0;

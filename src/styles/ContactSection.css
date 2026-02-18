@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: stretch; /* ✅ allunga i figli alla stessa altezza */
   padding: 6rem 10rem;
-  font-family: 'Almarena', sans-serif;
 }
 
 .contact-content {
