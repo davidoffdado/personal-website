@@ -26,7 +26,7 @@ function MainContent() {
 
 
           <p className="">
-            Sono David, sono uno statistico e questo è il mio <a
+            Sono David, sono uno statistico e questo è il <a
   href="#interests"
   className="btn-link"
   onClick={(e) => {
@@ -37,7 +37,7 @@ function MainContent() {
   }}
 >
   portfolio
-</a>. <br/><br/>
+</a> dei miei lavori di data journalism. <br/><br/>
 
             Se vuoi saperne di più su di me e sulle realtà con cui ho già collaborato, visita la sezione <Link
               to="/about"
