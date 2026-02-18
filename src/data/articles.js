@@ -1,5 +1,32 @@
 export const articles = [
   {
+  title: "L'intreccio tra demografia e socialità",
+  dek: "In Italia si è più soli rispetto al passato",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "18.02.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/02/18/addio-al-mito-della-grande-famiglia-litalia-e-un-paese-di-singles/",
+  cover: ""
+  },
+  {
+  title: "Cosa faranno ora Russia e Stati Uniti?",
+  dek: "Il trattato di non proliferazione delle armi nucleari è scaduto",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "15.02.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/02/15/il-trattato-di-non-proliferazione-delle-armi-nucleari-gli-accordi-start-e-i-dati/",
+  cover: ""
+  },
+  {
+  title: "Come clima, conflitti e vulnerabilità influenzano i paesi",
+  dek: "Il mondo dal punto di vista dell'indice CCVI",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "10.02.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/02/10/cosa-accomuna-il-clima-e-i-conflitti-il-climate-conflict-vulnerability-index-spiegato-bene/",
+  cover: ""
+  },
+  {
   title: 'Sono davvero i "worst of worst"?',
   dek: "Gli arresti dell'ICE negli Stati Uniti",
   role: "Data Journalist",
