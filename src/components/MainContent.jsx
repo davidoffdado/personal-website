@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
 import ContactSection from "./ContactSection";
 import InterestsSection from "./InterestsSection";
+import FeaturedWorksSection from "./FeaturedWorksSection";
 
 
 /**
@@ -27,12 +28,12 @@ function MainContent() {
 
           <p className="">
             Sono David, sono uno statistico e questo è il <a
-  href="#interests"
+  href="#featured"
   className="btn-link"
   onClick={(e) => {
     e.preventDefault();
     document
-      .getElementById("interests")
+      .getElementById("featured")
       ?.scrollIntoView({ behavior: "smooth" });
   }}
 >
@@ -46,7 +47,18 @@ function MainContent() {
             >
               about
             </Link>.<br/><br/>
-            Se mi vuoi contattare, ti basta scorrere fino alla fine. <br/><br/>
+            Se mi vuoi contattare, puoi cliccare <a
+  href="#contact"
+  className="btn-link"
+  onClick={(e) => {
+    e.preventDefault();
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  qua
+</a>. <br/><br/>
 
           </p>
 
@@ -75,6 +87,11 @@ function MainContent() {
           </div>
         </div>
       </section>
+
+      {/* ================================
+          LAVORI IN EVIDENZA
+      ================================= */}
+      <FeaturedWorksSection />
 
       {/* ================================
           AREE DI INTERESSE

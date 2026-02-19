@@ -204,7 +204,6 @@ section a:hover::after {
 /* Link Hero */
 .hero-links {
   display: flex;
-  justify-content: center;
   gap: 1.5rem;
   font-size: 1.5rem;
 }
@@ -622,3 +621,103 @@ a:hover {
   }
 }
 
+/* =========================================
+   IN EVIDENZA
+========================================= */
+
+
+.featured-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Desktop: 2 colonne */
+@media (min-width: 900px) {
+  .featured-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.featured-side {
+  display: grid;
+  gap: 1rem;
+}
+
+.embed-card {
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  overflow: hidden; /* evita scroll orizzontale su mobile */
+}
+
+.embed-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.embed-card-title {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.embed-card-subtitle {
+  margin: 0.25rem 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.embed-card-link {
+  white-space: nowrap;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.embed-frame {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Spazio minimo per evitare "saltelli" durante il load */
+.embed-card.is-large .embed-frame {
+  min-height: 360px;
+}
+
+.embed-card.is-small .embed-frame {
+  min-height: 220px;
+}
+
+/* Gli iframe dentro gli embed devono essere responsive */
+.embed-root iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.featured-main {
+  margin-bottom: 1rem;
+}
+
+/* mobile: 1 colonna */
+.featured-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+/* tablet: 2 colonne */
+@media (min-width: 700px) {
+  .featured-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop: 3 colonne */
+@media (min-width: 1000px) {
+  .featured-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
