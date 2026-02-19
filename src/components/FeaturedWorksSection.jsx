@@ -52,7 +52,7 @@ export default function FeaturedWorksSection() {
         <AnimatedSection>
           <h2 className="section-title">Lavori in evidenza</h2>
           <p className="section-subtitle">
-            Questa sono alcuni miei lavori in evidenza, ma puoi trovarne altri nelle sezioni <Link to="/articles">articoli</Link>, {" "}
+            Questi sono alcuni dei miei lavori, ma puoi trovarne altri nelle sezioni <Link to="/articles">articoli</Link>, {" "}
         <Link to="/projects">progetti</Link>  e{" "} <Link to="/web-dev-projects">sviluppo web</Link>.
           </p>
 
