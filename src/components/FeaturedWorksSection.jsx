@@ -8,7 +8,7 @@ const featuredWorks = [
   {
     id: "main",
     size: "lg",
-    title: "Progetto personale & Il Sole 24 Ore",
+    title: "Progetto personale & Il Sole 24 Ore • updating daily",
     subtitle: "Scraper automatico per il monitoraggio del sovraffollamento carcerario italiano",
     // Incolla qui l’HTML di embed (iframe o snippet)
     embed: `
@@ -19,7 +19,7 @@ const featuredWorks = [
   {
     id: "a",
     size: "sm",
-    title: "Il Sole 24 Ore",
+    title: "Il Sole 24 Ore • 21.01.2026",
     subtitle: '',
     embed: `<iframe src='https://flo.uri.sh/visualisation/27273649/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>`,
     link: "https://www.infodata.ilsole24ore.com/2026/01/21/operazione-metro-surge-quando-i-numeri-smentiscono-la-retorica/?cmpid=.comhttps://www.infodata.ilsole24ore.com/2026/01/21/operazione-metro-surge-quando-i-numeri-smentiscono-la-retorica/?cmpid=.com",
@@ -27,7 +27,7 @@ const featuredWorks = [
   {
     id: "b",
     size: "sm",
-    title: "Progetto personale",
+    title: "Progetto personale • 30.09.2025",
     subtitle: "",
     embed: `<iframe src='https://flo.uri.sh/visualisation/25370291/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>`,
     link: "https://davidoffdado.github.io/elezioni-marche/",
@@ -35,7 +35,7 @@ const featuredWorks = [
   {
     id: "c",
     size: "sm",
-    title: "Wired Italia",
+    title: "Wired Italia • 20.09.2025",
     subtitle: "",
     embed: `<iframe src='https://flo.uri.sh/visualisation/25181007/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>`,
     link: "https://www.wired.it/article/attacchi-double-tap-striscia-di-gaza-mappa/",
@@ -50,9 +50,9 @@ export default function FeaturedWorksSection() {
     <section id="featured" className="featured-section">
       <div className="container">
         <AnimatedSection>
-          <h2 className="section-title">Lavori in evidenza</h2>
+          <h2 className="section-title">Some works</h2>
           <p className="section-subtitle">
-            Questi sono alcuni dei miei lavori, ma puoi trovarne altri nelle sezioni <Link to="/articles">articoli</Link>, {" "}
+           Puoi guardare il resto dei miei lavori nelle sezioni <Link to="/articles">articoli</Link>, {" "}
         <Link to="/projects">progetti</Link>  e{" "} <Link to="/web-dev-projects">sviluppo web</Link>.
           </p>
 

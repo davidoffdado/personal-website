@@ -15,8 +15,9 @@ body,
   padding: 0;
   width: 100%;
   font-family: "Google Sans", sans-serif;
-  background-color: #f5f5f5;  
-  /* background-color: transparent; */
+  /*background-color: #f5f5f5;  */
+  background-color: white; 
+  /* background-color: white; */
   color: black;
   scroll-behavior: smooth; /* Scroll fluido per link ad anchor */
 }
@@ -63,7 +64,7 @@ section > div {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 /* Link della navbar */
@@ -104,12 +105,12 @@ section > div {
 /* Titoli principali delle sezioni */
 section h2 {
   margin-bottom: 1rem;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 /* Paragrafi interni alle sezioni */
 section p {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 /* Link all’interno delle sezioni */
@@ -149,7 +150,7 @@ section a:hover::after {
   left: 50%;               /* centrato orizzontalmente */
   transform: translateX(-50%);
   color: #f5f5f5;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.9;
@@ -169,10 +170,12 @@ section a:hover::after {
   flex-direction: column;
   align-items: stretch;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   position: relative;
 
 }
+
+
 
 .hero-name,
 .hero-subtitle,
@@ -194,7 +197,7 @@ section a:hover::after {
   display: flex;
   justify-content: flex-start;
   text-align: center;
-  font-size: clamp(4rem, 3vw, 6rem);
+  font-size: clamp(1rem, 3vw, 6rem);
   color: #222;
   margin: 1rem 0 2rem 0;
   font-weight: 400;
@@ -205,7 +208,7 @@ section a:hover::after {
 .hero-links {
   display: flex;
   gap: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 /* Link della navbar */
@@ -333,7 +336,7 @@ section a:hover::after {
 .article-card h3,
 .project-card h3 {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 /* Testo delle card */
@@ -346,7 +349,7 @@ section a:hover::after {
 /* Metadata */
 .article-card .meta,
 .project-card .meta {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #777;
 }
 
@@ -358,7 +361,7 @@ section a:hover::after {
   width: 100%;
   text-align: center;
   padding: 2rem 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #444;
 }
 
@@ -399,7 +402,7 @@ section a:hover::after {
    LINK
 ========================================= */
 .btn-link {
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .btn-link:hover {
@@ -417,7 +420,7 @@ a:hover {
 @media (max-width: 600px) {
   .hero-name {
     font-size: clamp(5rem, 12vw, 7rem);
-    margin: 0.5rem;
+    margin: 0;
   }
 
   .hero-subtitle {
@@ -430,7 +433,7 @@ a:hover {
 
   .navbar {
     font-size: 0.9rem;
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 1rem;
   }
 
   .oggetto {
@@ -581,7 +584,7 @@ a:hover {
 
 
   #statistico .thematic-block h2 {
-    font-size: clamp(3rem, 8vmin, 6rem);
+    font-size: clamp(1rem, 8vmin, 6rem);
     font-weight: 900;
     margin-bottom: 1.5rem;
     animation-range: entry 0% exit 100%; /* parte un po’ dopo l’h2 */
@@ -645,7 +648,7 @@ a:hover {
 }
 
 .embed-card {
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 0px solid rgba(255,255,255,0.12);
   border-radius: 16px;
   padding: 1rem;
   backdrop-filter: blur(10px);
@@ -661,14 +664,14 @@ a:hover {
 }
 
 .embed-card-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0;
 }
 
 .embed-card-subtitle {
   margin: 0.25rem 0 0;
   opacity: 0.85;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .embed-card-link {

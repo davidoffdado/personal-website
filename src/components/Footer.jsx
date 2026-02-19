@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="footer">
-      <p>© 2025 David Ruffini</p>
+      <p>© 2026 David Ruffini</p>
     </footer>
   );
 }

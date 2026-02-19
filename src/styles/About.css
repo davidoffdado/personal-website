@@ -4,7 +4,8 @@ html, body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background: #f5f5f5;
+  /*background: #f5f5f5;*/
+  background: white;
   color: black;
 }
 
@@ -22,7 +23,8 @@ html, body {
   display: grid;
   align-items: center;
   justify-items: start;
-  background: #f5f5f5;
+  /*background: #f5f5f5;*/
+  background: white;
   padding: 0 0rem;
   text-align: left;
   
@@ -33,7 +35,6 @@ html, body {
   justify-content: center;
   align-items: stretch;
   padding: 0;
-  background: inherit; /* usa lo sfondo del resto della pagina */
 }
 
 
@@ -90,7 +91,7 @@ html, body {
 /* ===== PARAGRAFI GRANDI ===== */
 .big-paragraph {
   max-width: min(1000px, 90vw);
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
   line-height: 1.5;
   text-align: left;
   margin: 0;
@@ -168,7 +169,7 @@ html, body {
 
 /* ===== SEZIONE COLLABORAZIONI ===== */
 .collaborations-panel {
-  background: #f5f5f5;
+  /*background: #f5f5f5;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +192,7 @@ html, body {
 
 .scrolling-inner span {
   display: inline-block;
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(2rem, 3vw, 10rem);
   font-weight: 500;
   color: black;
   padding-right: 4rem; /* spazio tra le ripetizioni */
@@ -212,13 +213,13 @@ html, body {
 }
 
 .collab-title {
-  font-size: clamp(2rem, 3vw, 6rem);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   margin-bottom: 1rem;
   color: #333;
 }
 
 .collaborations-panel {
-  background: #f5f5f5;
+  /*background: #f5f5f5;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,7 +242,7 @@ html, body {
 
 .scrolling-inner span {
   display: inline-block;
-  font-size: clamp(6rem, 3vw, 10rem);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 500;
   color: black;
   padding-right: 4rem; /* spazio tra le ripetizioni */

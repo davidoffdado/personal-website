@@ -82,7 +82,7 @@ Svolgo attività di formazione e divulgazione su statistica e data journalism, c
   return (
     <section id="interests" className="interests-section">
       <div className="interests-container">
-        <h2 className="interests-title">Cosa faccio</h2>
+        <h2 className="interests-title">Briefly...</h2>
 
   <p className="interests-subtitle">
           {/* Provando a riassumere  */}

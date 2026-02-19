@@ -27,7 +27,13 @@ function MainContent() {
 
 
           <p className="">
-            Sono David, sono uno statistico e questo è il <a
+            Sono <Link
+              to="/about"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="btn-link"
+            >
+              David Ruffini
+            </Link>  e questo è il mio <a
   href="#featured"
   className="btn-link"
   onClick={(e) => {
@@ -38,16 +44,9 @@ function MainContent() {
   }}
 >
   portfolio
-</a> dei miei lavori di data journalism. <br/><br/>
+</a> di data journalism.
 
-            Se vuoi saperne di più su di me e sulle realtà con cui ho già collaborato, visita la sezione <Link
-              to="/about"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="btn-link"
-            >
-              about
-            </Link>.<br/><br/>
-            Se mi vuoi contattare, puoi cliccare <a
+            Per contattarmi puoi cliccare <a
   href="#contact"
   className="btn-link"
   onClick={(e) => {
@@ -57,8 +56,8 @@ function MainContent() {
       ?.scrollIntoView({ behavior: "smooth" });
   }}
 >
-  qua
-</a>. <br/><br/>
+  qui
+</a>. <br/>
 
           </p>
 
