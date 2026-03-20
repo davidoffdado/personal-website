@@ -50,10 +50,23 @@ export default function FeaturedWorksSection() {
     <section id="featured" className="featured-section">
       <div className="container">
         <AnimatedSection>
-          <h2 className="section-title">Some works</h2>
-          <p className="section-subtitle">
-           Puoi guardare il resto dei miei lavori nelle sezioni <Link to="/articles">articoli</Link>, {" "}
-        <Link to="/projects">progetti</Link>  e{" "} <Link to="/web-dev-projects">sviluppo web</Link>.
+          {/*<h2 className="section-title">Some works</h2>*/}
+          <p className="section-subtitle"> 
+            Ciao, il mio nome è David Ruffini. Sono uno statistico e un data journalist. <br></br><br></br>
+
+            Lavoro come data analyst in consulenza e come data journalist, collaborando principalmente con Il Sole 24 Ore. Tra i miei lavori, c'è uno scraper che aggiorna quotidianamente, in maniera automatica, i dati sul sovraffollamento carcerario italiano; il progetto è stato segnalato dal <a
+            href="https://gijn.org/stories/europes-deadly-heatwave-middle-east-ceasefires/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >Global Investigative Journalism Network</a>. <br></br><br></br>
+
+          In passato, sono stato un assegnista di ricerca e ho collaborato con Wired Italia, Aliseo Editoriale e SEC Newgate.<br></br><br></br>
+
+          Ho una laurea magistrale in Statistica e Data Science conseguita presso l'Università degli Studi di Firenze, con una tesi sulla Teoria dei valori estremi applicata all'epidemiologia, e una laurea triennale in Economia bancaria, finanziaria e assicurativa, conclusa con una tesi sulla probabilità e sui mercati finanziari. <br></br><br></br>
+
+           Sotto c'è qualche esempio di ciò che faccio, ma puoi guardare il resto dei miei lavori nelle sezioni <Link to="/articles">articoli</Link> e {" "}
+        <Link to="/projects">progetti</Link>.
           </p>
 
           {/* PRINCIPALE */}

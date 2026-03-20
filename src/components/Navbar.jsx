@@ -1,47 +1,24 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleWorkClick = (e) => {
-    e.preventDefault();
-    // Se sei già sulla home, scorri subito
-    if (location.pathname === "/") {
-      const el = document.getElementById("statistico");
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    } else {
-      // Torna alla home e poi scorri
-      navigate("/");
-      // piccolo delay per dare tempo al DOM di montare
-      setTimeout(() => {
-        const el = document.getElementById("statistico");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 300);
-    }
-  };
-
   return (
-    <nav className="navbar">
-      <a href="#home" className="nav-left" onClick={(e) => {
-        e.preventDefault();
-        navigate("/");
-        setTimeout(() => {
-          const el = document.getElementById("home");
-          if (el) el.scrollIntoView({ behavior: "smooth" });
-        }, 300);
-      }}>
-        home
-      </a>
-
-      <div className="nav-right">
-        {/* <a href="#statistico" onClick={handleWorkClick}>
-          work
-        </a> */}
-        <Link to="/articles">articoli</Link>
-        <Link to="/projects">progetti</Link>
-        <Link to="/web-dev-projects">sviluppo web</Link>
-        <Link to="/about">about</Link>
+    <nav className="sidebar">
+      <div className="sidebar-inner">
+        <NavLink to="/" className="sidebar-link home-link">
+          David Ruffini
+        </NavLink>
+        <NavLink to="/articles" className="sidebar-link">
+          articoli
+        </NavLink>
+        <NavLink to="/projects" className="sidebar-link">
+          progetti
+        </NavLink>
+        {/*<NavLink to="/web-dev-projects" className="sidebar-link">
+          sviluppo web
+        </NavLink>*/}
+        <NavLink to="/about" className="sidebar-link">
+          about
+        </NavLink>
       </div>
     </nav>
   );

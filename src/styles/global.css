@@ -95,7 +95,7 @@ section > div {
 /* Contenitore dei link a destra */
 .nav-right {
   display: flex;
-  gap: 1.5rem;
+  gap: 0rem;
 }
 
 /* =========================================
@@ -285,7 +285,7 @@ section a:hover::after {
 /* =========================================
    TRANSIZIONE DI ENTRATA (slideUp)
 ========================================= */
-
+/*
 @keyframes slideUp {
   0% {
     opacity: 0;
@@ -303,7 +303,7 @@ section a:hover::after {
 .hero-links {
   animation: slideUp 1.5s cubic-bezier(0.5, 0, 0.175, 1) forwards;
   transform-origin: bottom center;
-}
+} */
 
 /* =========================================
    LISTE ARTICOLI E PROGETTI
@@ -460,7 +460,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding-top: 8rem; /* 👈 Spinge il contenuto verso il basso */
+  padding-top: 0rem; /* 👈 Spinge il contenuto verso il basso */
 }
 
 
@@ -722,5 +722,124 @@ a:hover {
 @media (min-width: 1000px) {
   .featured-row {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== LAYOUT BASE ===== */
+
+.app {
+  min-height: 100vh;
+  background: white;
+}
+
+/* sidebar fissa a sinistra */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  padding: 2.5rem 2rem;
+  display: flex;
+ /* align-items: center;*/
+  justify-content: flex-start;
+  background: white;
+  z-index: 100;
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+/* link sidebar */
+.sidebar-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.45;
+  transition: opacity 0.25s ease;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+  opacity: 1;
+}
+
+/* contenuto a destra */
+.main-content {
+  margin-left: 15%;
+  width: 80%;
+  min-height: 100vh;
+  display: block;
+}
+
+/* stile base home */
+.home-link {
+  font-size: 2rem;
+  color: black;
+}
+
+@media (max-width: 768px) {
+
+  /* stile base home */
+.home-link {
+  font-size: 1rem;
+  color: black;
+}
+
+  /* sidebar diventa navbar sopra */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .sidebar-inner {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  /* contenuto torna full width */
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 60px; /* spazio per navbar */
+  }
+}
+
+.about-page {
+  background: white;
+  color: black;
+}
+
+.about-intro-panel {
+  min-height: auto;
+  align-items: flex-start;
+  justify-items: start;
+  padding: 4rem 1rem 4rem;
+}
+
+.about-text {
+  max-width: 900px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+@media (max-width: 600px) {
+  .about-text {
+    font-size: 1rem;
   }
 }

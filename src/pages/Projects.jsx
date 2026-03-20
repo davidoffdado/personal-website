@@ -6,8 +6,8 @@ function Projects() {
   return (
     <main className="main-content">
       <section className="section">
-        <h2>Data journalism</h2>
-        <p>Questi sono alcuni dei miei progetti di data journalism.</p>
+        {/*<h2>Data journalism</h2>
+        <p>Questi sono alcuni dei miei progetti di data journalism.</p>*/}
 
 <div className="projects-list">
   {projects.map((proj, index) => (

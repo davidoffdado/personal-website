@@ -16,7 +16,7 @@ function MainContent() {
       {/* ================================
           HERO / INTRO
       ================================= */}
-      <section
+       {/*<section
         id="home"
       >
         <div className="hero-inner container">
@@ -85,7 +85,7 @@ function MainContent() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ================================
           LAVORI IN EVIDENZA
@@ -95,13 +95,13 @@ function MainContent() {
       {/* ================================
           AREE DI INTERESSE
       ================================= */}
-      <InterestsSection />
+      {/* <InterestsSection />*/}
       
 
       {/* ================================
           CONTATTI
-      ================================= */}
-      <ContactSection />
+      ================================= 
+      <ContactSection /> */}
     </main>
   );
 }

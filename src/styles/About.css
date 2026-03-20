@@ -273,21 +273,8 @@ html, body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .subtitle { margin-left: 2rem; }
-  .image-box {
-    top: 4rem; left: 6rem;
-    width: 180px; height: 240px;
-  }
   .collab-title {
   font-size: clamp(1.2rem, 3vw, 6rem);
 }
 
-.scrolling-inner span {
-  display: inline-block;
-  font-size: clamp(3rem, 3vw, 10rem);
-  font-weight: 500;
-  color: black;
-  padding-right: 4rem; /* spazio tra le ripetizioni */
-}
-  
 }
