@@ -6,7 +6,7 @@ function About() {
     <main className="about-page">
       <section className="panel about-intro-panel">
         <p className="about-text">
-          Ciao, il mio nome è David Ruffini. Sono uno statistico e un data journalist.
+          Ciao. Mi chiamo David Ruffini, sono uno statistico e un data journalist.
           <br /><br />
 
           Lavoro come data analyst, nel mondo della consulenza, e come data journalist,

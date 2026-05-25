@@ -1,5 +1,59 @@
 export const articles = [
   {
+  title: "La violenza dei coloni israeliani",
+  dek: "In aumento dall'inizio della guerra in Iran",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "25.04.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/04/25/la-violenza-dei-coloni-israeliani-nei-confronti-dei-palestinesi-sta-aumentando-i-dati-acled/",
+  cover: ""
+  },
+  {
+  title: "Pendolarimo, trasporti e città",
+  dek: "Come l'ISTAT vuole riscrivere lo studio del fenomeno",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "15.04.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/04/15/dati-telefonia-mobile-istat-mobilita-pendolari/?cmpid=.com",
+  cover: ""
+  },
+  {
+  title: "Il referendum sulla giustizia",
+  dek: "La mappa del voto comune per comune",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "24.03.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/03/24/referendum-giustizia-risultati-comuni-mappa-voto-italia/",
+  cover: ""
+  },
+  {
+  title: "Il sovraffollamento delle carceri italiane",
+  dek: "In otto mesi, il tasso è passato dal 134% al 139%",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "18.03.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/03/18/carceri-italiane-il-sovraffollamento-cresce-ancora-dal-134-al-139-in-otto-mesi-il-nostro-monitoraggio/",
+  cover: ""
+  },
+  {
+  title: "Consiglio superiore della magistratura",
+  dek: "Quali sono le principali correnti e come sono cambiate negli anni?",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "13.03.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/03/13/le-correnti-del-consiglio-superiore-della-magistratura-csm-in-una-mappa/?refresh_ce=1",
+  cover: ""
+  },
+  {
+  title: "Le autocrazie nel mondo",
+  dek: "Negli anni, sempre più dure",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "09.03.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/03/09/le-autocrazie-nel-mondo-sono-sempre-piu-dure-la-mappa-dei-regimi-nel-2024/",
+  cover: ""
+  },
+  {
   title: "L'intreccio tra demografia e socialità",
   dek: "In Italia si è più soli rispetto al passato",
   role: "Data Journalist",
