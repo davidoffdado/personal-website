@@ -10,7 +10,7 @@ export const articles = [
   },
   {
   title: "Pendolarimo, trasporti e città",
-  dek: "Come l'ISTAT vuole riscrivere lo studio del fenomeno",
+  dek: "Come l'ISTAT vuole riscrivere lo studio della mobilità in Italia",
   role: "Data Journalist",
   year: 2026,
   tags: ["Il Sole 24 Ore", "15.04.2026"],
