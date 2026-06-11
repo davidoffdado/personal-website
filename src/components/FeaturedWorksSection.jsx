@@ -54,7 +54,7 @@ export default function FeaturedWorksSection() {
           <p className="section-subtitle"> 
             Ciao. Mi chiamo David Ruffini, sono uno statistico e un data journalist. <br></br><br></br>
 
-            Lavoro come data analyst in consulenza e come data journalist, collaborando principalmente con Il Sole 24 Ore. Tra i miei lavori, c'è uno scraper che aggiorna quotidianamente, in maniera automatica, i dati sul sovraffollamento carcerario italiano; il progetto è stato segnalato dal <a
+            Lavoro come data analyst in una società di consulenza e come data journalist, collaborando principalmente con Il Sole 24 Ore. Tra i miei lavori c'è uno scraper che aggiorna quotidianamente, in maniera automatica, i dati sul sovraffollamento carcerario italiano; il progetto è stato segnalato dal <a
             href="https://gijn.org/stories/europes-deadly-heatwave-middle-east-ceasefires/"
             target="_blank"
             rel="noopener noreferrer"
