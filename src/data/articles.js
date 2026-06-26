@@ -1,5 +1,23 @@
 export const articles = [
   {
+  title: "Looksmaxxer e proteine",
+  dek: "Che fatica questa performance",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Senza Filtro", "11.06.2026"],
+  url: "https://www.informazionesenzafiltro.it/shop-senza-filtro/rivista-lavorare-su-se-stessi-vers-cartacea-giugno-settembre-2026",
+  cover: ""
+  },
+    {
+  title: "Avvocati, ingegneri?",
+  dek: "No grazie: genitori che sognano figli streamer",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Senza Filtro", "11.06.2026"],
+  url: "https://www.informazionesenzafiltro.it/shop-senza-filtro/rivista-lavorare-su-se-stessi-vers-cartacea-giugno-settembre-2026",
+  cover: ""
+  },
+  {
   title: "La violenza dei coloni israeliani",
   dek: "In aumento dall'inizio della guerra in Iran",
   role: "Data Journalist",
