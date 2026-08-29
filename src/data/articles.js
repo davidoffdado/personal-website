@@ -1,5 +1,14 @@
 export const articles = [
   {
+  title: "Dieci anni dopo il terremoto nel centro Italia",
+  dek: "Come procede la ricostruzione nel Lazio",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "24.08.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/08/24/il-terremoto-di-amatrice-le-mappe-satellitari-i-dati-e-la-ricostruzione-infinita/",
+  cover: ""
+  },
+  {
   title: "Looksmaxxer e proteine",
   dek: "Che fatica questa performance",
   role: "Data Journalist",
