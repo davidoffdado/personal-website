@@ -1,6 +1,15 @@
 export const articles = [
   {
   title: "Dieci anni dopo il terremoto nel centro Italia",
+  dek: "Come procede la ricostruzione nelle Marche",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "31.08.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/08/31/terremoto-dieci-anni-dopo-nelle-marche-112-miliardi-per-ricostruire-ma-5-526-cantieri-sono-ancora-aperti/",
+  cover: ""
+  },
+  {
+  title: "Dieci anni dopo il terremoto nel centro Italia",
   dek: "Come procede la ricostruzione nel Lazio",
   role: "Data Journalist",
   year: 2026,
