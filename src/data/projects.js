@@ -53,4 +53,59 @@ tags: [],
 url: 'https://davidoffdado.github.io/mapping/',
 cover: ''
 }
+,
+{
+  title: 'Social network analysis',
+  dek: 'Studio delle proprietà strutturali di grafi e reti complesse',
+  role: '',
+  year: 2024,
+  tags: ['università'],
+  url: 'https://github.com/davidoffdado/statistical-analysis-of-network-data',
+  cover: ''
+},
+{
+  title: 'Classificazione mediante alberi decisionali',
+  dek: 'Classificazione dei ritardi ferroviari tramite alberi di classificazione',
+  role: '',
+  year: 2023,
+  tags: ['università'],
+  url: 'https://github.com/davidoffdado/classification.tree',
+  cover: ''
+},
+{
+  title: 'Latent Dirichlet Allocation',
+  dek: 'Classificazione di canzoni tramite topic modeling con LDA',
+  role: '',
+  year: 2023,
+  tags: ['università'],
+  url: 'https://github.com/davidoffdado/latent-dirichlet-allocation',
+  cover: ''
+},
+{
+  title: 'Analisi di dati longitudinali',
+  dek: 'Modelli statistici per dati raccolti su soggetti nel tempo',
+  role: '',
+  year: 2023,
+  tags: ['università'],
+  url: 'https://github.com/davidoffdado/longitudinal-data-analysis',
+  cover: ''
+},
+{
+  title: 'Algoritmi su grafi',
+  dek: 'Implementazione e analisi di algoritmi classici su strutture a grafo',
+  role: '',
+  year: 2023,
+  tags: ['università'],
+  url: 'https://github.com/davidoffdado/algorithms-graph',
+  cover: ''
+},
+{
+  title: 'Modello bayesiano gerarchico',
+  dek: 'Stima bayesiana con struttura gerarchica per dati raggruppati',
+  role: '',
+  year: 2023,
+  tags: ['università'],
+  url: 'https://github.com/davidoffdado/bayesian.hierarchical.model',
+  cover: ''
+}
 ];

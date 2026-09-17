@@ -18,7 +18,6 @@ function Projects() {
             <p className="meta">
               {proj.role && <>{proj.role} · </>}
               {proj.year}
-              {proj.tags?.length > 0 && <> · {proj.tags.join(" — ")}</>}
             </p>
           </a>
         ))}
