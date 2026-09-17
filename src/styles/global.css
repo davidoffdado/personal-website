@@ -1,658 +1,119 @@
-/* =========================================
-   FONT E RESET BASE
-========================================= */
-
-
-/* Import Google Sans font */
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
 
-/* Reset base e impostazioni generali */
-html,
-body,
-#root,
-.app {
+/* ===== RESET ===== */
+
+html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
   font-family: "Google Sans", sans-serif;
-  /*background-color: #f5f5f5;  */
-  background-color: white; 
-  /* background-color: white; */
+  background-color: white;
   color: black;
-  scroll-behavior: smooth; /* Scroll fluido per link ad anchor */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-
-/* =========================================
-   STRUTTURA GENERALE
-========================================= */
-
-/* Contenitore principale */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
+a {
+  color: black;
+  text-decoration: none;
 }
 
-/* Tutte le sezioni principali */
-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* ===== APP WRAPPER ===== */
+
+.app {
   min-height: 100vh;
-  padding: 2rem 1rem;
-  margin: 0;
+  background: white;
+  padding-top: 56px; /* offset for fixed navbar */
 }
 
-/* Il contenuto dentro la sezione è sopra allo sfondo animato */
-section > div {
-  position: relative;
-  z-index: 1;
-}
-
-/* =========================================
-   NAVBAR
-========================================= */
+/* ===== NAVBAR ===== */
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+  justify-content: center;
+  padding: 0 2.5rem;
+  background: white;
+  z-index: 100;
 }
 
-/* Link della navbar */
-.navbar a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-/* Effetto underline animato */
-.navbar a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 1px;
-  background-color: black;
-  transition: width 0.5s ease;
-}
-
-.navbar a:hover::after {
-  width: 100%;
-}
-
-/* Contenitore dei link a destra */
-.nav-right {
-  display: flex;
-  gap: 0rem;
-}
-
-/* =========================================
-   SEZIONI (statistico, sviluppatore, ecc.)
-========================================= */
-
-/* Titoli principali delle sezioni */
-section h2 {
-  margin-bottom: 1rem;
-  font-size: 4rem;
-}
-
-/* Paragrafi interni alle sezioni */
-section p {
-  font-size: 1.2rem;
-}
-
-/* Link all’interno delle sezioni */
-section a {
-  position: relative;
-  color: black;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-/* Linea sotto i link (visibile normalmente) */
-section a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 1px;
-  background-color: black;
-  transition: width 0.5s ease;
-}
-
-/* All’hover la linea “si ritira” */
-section a:hover::after {
-  width: 0;
-  color: black;
-}
-
-/* ===============================
-   INTRO-TOP (per “i miei lavori”)
-================================= */
-
-.intro-top {
-  position: absolute;      /* 👈 si riferisce al contenitore della sezione */
-  top: 2rem;               /* distanza dal bordo superiore della sezione */
-  left: 50%;               /* centrato orizzontalmente */
-  transform: translateX(-50%);
-  color: #f5f5f5;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
   text-transform: uppercase;
-  opacity: 0.9;
-  z-index: 10;             /* sopra lo sfondo animato */
-}
-
-
-/* =========================================
-   HERO SECTION (pagina principale)
-========================================= */
-#home {
-  min-height: 70vh; /* 👈 occuperà il 70% dell’altezza dello schermo */
-}
-
-.hero-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: 100%;
-  margin: 0;
-  position: relative;
-
-}
-
-
-
-.hero-name,
-.hero-subtitle,
-.hero-links {
-  width: 100%;
-}
-
-/* Nome grande */
-.hero-name {
-  font-size: clamp(12rem, 8vw, 15rem);
-  margin: 0;
-  text-align: left;
-  position: relative;
-  z-index: 1;
-}
-
-/* Sottotitolo */
-.hero-subtitle {
-  display: flex;
-  justify-content: flex-start;
-  text-align: center;
-  font-size: clamp(1rem, 3vw, 6rem);
-  color: #222;
-  margin: 1rem 0 2rem 0;
-  font-weight: 400;
-  z-index: 2;
-}
-
-/* Link Hero */
-.hero-links {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 1.2rem;
-}
-
-/* Link della navbar */
-.hero-links a {
-  position: relative;
-  text-decoration: none;
+  letter-spacing: 0.08em;
   color: black;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  opacity: 0.55;
+  transition: opacity 0.2s;
 }
 
-/* Effetto underline animato */
-.hero-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 1px;
-  background-color: black;
-  transition: width 0.5s ease;
+.nav-logo:hover,
+.nav-logo.active {
+  opacity: 1;
 }
 
-.hero-links a:hover::after {
-  width: 100%;
-}
+/* ===== PAGE CONTENT ===== */
 
-
-
-/* =========================================
-   OGGETTO ANIMATO NELLA HERO
-========================================= */
-
-@-webkit-keyframes squareToCircle {
-  0% {
-    border-radius: 50% 50% 50% 50%;
-    background: coral;
-    transform: rotate(0deg);
-  }
-  25% {
-    border-radius: 0% 50% 0% 50%;
-    background: darksalmon;
-    transform: rotate(45deg);
-  }
-  50% {
-    border-radius: 0;
-    background: indianred;
-    transform: rotate(90deg);
-  }
-  75% {
-    border-radius: 50% 0% 50% 0%;
-    background: lightcoral;
-    transform: rotate(135deg);
-  }
-  100% {
-    border-radius: 50%;
-    background: darksalmon;
-    transform: rotate(180deg);
-  }
-}
-
-.oggetto {
-  width: 50px;
-  height: 50px;
-  background-color: coral;
-  -webkit-animation: squareToCircle 2s 1s infinite alternate;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-/* =========================================
-   TRANSIZIONE DI ENTRATA (slideUp)
-========================================= */
-/*
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(100px) scaleY(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scaleY(1);
-  }
-}
-
-.page,
-.hero-name,
-.hero-subtitle,
-.hero-links {
-  animation: slideUp 1.5s cubic-bezier(0.5, 0, 0.175, 1) forwards;
-  transform-origin: bottom center;
-} */
-
-/* =========================================
-   LISTE ARTICOLI E PROGETTI
-========================================= */
-
-/* Contenitori */
-.articles-list,
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-/* Card articolo o progetto */
-.article-card,
-.project-card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.article-card:hover,
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* Titoli delle card */
-.article-card h3,
-.project-card h3 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-/* Testo delle card */
-.article-card .dek,
-.project-card .dek {
-  margin: 0.75rem 0;
-  color: #333;
-}
-
-/* Metadata */
-.article-card .meta,
-.project-card .meta {
-  font-size: 1rem;
-  color: #777;
-}
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 1rem;
-  color: #444;
-}
-
-/* =========================================
-   SEZIONE CONTATTI
-========================================= */
-
-.contact a {
-  position: relative;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-
-.circle-rotate {
-    position: absolute;
-    inset: 0;
-    border: 2px solid rgb(192, 182, 182);
-    border-radius: 50%;
-    opacity: .4;
-    z-index: 0;
-    filter: url(#chalk-noise);
-      transform: scaleX(1.1) scaleY(4) rotate(-2deg);
-} 
-
-
-.circle-text {
-    position: relative;
-    z-index: 1;
-    color: inherit;
-}
-
-
-
-/* =========================================
-   LINK
-========================================= */
-.btn-link {
-  margin-top: 0rem;
-}
-
-.btn-link:hover {
-  color: black;
-}
-
-a:hover {
-  color: black
-}
-
-/* =========================================
-   MEDIA QUERY (mobile)
-========================================= */
-
-@media (max-width: 600px) {
-  .hero-name {
-    font-size: clamp(5rem, 12vw, 7rem);
-    margin: 0;
-  }
-
-  .hero-subtitle {
-    font-size: clamp(2rem, 6vw, 3.5rem);
-  }
-
-  .hero-links {
-    font-size: 1rem;
-  }
-
-  .navbar {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
-  }
-
-  .oggetto {
-    width: 25px;
-    height: 25px;
-  }
-
-  section h2 {
-  margin-bottom: 1rem;
-  font-size: 3.5rem;
-  }
-
-  section p {
-    font-size: 1rem;
-  }
-}
-
-
-.section-content {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding-top: 0rem; /* 👈 Spinge il contenuto verso il basso */
-}
-
-
-/* =========================================
-   DISTANZA TRA SEZIONI INTERNE (h2 e p)
-========================================= */
-
-/* distanza tra blocchi di testo e il titolo successivo */
-.section-content h2 {
-  margin-top: 6rem;  /* spazio costante sopra ogni nuovo h2 */
-  margin-bottom: 2rem;
-  justify-self: start;
-}
-
-/* il primo titolo dentro la sezione (es. "Statistico") non deve avere spazio sopra */
-.section-content h2:first-of-type {
-  margin-top: 0;
-}
-
-/* distanza uniforme tra paragrafi */
-.section-content p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  justify-self: start;
-
-}
-
-
-
-
-/* Contenitore principale */
-#statistico {
-  --space: 12rem; /* distanza verticale totale tra blocchi */
-  position: relative;
-  gap: var(--space); /* spazio automatico tra i figli */
-}
-
-/* Blocchi di contenuto */
-#statistico .stat,
-#statistico .svil,
-#statistico .dj {
-  width: 100%;
-}
-
-  .section-content div {
-  position: relative;
-}
-
-.section-divider {
-  align-self: center;
-  width: 100%; /* ✅ serve per dare la larghezza finale */
-  height: 6px;
-  background-color: black;
-
-  /* ✅ posizione a metà tra i blocchi */
-  margin-block: calc(var(--space) / 2);
-
-  /* ✅ Animazione: parte da sinistra */
-  transform-origin: left center;
-  transform: scaleX(0); /* inizio invisibile */
-  animation: growLine linear both;
-  animation-timeline: view();
-  animation-range: entry 0% exit 100%;
-}
-
-
-/* ✅ Animazione: la riga cresce da sinistra verso destra */
-@keyframes growLine {
-  from {
-    transform: scaleX(0);   /* parte da sinistra */
-    opacity: 0;
-  }
-  to {
-    transform: scaleX(1);   /* si estende verso destra */
-    opacity: 1;
-  }
-}
-
-.container {
+.page-content {
   max-width: 1100px;
   margin: 0 auto;
-  width: 100%;
+  padding: 3rem 2.5rem 5rem;
 }
 
-/* =========================================
-   SCROLL-LINKED ANIMAZIONE su h2 e p
-========================================= */
+/* ===== SECTION LABELS ===== */
 
-
-
-@supports (animation-timeline: view()) {
-
-
-
-#statistico .thematic-block h2,
-#statistico .thematic-block p {
-  position: relative;
-  display: block;
-  width: fit-content;
-  text-align: center;
-  margin-left: 0;
-  transform-origin: left center;
-
-  /* effetto di scorrimento orizzontale */
-  animation: slideText linear both;
-  animation-timeline: view();
-
-  /* 🔹 testo come maschera del background */
-  background: 
-    linear-gradient(black 0 0) 
-      50% / 75vmin no-repeat scroll
-    black;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-
-  /* livello sopra l’immagine */
-  z-index: 1;
-} 
-
-
-  #statistico .thematic-block h2 {
-    font-size: clamp(1rem, 8vmin, 6rem);
-    font-weight: 900;
-    margin-bottom: 1.5rem;
-    animation-range: entry 0% exit 100%; /* parte un po’ dopo l’h2 */
-
-  }
-
-  #statistico .thematic-block p {
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.6;
-    animation-range: entry 50% exit 100%; /* parte un po’ dopo l’h2 */
-  }
-
-  
-
-
-  /* keyframes principali */
-  @keyframes slideText {
-    from {
-      transform: translateX(20vw);
-    }
-    to {
-      transform: translateX(50vw);
-    }
-  }
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+  margin: 0 0 1.5rem;
 }
 
+/* ===== DATA JOURNALISM PAGE ===== */
 
-@media (max-width: 600px) {
-    @keyframes slideText {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(20vw);
-    }
-  }
+.dj-section {
+  margin-bottom: 4rem;
 }
 
-/* =========================================
-   IN EVIDENZA
-========================================= */
+/* ===== EMBED CARDS ===== */
 
+.featured-main {
+  margin-bottom: 1rem;
+}
 
-.featured-grid {
+.featured-row {
   display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr;
 }
 
-/* Desktop: 2 colonne */
-@media (min-width: 900px) {
-  .featured-grid {
-    grid-template-columns: 2fr 1fr;
-    align-items: start;
+@media (min-width: 700px) {
+  .featured-row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.featured-side {
-  display: grid;
-  gap: 1rem;
+@media (min-width: 1000px) {
+  .featured-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .embed-card {
-  border: 0px solid rgba(255,255,255,0.12);
-  border-radius: 16px;
-  padding: 1rem;
-  backdrop-filter: blur(10px);
-  overflow: hidden; /* evita scroll orizzontale su mobile */
+  background: #f4f4f1;
+  border: 1px solid black;
+  padding: 1.25rem;
+  overflow: hidden;
 }
 
 .embed-card-header {
@@ -664,20 +125,27 @@ a:hover {
 }
 
 .embed-card-title {
-  font-size: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   margin: 0;
 }
 
 .embed-card-subtitle {
   margin: 0.25rem 0 0;
-  opacity: 0.85;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  color: #666;
 }
 
 .embed-card-link {
   white-space: nowrap;
-  text-decoration: none;
-  opacity: 0.9;
+  font-size: 0.875rem;
+  color: #999;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.embed-card-link:hover {
+  color: black;
 }
 
 .embed-frame {
@@ -685,7 +153,6 @@ a:hover {
   overflow: hidden;
 }
 
-/* Spazio minimo per evitare "saltelli" durante il load */
 .embed-card.is-large .embed-frame {
   min-height: 360px;
 }
@@ -694,152 +161,193 @@ a:hover {
   min-height: 220px;
 }
 
-/* Gli iframe dentro gli embed devono essere responsive */
 .embed-root iframe {
   width: 100% !important;
   max-width: 100% !important;
 }
 
-.featured-main {
-  margin-bottom: 1rem;
-}
+/* ===== ARTICLES / PROJECTS LIST ===== */
 
-/* mobile: 1 colonna */
-.featured-row {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-}
-
-/* tablet: 2 colonne */
-@media (min-width: 700px) {
-  .featured-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* desktop: 3 colonne */
-@media (min-width: 1000px) {
-  .featured-row {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ===== LAYOUT BASE ===== */
-
-.app {
-  min-height: 100vh;
-  background: white;
-}
-
-/* sidebar fissa a sinistra */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20%;
-  height: 100vh;
-  padding: 2.5rem 2rem;
-  display: flex;
- /* align-items: center;*/
-  justify-content: flex-start;
-  background: white;
-  z-index: 100;
-}
-
-.sidebar-inner {
+.articles-list,
+.projects-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
-/* link sidebar */
-.sidebar-link {
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
-  font-weight: 500;
-  opacity: 0.45;
-  transition: opacity 0.25s ease;
-}
-
-.sidebar-link:hover,
-.sidebar-link.active {
-  opacity: 1;
-}
-
-/* contenuto a destra */
-.main-content {
-  margin-left: 15%;
-  width: 80%;
-  min-height: 100vh;
+.article-card,
+.project-card {
   display: block;
+  background: #f4f4f1;
+  border: 1px solid black;
+  padding: 1.25rem 1.5rem;
+  transition: background 0.15s;
 }
 
-/* stile base home */
-.home-link {
-  font-size: 2rem;
-  color: black;
+.article-card:hover,
+.project-card:hover {
+  background: #eaeae6;
 }
 
-@media (max-width: 768px) {
-
-  /* stile base home */
-.home-link {
-  font-size: 1rem;
-  color: black;
+.article-card h3,
+.project-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
-  /* sidebar diventa navbar sopra */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-
-    flex-direction: row;
-    justify-content: center;
-
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .sidebar-inner {
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-
-  /* contenuto torna full width */
-  .main-content {
-    margin-left: 0;
-    width: 100%;
-    margin-top: 60px; /* spazio per navbar */
-  }
+.article-card .dek,
+.project-card .dek {
+  margin: 0 0 0.35rem;
+  font-size: 0.875rem;
+  color: #444;
+  line-height: 1.5;
 }
 
-.about-page {
-  background: white;
-  color: black;
+.article-card .meta,
+.project-card .meta {
+  font-size: 0.8rem;
+  color: #999;
 }
 
-.about-intro-panel {
-  min-height: auto;
-  align-items: flex-start;
-  justify-items: start;
-  padding: 4rem 1rem 4rem;
-}
+/* ===== ABOUT ===== */
 
 .about-text {
-  max-width: 900px;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin: 0 0 2rem 0;
+  max-width: 680px;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin: 0 0 2.5rem;
+  color: #111;
 }
 
-@media (max-width: 600px) {
+.about-text a {
+  border-bottom: 1px solid #ccc;
+  transition: border-color 0.2s;
+}
+
+.about-text a:hover {
+  border-color: black;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hero-links a {
+  font-size: 0.95rem;
+  color: #999;
+  transition: color 0.2s;
+}
+
+.hero-links a:hover {
+  color: black;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem 2rem;
+  font-size: 0.85rem;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+  opacity: 0.5;
+}
+
+.footer-copy {
+  color: black;
+  opacity: 0.4;
+  font-size: 0.8rem;
+}
+
+/* ===== HOME GRID ===== */
+
+.home-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.home-card {
+  background: #f4f4f1;
+  border: 1px solid black;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: max(220px, calc((100vh - 58px) / 3));
+  color: black;
+  transition: background 0.15s;
+}
+
+.home-card:hover {
+  background: #eaeae6;
+}
+
+.home-card-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.home-card-desc {
+  font-size: 0.875rem;
+  color: #999;
+  margin: 0;
+}
+
+.home-card--full {
+  grid-column: 1 / -1;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 2rem 1rem 0;
+  }
+
+  .page-content {
+    padding: 2rem 1.25rem 4rem;
+  }
+
   .about-text {
     font-size: 1rem;
+  }
+
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card {
+    min-height: 130px;
+    padding: 1.75rem 1.25rem;
   }
 }
