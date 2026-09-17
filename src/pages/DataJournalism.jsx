@@ -21,7 +21,7 @@ export default function DataJournalism() {
       </div>
 
       <div className="dj-section">
-        <p className="section-label">articoli</p>
+        <p className="section-label">tutti gli articoli</p>
         <div className="articles-list">
           {articles.map((article, index) => (
             <a
