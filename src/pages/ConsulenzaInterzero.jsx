@@ -56,8 +56,8 @@ export default function ConsulenzaInterzero() {
         <p className="case-description">
           Per Interzero, gruppo europeo specializzato in economia circolare, ho raccolto ed elaborato
           dati Eurostat sulla produzione di rifiuti aziendali nei paesi dell'Unione Europea nel periodo
-          2004–2022. L'analisi — condotta in R su microdati disaggregati per paese, settore economico
-          e tipologia di rifiuto — è stata sintetizzata in un report e in un comunicato stampa poi
+          2004-2022. L'analisi - condotta in R su microdati disaggregati per paese, settore economico
+          e tipologia di rifiuto - è stata sintetizzata in un report e in un comunicato stampa poi
           distribuito agli organi di informazione.
         </p>
 
