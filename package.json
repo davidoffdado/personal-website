@@ -8,6 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "vite build",
     "deploy": "echo www.davidruffini.com > dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
