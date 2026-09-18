@@ -310,6 +310,14 @@ a {
   margin: 0;
 }
 
+.case-note {
+  max-width: 720px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
 .case-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
