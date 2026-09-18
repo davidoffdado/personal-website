@@ -69,6 +69,12 @@ export default function ConsulenzaCoopservice() {
           ))}
         </div>
 
+        {/* Note */}
+        <p className="case-note">
+          I grafici qui sopra sono una selezione: il lavoro è confluito in un report completo,
+          con analisi a livello regionale e provinciale, consegnato al cliente.
+        </p>
+
       </div>
     </div>
   );
