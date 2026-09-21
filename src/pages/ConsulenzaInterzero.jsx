@@ -46,7 +46,7 @@ export default function ConsulenzaInterzero() {
         <div className="case-header">
           <h1 className="case-title">Rifiuti aziendali in Europa: un'analisi su vent'anni di dati</h1>
           <div className="case-meta">
-            <span>Cliente: <strong>Interzero</strong></span>
+            <span>Cliente: <strong>Interzero</strong> (tramite SEC Newgate)</span>
             <span>Anno: <strong>2025</strong></span>
             <span>Tipo: <strong>raccolta dati, analisi statistica, report</strong></span>
           </div>
@@ -54,8 +54,8 @@ export default function ConsulenzaInterzero() {
 
         {/* Description */}
         <p className="case-description">
-          Per Interzero, gruppo europeo specializzato in economia circolare, ho raccolto ed elaborato
-          dati Eurostat sulla produzione di rifiuti aziendali nei paesi dell'Unione Europea nel periodo
+          Per Interzero, gruppo europeo specializzato in economia circolare, su incarico dell'agenzia
+          SEC Newgate, ho raccolto ed elaborato dati Eurostat sulla produzione di rifiuti aziendali nei paesi dell'Unione Europea nel periodo
           2004-2022. L'analisi - condotta in R su microdati disaggregati per paese, settore economico
           e tipologia di rifiuto - è stata sintetizzata in un report e in un comunicato stampa poi
           distribuito agli organi di informazione.

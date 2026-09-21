@@ -282,6 +282,55 @@ a {
   margin-top: 2.5rem;
 }
 
+/* ===== COLLABORAZIONI (about) ===== */
+
+.collab {
+  margin-top: 4.5rem;
+}
+
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.collab-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  padding: 1rem 1.25rem;
+  background: white;
+  border: 1.5px solid black;
+  box-shadow: 4px 4px 0 black;
+  transition: transform 0.14s ease-out, box-shadow 0.14s ease-out, background 0.14s ease-out;
+}
+
+.collab-card:hover,
+.collab-card:focus-visible {
+  background: #02f585;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 black;
+}
+
+.collab-card:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 black;
+}
+
+/* multiply: il bianco interno ai loghi prende il verde dell'hover, il nero resta nero */
+.collab-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+/* logo originale chiaro (per sfondi scuri): lo porto a nero come gli altri */
+.collab-logo--mono {
+  filter: brightness(0);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -555,6 +604,14 @@ a {
   grid-column: 1 / -1;
 }
 
+/* ===== TABLET ===== */
+
+@media (max-width: 960px) {
+  .collab-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* ===== MOBILE ===== */
 
 @media (max-width: 768px) {
@@ -577,6 +634,23 @@ a {
   .about-layout--photo {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .collab {
+    margin-top: 3.5rem;
+  }
+
+  .collab-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .collab-card {
+    height: 96px;
+  }
+
+  .collab-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
   .about-photo {
