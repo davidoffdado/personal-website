@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 // percorso della foto nella cartella public/, es. "/foto.jpg"; con null la colonna non appare
 const PHOTO = null;
 
+// larghezza (px) di ogni logo, calibrata a mano perché i file hanno margini interni diversi
+const COLLABS = [
+  { name: "Il Sole 24 Ore", href: "https://www.ilsole24ore.com", logo: "/logos/sole24ore.svg", width: 130 },
+  { name: "Wired Italia", href: "https://www.wired.it", logo: "/logos/wired.svg", width: 150 },
+  { name: "Senza Filtro", href: "https://www.informazionesenzafiltro.it", logo: "/logos/senzafiltro.svg", width: 150 },
+  { name: "Aliseo Editoriale", href: "https://aliseoeditoriale.it", logo: "/logos/aliseo.png", width: 130, mono: true },
+  { name: "SEC Newgate", href: "https://www.secnewgate.it", logo: "/logos/secnewgate.svg", width: 150 },
+];
+
 function About() {
   return (
     <div className="page-content">
@@ -74,6 +83,29 @@ function About() {
           </figure>
         )}
       </div>
+
+      <section className="collab">
+        <p className="section-label">collaborazioni</p>
+        <div className="collab-grid">
+          {COLLABS.map((c) => (
+            <a
+              key={c.name}
+              className="collab-card"
+              href={c.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={c.name}
+            >
+              <img
+                className={c.mono ? "collab-logo collab-logo--mono" : "collab-logo"}
+                src={c.logo}
+                alt={c.name}
+                style={{ width: c.width }}
+              />
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

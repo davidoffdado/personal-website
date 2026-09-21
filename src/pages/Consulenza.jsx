@@ -13,7 +13,7 @@ const projects = [
     to: "/consulenza/interzero",
     client: "Interzero",
     title: "Rifiuti aziendali in Europa: un'analisi su vent'anni di dati",
-    dek: "Raccolta ed elaborazione di dati Eurostat sulla produzione di rifiuti aziendali nei paesi UE nel periodo 2004–2022, sintetizzati in report e comunicato stampa.",
+    dek: "Raccolta ed elaborazione di dati Eurostat sulla produzione di rifiuti aziendali nei paesi UE nel periodo 2004–2022, sintetizzati in report e comunicato stampa, realizzati per Interzero tramite l'agenzia SEC Newgate.",
     year: "2025",
     type: "raccolta dati, analisi statistica, report",
   },
