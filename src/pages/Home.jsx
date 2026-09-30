@@ -21,16 +21,6 @@ const sections = [
     title: "progetti",
     desc: "analisi, scraping e sviluppo web",
   },
-  {
-    to: "/about",
-    title: "about",
-    desc: "chi sono",
-  },
-  {
-    to: "/contatti",
-    title: "contatti",
-    desc: "lavoriamo insieme",
-  },
 ];
 
 export default function Home() {
