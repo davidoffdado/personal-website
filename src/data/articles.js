@@ -1,5 +1,14 @@
 export const articles = [
   {
+  title: "Il complicato rapporto tra Casa Bianca e giornalisti ha radici lontane",
+  dek: "Uno sguardo ai loro alterchi negli ultimi 60 anni",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "29.09.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/09/29/il-complicato-rapporto-tra-casa-bianca-e-giornalisti-ha-radici-lontane/?cmpid=.com",
+  cover: ""
+  },
+  {
   title: "Dieci anni dopo il terremoto nel centro Italia",
   dek: "Come procede la ricostruzione nelle Marche",
   role: "Data Journalist",
