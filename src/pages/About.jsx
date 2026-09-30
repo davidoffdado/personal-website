@@ -55,6 +55,7 @@ function About() {
             >
               curriculum
             </a>
+            {/*
             <a
               className="btn"
               href="https://github.com/davidoffdado"
@@ -62,7 +63,7 @@ function About() {
               rel="noopener noreferrer"
             >
               github
-            </a>
+            </a> 
             <a
               className="btn"
               href="https://linktr.ee/davidruffini"
@@ -70,7 +71,7 @@ function About() {
               rel="noopener noreferrer"
             >
               social
-            </a>
+            </a> */}
             <Link className="btn" to="/contatti">
               contatti
             </Link>
