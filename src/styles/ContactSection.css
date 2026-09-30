@@ -23,14 +23,18 @@
 .contact-card .home-card-title {
   font-size: 1.5rem;
   margin: 0;
+}
+
+.contact-card .home-card-title span {
   text-decoration: underline;
   text-decoration-color: rgba(0, 0, 0, 0.3);
   text-underline-offset: 4px;
-  transition: text-decoration-color 0.15s;
+  transition: text-decoration-color 0.15s, background 0.15s;
 }
 
-.contact-card:hover .home-card-title {
-  text-decoration-color: black;
+.contact-card:hover .home-card-title span {
+  text-decoration-color: transparent;
+  background: var(--highlight);
 }
 
 .contact-card .home-card-desc {
@@ -42,7 +46,7 @@
 
 .contact-card-cta {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* ===== COLLABORIAMO ===== */
@@ -71,7 +75,7 @@
 
 .contact-email {
   font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 /* ellisse a gesso dello stile precedente: nascosta */

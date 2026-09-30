@@ -9,7 +9,7 @@ export default function Consulenza() {
       <div className="projects-list">
         {consulenza.map((p, i) => (
           <Link key={i} to={p.to} className="project-card">
-            <h3>{p.title}</h3>
+            <h3><span>{p.title}</span></h3>
             <p className="dek">{p.dek}</p>
             <p className="meta">{p.client} · {p.year} · {p.type}</p>
           </Link>

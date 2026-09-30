@@ -13,7 +13,7 @@ function Projects() {
             rel="noopener noreferrer"
             className="project-card"
           >
-            <h3>{proj.title}</h3>
+            <h3><span>{proj.title}</span></h3>
             {proj.dek && <p className="dek">{proj.dek}</p>}
             <p className="meta">
               {proj.role && <>{proj.role} · </>}

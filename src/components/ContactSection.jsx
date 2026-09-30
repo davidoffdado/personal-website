@@ -31,7 +31,7 @@ function ContactSection() {
             className="home-card contact-card"
             href={`mailto:${EMAIL}?subject=${encodeURIComponent(t.subject)}`}
           >
-            <h3 className="home-card-title">{t.title}</h3>
+            <h3 className="home-card-title"><span>{t.title}</span></h3>
             <p className="home-card-desc">{t.desc}</p>
             <span className="contact-card-cta">scrivimi →</span>
           </a>

@@ -31,7 +31,7 @@ export default function DataJournalism() {
               rel="noopener noreferrer"
               className="article-card"
             >
-              <h3>{article.title}</h3>
+              <h3><span>{article.title}</span></h3>
               {article.dek && <p className="dek">{article.dek}</p>}
               <p className="meta">{article.tags.join(", ")}</p>
             </a>

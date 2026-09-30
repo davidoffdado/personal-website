@@ -19,7 +19,7 @@ export default function ConsulenzaCoopservice() {
   return (
     <div className="page-content">
       <p className="section-label">
-        <Link to="/consulenza">← consulenza</Link>
+        <Link to="/consulenza">consulenza</Link>
       </p>
 
       <div className="case-study">
