@@ -1,157 +1,97 @@
 .contact {
-  background: white;
-  color: black;
-  max-width: 1200px;
+  width: calc(100% - 50px);
+  max-width: var(--wrap);
   margin: 0 auto;
-  padding: 4rem 2.5rem 5rem;
+  padding: 3rem 0 5rem;
 }
 
-.contact-content {
+/* ===== TEMI ===== */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.contact-card {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.contact-left {
-  flex: 1;
-}
-
-.contact-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1.25rem 1.5rem 0 0;
-}
-
-.contact-title {
-  font-family: 'Bowlby One', sans-serif;
-  font-size: clamp(1.75rem, 4vw, 3.5rem);
-  font-weight: 400;
-  line-height: 1.1;
-  margin: 0 0 1.5rem 0;
-}
-
-.contact-left p {
-  font-size: 1rem;
-  color: black;
-  margin: 0;
-  max-width: 420px;
-  line-height: 1.6;
-}
-
-.contact-email {
-  display: inline-block;
-  font-size: 1.4rem;
-  color: black;
+  flex-direction: column;
+  gap: 0.5rem;
   text-decoration: none;
-  position: relative;
-  font-weight: 400;
 }
 
-.circle-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.circle-rotate {
-  position: absolute;
-  inset: 0;
-  border: 2px solid rgb(192, 182, 182);
-  border-radius: 50%;
-  opacity: 0.4;
-  z-index: 0;
-  filter: url(#chalk-noise);
-  transform: scaleX(1.1) scaleY(4) rotate(-2deg);
-}
-
-.circle-text {
-  position: relative;
-  z-index: 1;
-  color: inherit;
+.contact-card .home-card-title {
+  font-size: 1.5rem;
+  margin: 0;
   text-decoration: underline;
-  text-decoration-color: #02f585;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-  background: linear-gradient(#02f585, #02f585) no-repeat 0 50% / 0% 100%;
-  transition: background-size 0.25s ease-out;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.15s;
 }
 
-/* evidenziatore verde che scorre da sinistra su tutta l'altezza del testo */
-.contact-email:hover .circle-text,
-.contact-email:focus-visible .circle-text {
-  background-size: 100% 100%;
+.contact-card:hover .home-card-title {
+  text-decoration-color: black;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .circle-text {
-    transition: none;
-  }
+.contact-card .home-card-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
 }
 
-/* ===== CARD TEMI ===== */
-
-.contact .contact-cards-label {
-  margin: 0 0 1.5rem;
+.contact-card-cta {
+  font-size: 0.9rem;
+  font-weight: 700;
 }
+
+/* ===== COLLABORIAMO ===== */
 
 .contact-cards + .contact-content {
   margin-top: 5rem;
 }
 
-.contact-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+.contact-content {
+  border-top: 1px dotted var(--rule);
+  padding-top: 2.5rem;
 }
 
-.home-card.contact-card {
-  min-height: 0;
-  padding: 2rem 1.75rem;
-  gap: 1rem;
-  justify-content: flex-start;
+.contact-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin: 0 0 1rem;
 }
 
-.contact-card .home-card-title {
-  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+.contact-left p {
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem;
+  max-width: 560px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
-.contact-card .home-card-desc {
-  color: #333;
-  line-height: 1.5;
+.contact-email {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 800;
 }
 
-.contact-card-cta {
-  margin-top: auto;
-  padding-top: 0.75rem;
-  font-size: 0.875rem;
+/* ellisse a gesso dello stile precedente: nascosta */
+.circle-rotate {
+  display: none;
 }
 
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 900px) {
   .contact {
-    padding: 3rem 1.25rem 4rem;
-  }
-
-  .contact-content {
-    flex-direction: column;
-  }
-
-  .contact-right {
-    justify-content: flex-start;
-    padding: 2rem 0 0 1rem;
-  }
-
-  .contact-email {
-    font-size: 1.2rem;
+    padding: 2rem 0 4rem;
   }
 
   .contact-cards {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .contact-cards + .contact-content {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
   }
 }
