@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# copia generata da npm run sync:litigi (la fonte è discorsi_camera/applausi)
+public/progetti/litigi-alleati/
