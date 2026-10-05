@@ -1,5 +1,14 @@
 export const articles = [
   {
+  title: "Quanti anni ha chi ci governa?",
+  dek: "Com'è cambiata la demografia dei leader europei",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "05.10.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/10/05/leuropa-dei-leader-invecchia-leta-mediana-sale-a-57-anni-il-dato-piu-alto-dal-1988/",
+  cover: ""
+  },
+  {
   title: "Il complicato rapporto tra Casa Bianca e giornalisti ha radici lontane",
   dek: "Uno sguardo ai loro alterchi negli ultimi 60 anni",
   role: "Data Journalist",
