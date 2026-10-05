@@ -1,14 +1,5 @@
 export const projects = [
 {
-title: 'I litigi tra gli alleati di governo',
-dek: 'Settantacinque anni di resoconti della Camera: quando la maggioranza si contesta da sola',
-role: '',
-year: 2026,
-tags: [],
-url: '/progetti/litigi-alleati/',
-cover: ''
-},
-{
 title: 'Le elezioni nelle Marche',
 dek: 'I dati sull\'affluenza e i voti di ciascun comune, durante le regionali del 2025',
 role: '',

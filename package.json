@@ -4,13 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "sync:litigi": "node scripts/sync-litigi.mjs",
-    "predev": "npm run sync:litigi",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run sync:litigi && vite build",
+    "predeploy": "vite build",
     "deploy": "echo www.davidruffini.com > dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
