@@ -19,9 +19,9 @@ function About() {
 
       <div className={`about-layout${PHOTO ? " about-layout--photo" : ""}`}>
         <div className="about-body">
-          <p className="about-text about-lede">
-            Ciao, sono David!
-          </p>
+          {/*<p className="about-text about-lede">
+            Sono David.
+          </p> */}
           <p className="about-text">
             Lavoro come data analyst in una società di consulenza e come data journalist,
             collaborando principalmente con Il Sole 24 Ore. Tra i miei lavori c'è uno scraper
@@ -39,12 +39,13 @@ function About() {
             In passato, sono stato un assegnista di ricerca e ho collaborato con Wired Italia,
             Aliseo Editoriale e SEC Newgate.
           </p>
+          {/*
           <p className="about-text">
             Ho una laurea magistrale in Statistica e Data Science conseguita presso l'Università
             degli Studi di Firenze, con una tesi sulla teoria dei valori estremi applicata
             all'epidemiologia, e una laurea triennale in Economia bancaria, finanziaria e
             assicurativa, conclusa con una tesi sulla probabilità e sui mercati finanziari.
-          </p>
+          </p> */}
 
           <div className="about-buttons">
             <a

@@ -73,20 +73,10 @@ a:focus-visible {
 
 .app {
   min-height: 100vh;
+  min-height: 100svh; /* su mobile: altezza visibile, con la barra del browser */
+  display: flex;
+  flex-direction: column;
   background: white;
-}
-
-/* ===== NAVBAR ===== */
-
-.navbar {
-  width: calc(100% - 50px);
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 1.5rem 0 0;
-}
-
-.nav-home {
-  font-size: 0.95rem;
 }
 
 /* ===== PAGE CONTENT ===== */
@@ -385,7 +375,7 @@ a:focus-visible {
 .footer {
   width: calc(100% - 50px);
   max-width: var(--wrap);
-  margin: 0 auto;
+  margin: auto auto 0; /* spinge il footer in fondo alla finestra */
   padding: 1.5rem 0 2rem;
   font-size: 0.85rem;
   font-weight: 500;

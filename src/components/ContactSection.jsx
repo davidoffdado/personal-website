@@ -4,19 +4,19 @@ const EMAIL = "davidruffini98@gmail.com";
 
 const TOPICS = [
   {
-    title: "Statistica e ricerca",
-    desc: "Analisi dei dati e modelli statistici per progetti di ricerca, lezioni o corsi di statistica.",
-    subject: "Collaborazione - statistica e ricerca",
+    title: "statistica e ricerca",
+    desc: "analisi dei dati per progetti di ricerca e didattica.",
+    subject: "Collaborazione: statistica e ricerca",
   },
   {
-    title: "Data journalism",
-    desc: "Articoli, inchieste e visualizzazioni basati sui dati per testate e giornalisti, interventi come relatore a eventi e conferenze.",
-    subject: "Collaborazione - data journalism",
+    title: "data journalism",
+    desc: "articoli, inchieste e visualizzazioni basati sui dati e partecipazione a eventi sul tema.",
+    subject: "Collaborazione: data journalism",
   },
   {
-    title: "Consulenza",
-    desc: "Analisi statistiche e report su misura per aziende e agenzie di comunicazione, formazione sull'analisi dei dati.",
-    subject: "Collaborazione - consulenza",
+    title: "consulenza",
+    desc: "analisi statistiche e formazione per aziende.",
+    subject: "Collaborazione: consulenza",
   },
 ];
 
@@ -41,9 +41,9 @@ function ContactSection() {
       <div className="contact-content">
         {/* Colonna sinistra */}
         <div className="contact-left">
-          <h2 className="contact-title">Collaboriamo?</h2>
+          <h2 className="contact-title">collaboriamo?</h2>
           <p>
-            Contattami se pensi a una possibile collaborazione o se vuoi semplicemente chiedermi qualcosa.
+            contattami se pensi a una possibile collaborazione o se vuoi semplicemente chiedermi qualcosa.
           </p>
         </div>
 
