@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- il sito usa HashRouter: le pagine interne (/#/about, /#/contatti…) per Google sono la stessa pagina, quindi qui c'è solo la home -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.davidruffini.com/</loc>
+  </url>
+</urlset>
