@@ -4,8 +4,9 @@ function Footer() {
   // in home niente link a home (si è già lì) né indirizzo mail (c'è già nella bio)
   const isHome = useLocation().pathname === "/";
 
+  // data-nosnippet: Google non usa il footer come descrizione del sito nei risultati di ricerca
   return (
-    <footer className="footer">
+    <footer className="footer" data-nosnippet>
       <div className="footer-links">
         {!isHome && <a href="mailto:davidruffini98@gmail.com">davidruffini98@gmail.com</a>}
         {!isHome && <Link to="/">home</Link>}
