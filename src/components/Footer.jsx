@@ -11,9 +11,7 @@ function Footer() {
         {!isHome && <a href="mailto:davidruffini98@gmail.com">davidruffini98@gmail.com</a>}
         {!isHome && <Link to="/">home</Link>}
         <Link to="/about">about</Link>
-        <Link to="/contatti">contatti</Link>
-        <span className="footer-copy">© 2026 David Ruffini</span>
-      </div>
+        <Link to="/contatti">contatti</Link>      </div>
     </footer>
   );
 }

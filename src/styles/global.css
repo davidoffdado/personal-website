@@ -22,10 +22,14 @@ html, body, #root {
   font-family: var(--font);
   background-color: white;
   color: var(--fg);
-  font-size: var(--text);
   line-height: 1.4;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+}
+
+/* la dimensione va su body e non su html, altrimenti i rem si moltiplicano (1.2 x 1.2) */
+body {
+  font-size: var(--text);
 }
 
 *, *::before, *::after {
@@ -392,11 +396,6 @@ a:focus-visible {
   gap: 1.5rem;
   flex-wrap: wrap;
   align-items: center;
-}
-
-.footer-copy {
-  opacity: 0.5;
-  margin-left: auto;
 }
 
 /* ===== CASE STUDY (consulenza) ===== */
