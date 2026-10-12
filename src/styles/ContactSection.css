@@ -21,7 +21,7 @@
 }
 
 .contact-card .home-card-title {
-  font-size: 1.5rem;
+  font-size: var(--text);
   margin: 0;
 }
 
@@ -39,14 +39,14 @@
 
 .contact-card .home-card-desc {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: var(--text);
+  line-height: 1.4;
   color: var(--muted);
 }
 
 .contact-card-cta {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: var(--text);
+  font-weight: 400;
 }
 
 /* ===== COLLABORIAMO ===== */
@@ -74,16 +74,16 @@
 }
 
 .contact-left p {
-  font-size: 1.1rem;
+  font-size: var(--text);
   margin: 0;
   max-width: 560px;
-  line-height: 1.6;
+  line-height: 1.4;
   color: var(--muted);
 }
 
 .contact-email {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 500;
+  font-size: var(--text);
+  font-weight: 400;
 }
 
 /* ellisse a gesso dello stile precedente: nascosta */

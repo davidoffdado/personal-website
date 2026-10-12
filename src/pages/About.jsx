@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 // percorso della foto nella cartella public/, es. "/foto.jpg"; con null la colonna non appare
-const PHOTO = null;
+const PHOTO = "/david.jpg";
 
 // larghezza (px) di ogni logo, calibrata a mano perché i file hanno margini interni diversi
 const COLLABS = [
