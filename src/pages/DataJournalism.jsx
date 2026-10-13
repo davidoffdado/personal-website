@@ -8,8 +8,19 @@ export default function DataJournalism() {
 
   return (
     <div className="page-content">
+      <p className="section-label">data journalism</p>
+      <p className="about-text page-intro">
+        Come data journalist ho collaborato con Il Sole 24 Ore, Wired Italia, Senza Filtro e Aliseo
+        Editoriale, scrivendo articoli che mettono i dati al centro dell'informazione.
+      </p>
+      <p className="about-text page-intro">
+        Posso realizzare articoli basati sui dati, supportare le redazioni nell'analisi o creare
+        visualizzazioni interattive e progetti di visual journalism, come quelli che pubblico
+        su <a href="https://alea.news" target="_blank" rel="noopener noreferrer">àlea</a>.
+      </p>
+
       <div className="dj-section">
-        <p className="section-label">selected works</p>
+        <p className="section-label">in evidenza</p>
         <div className="featured-main">
           <EmbedCard work={main} />
         </div>

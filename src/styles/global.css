@@ -75,12 +75,10 @@ a:focus-visible {
 .article-card:hover,
 .project-card:hover,
 .press-card:hover,
-.contact-card:hover,
 .collab-card:hover,
 .article-card:focus-visible,
 .project-card:focus-visible,
 .press-card:focus-visible,
-.contact-card:focus-visible,
 .collab-card:focus-visible {
   background: none;
 }
@@ -157,6 +155,16 @@ a:focus-visible {
 
 .dj-section {
   margin-bottom: 4rem;
+}
+
+/* introduzione in cima alle pagine (data journalism, consulenza), prima dei lavori */
+.page-intro {
+  max-width: 760px;
+}
+
+/* più spazio solo tra l'ultimo paragrafo dell'introduzione e i lavori */
+.page-intro + :not(.page-intro) {
+  margin-top: 3rem;
 }
 
 /* ===== EMBED ===== */

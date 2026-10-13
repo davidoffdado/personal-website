@@ -1,58 +1,103 @@
+/* la sezione riempie la finestra fino al footer: "collaboriamo?" sta in fondo e non si sposta
+   quando si aprono o chiudono le tendine (si sposta solo se il contenuto non ci sta) */
 .contact {
   width: calc(100% - 50px);
   max-width: var(--wrap);
   margin: 0 auto;
   padding: 3rem 0 5rem;
-}
-
-/* ===== TEMI ===== */
-
-.contact-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-}
-
-.contact-card {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  text-decoration: none;
 }
 
-.contact-card .home-card-title {
+/* ===== TEMI: elenco a tendina (details/summary) ===== */
+
+/* tre colonne affiancate: aprendone una, le altre restano chiuse e non si allungano */
+.contact-topics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 2.5rem;
+  align-items: start;
+  margin-bottom: 5rem; /* distanza minima da "collaboriamo?" */
+}
+
+.contact-topic {
+  position: relative;
+  border-top: 1px dotted var(--rule);
+  border-bottom: 1px dotted var(--rule);
+}
+
+/* desktop: la tendina aperta si appoggia sopra la sua copia invisibile, che riserva lo spazio */
+.contact-topic .contact-topic-body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.contact-topic-ghost {
+  visibility: hidden;
+}
+
+.contact-topic summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.9rem 0;
+  cursor: pointer;
+  list-style: none;
   font-size: var(--text);
-  margin: 0;
 }
 
-.contact-card .home-card-title span {
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 0, 0, 0.3);
-  text-underline-offset: 4px;
-  transition: text-decoration-color 0.15s, background 0.15s;
+.contact-topic summary::-webkit-details-marker {
+  display: none;
 }
 
-.contact-card:hover .home-card-title span {
-  text-decoration-color: transparent;
+/* il + ruota e diventa una x quando la sezione è aperta */
+.contact-plus {
+  display: inline-block;
+  width: 1ch;
+  transition: transform 0.15s ease-out;
+}
+
+.contact-topic[open] .contact-plus {
+  transform: rotate(45deg);
+}
+
+.contact-topic-title {
+  transition: background 0.15s;
+}
+
+.contact-topic summary:hover .contact-topic-title,
+.contact-topic summary:focus-visible .contact-topic-title {
   background: var(--highlight);
 }
 
-.contact-card .home-card-desc {
+.contact-topic-body {
+  padding: 0.9rem 0 0 calc(1ch + 0.75rem);
+}
+
+.contact-topic-body p {
   margin: 0;
   font-size: var(--text);
   line-height: 1.4;
+}
+
+.contact-topic-desc {
   color: var(--muted);
 }
 
-.contact-card-cta {
-  font-size: var(--text);
-  font-weight: 400;
+.contact-topic-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  margin-top: 0.6rem !important;
 }
 
 /* ===== COLLABORIAMO ===== */
 
-.contact-cards + .contact-content {
-  margin-top: 5rem;
+.contact-topics + .contact-content {
+  margin-top: auto;
 }
 
 .contact-content {
@@ -98,14 +143,26 @@
     padding: 2rem 0 4rem;
   }
 
-  .contact-cards {
+  /* su schermi stretti, una sotto l'altra */
+  .contact-topics {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    margin-bottom: 3.5rem;
   }
 
-  .contact-cards + .contact-content {
-    margin-top: 3.5rem;
+  .contact-topic-col + .contact-topic-col .contact-topic {
+    border-top: none;
   }
+
+  /* su mobile le sezioni sono una sotto l'altra: niente spazio riservato, la tendina spinge giù */
+  .contact-topic-ghost {
+    display: none;
+  }
+
+  .contact-topic .contact-topic-body {
+    position: static;
+    padding-bottom: 1.2rem;
+  }
+
 
   .contact-content {
     flex-direction: column;

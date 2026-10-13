@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/ContactSection.css";
 
 const EMAIL = "davidruffini98@gmail.com";
@@ -5,36 +6,55 @@ const EMAIL = "davidruffini98@gmail.com";
 const TOPICS = [
   {
     title: "statistica e ricerca",
-    desc: "analisi dei dati per progetti di ricerca e didattica.",
+    desc: "analisi dei dati per progetti di ricerca, supporto metodologico e didattica.",
     subject: "Collaborazione: statistica e ricerca",
   },
   {
     title: "data journalism",
-    desc: "articoli, inchieste e visualizzazioni basati sui dati e partecipazione a eventi sul tema.",
+    desc: "per redazioni: inchieste e articoli basati sui dati, grafici e pezzi interattivi, talk ed eventi sul tema.",
     subject: "Collaborazione: data journalism",
+    works: "/data-journalism",
   },
   {
     title: "consulenza",
-    desc: "analisi statistiche e formazione per aziende.",
+    desc: "per aziende: analisi statistiche, raccolta e pulizia dei dati, automazioni e formazione.",
     subject: "Collaborazione: consulenza",
+    works: "/consulenza",
   },
 ];
+
+function TopicBody({ t }) {
+  return (
+    <div className="contact-topic-body">
+      <p className="contact-topic-desc">{t.desc}</p>
+      <p className="contact-topic-links">
+        <a href={`mailto:${EMAIL}?subject=${encodeURIComponent(t.subject)}`}>scrivimi</a>
+        {t.works && <Link to={t.works}>vedi i lavori</Link>}
+      </p>
+    </div>
+  );
+}
 
 function ContactSection() {
   return (
     <section className="contact">
       <p className="section-label contact-cards-label">di cosa possiamo parlare</p>
-      <div className="contact-cards">
+      <div className="contact-topics">
         {TOPICS.map((t) => (
-          <a
-            key={t.title}
-            className="home-card contact-card"
-            href={`mailto:${EMAIL}?subject=${encodeURIComponent(t.subject)}`}
-          >
-            <h3 className="home-card-title"><span>{t.title}</span></h3>
-            <p className="home-card-desc">{t.desc}</p>
-            <span className="contact-card-cta">scrivimi →</span>
-          </a>
+          <div key={t.title} className="contact-topic-col">
+            <details className="contact-topic">
+              <summary>
+                <span className="contact-plus" aria-hidden="true">+</span>
+                <span className="contact-topic-title">{t.title}</span>
+              </summary>
+              <TopicBody t={t} />
+            </details>
+            {/* copia invisibile: tiene sempre occupato lo spazio della tendina aperta,
+                così aprendo e chiudendo non si sposta niente (solo su desktop, vedi CSS) */}
+            <div className="contact-topic-ghost" aria-hidden="true">
+              <TopicBody t={t} />
+            </div>
+          </div>
         ))}
       </div>
 
