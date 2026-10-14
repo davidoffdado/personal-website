@@ -1,5 +1,14 @@
 export const articles = [
   {
+  title: "La crisi abitativa in Europa",
+  dek: "Come sono cambiati i prezzi in 15 anni",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "13.10.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/10/13/in-dieci-anni-i-prezzi-delle-case-sono-saliti-del-61-tre-volte-piu-degli-affitti-la-mappa-della-crisi-in-europa/",
+  cover: ""
+  },
+  {
   title: "Quanti anni ha chi ci governa?",
   dek: "Com'è cambiata la demografia dei leader europei",
   role: "Data Journalist",
