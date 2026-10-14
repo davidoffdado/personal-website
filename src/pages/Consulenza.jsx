@@ -5,10 +5,12 @@ const competenze = [
   [
     "R",
     "Python",
+    "Stata",
     "SQL",
     "Excel",
     "Power BI",
     "GitHub",
+    "D3.js",
   ],
   [
     "modelli statistici",
