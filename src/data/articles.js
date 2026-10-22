@@ -1,5 +1,14 @@
 export const articles = [
   {
+  title: "Ragazzi e ragazze si stanno allontanando politicamente",
+  dek: "I giovani più conservatori e le giovani più progressiste",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "22.10.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/10/22/giovani-uomini-piu-a-destra-donne-piu-progressiste-che-cosa-dicono-i-dati-delleuropean-quality-of-government-index-eqi/",
+  cover: ""
+  },
+  {
   title: "La crisi abitativa in Europa",
   dek: "Come sono cambiati i prezzi in 15 anni",
   role: "Data Journalist",
