@@ -30,7 +30,8 @@ export default function Home() {
       <header className="hero">
         <h1>Ciao, sono David. Lavoro con i <mark>dati</mark>.</h1>
         <p>
-          Statistico e data journalist. Scrivo per Il Sole 24 Ore, curo la newsletter àlea e offro
+          Statistico e data journalist. Scrivo per <span className="nowrap">Il Sole 24 Ore</span>, curo la
+          newsletter <a href="https://alea.news" target="_blank" rel="noopener noreferrer">àlea</a> e offro
           consulenze di analisi statistica.
         </p>
       </header>

@@ -270,6 +270,11 @@ a:focus-visible {
   white-space: nowrap;
 }
 
+/* "Il Sole 24 Ore" non va mai a capo */
+.nowrap {
+  white-space: nowrap;
+}
+
 .more {
   display: inline-block;
   margin-top: 1rem;
@@ -317,7 +322,6 @@ a:focus-visible {
 
 .hero p {
   font-size: 1.25rem;
-  max-width: 34ch;
   margin: 0 0 3.5rem;
   color: #333;
 }
