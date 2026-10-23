@@ -1,56 +1,46 @@
 import { Link } from "react-router-dom";
 import { consulenza } from "../data/consulenza";
+import Cta from "../components/Cta";
 
 const competenze = [
-  [
-    "R",
-    "Python",
-    "Stata",
-    "SQL",
-    "Excel",
-    "Power BI",
-    "GitHub",
-    "D3.js",
-  ],
-  [
-    "modelli statistici",
-    "statistica bayesiana",
-    "web scraping",
-    "visualizzazioni e dashboard interattive",
-  ],
+  ["strumenti", "R, Python, Stata, SQL, Excel, Power BI, GitHub, D3.js"],
+  ["attività", "modelli statistici, statistica bayesiana, web scraping, visualizzazioni e dashboard interattive"],
 ];
 
 export default function Consulenza() {
   return (
     <div className="page-content">
-      <p className="section-label">consulenza</p>
-      <p className="about-text page-intro">
-        Posso seguire l'intero ciclo del dato: dalla raccolta alla pulizia, dalle analisi descrittive
-        ai modelli statistici più complessi, fino all'interpretazione dei risultati. Quando
-        necessario, posso automatizzare l'aggiornamento dei dati.
-      </p>
-
-      <div className="dj-section">
-        <p className="section-label">competenze</p>
-        <p className="about-text">
-          {competenze.map((riga, i) => (
-            <span key={i}>{riga.join(", ")}<br /></span>
-          ))}
+      <h1 className="page-title">Consulenza</h1>
+      <div className="intro">
+        <p>
+          Posso seguire l'intero ciclo del dato: dalla raccolta alla pulizia, dalle analisi descrittive
+          ai modelli statistici più complessi, fino all'interpretazione dei risultati. Quando
+          necessario, posso automatizzare l'aggiornamento dei dati.
         </p>
       </div>
+      <Cta topic="consulenza">Hai dei dati e non sai da dove partire?</Cta>
 
-      <div className="dj-section">
-        <p className="section-label">in evidenza</p>
-        <div className="projects-list">
-          {consulenza.map((p, i) => (
-            <Link key={i} to={p.to} className="project-card">
-              <h3><span>{p.title}</span></h3>
-              <p className="dek">{p.dek}</p>
-              <p className="meta">{p.client} · {p.year} · {p.type}</p>
+      <section className="block">
+        <p className="section-label">competenze</p>
+        <dl className="kv block-body">
+          {competenze.map(([k, v]) => (
+            <div key={k}><dt>{k}</dt><dd>{v}</dd></div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="block">
+        <p className="section-label">lavori</p>
+        <div className="rows block-body">
+          {consulenza.map((p) => (
+            <Link key={p.to} to={p.to}>
+              <span className="row-meta">{p.client}</span>
+              <span className="row-title"><span>{p.title}</span></span>
+              <span className="row-meta">{p.year}</span>
             </Link>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }

@@ -1,16 +1,15 @@
-/* stile editoriale, ispirato a matthewfdaniels.github.io/home
-   lo stile precedente (card con ombra e hover verde) è salvato nel tag git stile-card-v1 */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
+/* stile "F7": bianco e nero squadrato, Bricolage Grotesque per i titoli e Geist per il testo.
+   lo stile precedente (EB Garamond) è salvato nel tag git stile-editoriale-v1,
+   quello ancora prima (card con ombra e hover verde) nel tag stile-card-v1 */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500&display=swap');
 
 :root {
-  --font: "EB Garamond", Georgia, serif;
-  --text: 1.2rem; /* dimensione unica per tutto il testo */
-  --fg: #262626;
-  --muted: rgba(38, 38, 38, 0.7);
-  --faint: rgba(38, 38, 38, 0.5);
-  --rule: #aaa;
+  --ink: #111;
+  --muted: #6a6862;
+  --line: 1.5px solid var(--ink);
+  --thin: 1px solid var(--ink);
   --wrap: 1000px;
-  --highlight: #e4e4e4;
+  --title-font: "Bricolage Grotesque", sans-serif;
 }
 
 /* ===== RESET ===== */
@@ -19,68 +18,36 @@ html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: var(--font);
+  font-family: "Geist", sans-serif;
   background-color: white;
-  color: var(--fg);
-  line-height: 1.4;
+  color: var(--ink);
+  line-height: 1.5;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-}
-
-/* la dimensione va su body e non su html, altrimenti i rem si moltiplicano (1.2 x 1.2) */
-body {
-  font-size: var(--text);
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* niente grassetti: tutto il sito è in peso 400 */
-strong, b, th {
-  font-weight: 400;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-/* titoli senza classe: stessa dimensione del testo, non quella di default del browser */
-h1, h2, h3, h4, button, input, textarea {
-  font-size: var(--text);
-}
-
-h1, h2, h3, h4 {
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.3;
-}
-
-/* link: sottolineatura sottile, piena all'hover */
+/* link: sottolineatura a riposo, blocco nero all'hover (come "dati" nel titolo della home) */
 a {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 0, 0, 0.3);
-  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s, background 0.15s;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
 
-/* hover: la sottolineatura lascia il posto all'evidenziazione */
 a:hover,
 a:focus-visible {
-  text-decoration-color: transparent;
-  background: var(--highlight);
-}
-
-/* link a blocco (card, loghi, nome): si evidenzia solo il titolo, non tutto il blocco */
-.article-card:hover,
-.project-card:hover,
-.press-card:hover,
-.collab-card:hover,
-.article-card:focus-visible,
-.project-card:focus-visible,
-.press-card:focus-visible,
-.collab-card:focus-visible {
-  background: none;
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
 }
 
 /* ===== APP WRAPPER ===== */
@@ -93,81 +60,306 @@ a:focus-visible {
   background: white;
 }
 
-/* ===== PAGE CONTENT ===== */
-
-.page-content {
-  width: calc(100% - 50px);
+.wrap,
+.page-content,
+.home,
+.top,
+.footer {
+  width: calc(100% - 32px);
   max-width: var(--wrap);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-content,
+.home {
   padding: 3rem 0 5rem;
 }
 
-/* ===== SECTION LABELS (occhiello maiuscolo con riga puntinata) ===== */
+/* ===== INTESTAZIONE ===== */
 
-.section-label,
-.subhead {
-  font-size: var(--text);
-  font-weight: 400;
-  color: var(--fg);
-  opacity: 0.9;
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 0 1.25rem;
+  border-bottom: var(--line);
+}
+
+.top-name {
+  font: 700 1.35rem/1 var(--title-font);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.top nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.top nav a {
+  text-decoration: none;
+  padding: 0 0.15rem;
+}
+
+.top nav a.active {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* in home il nome è già nel titolo: resta solo il menu */
+.top--home {
+  border-bottom: 0;
+  justify-content: flex-end;
+}
+
+.top--home .top-name {
+  display: none;
+}
+
+/* ===== PEZZI COMUNI ===== */
+
+/* etichetta: blocco nero squadrato sopra una riga */
+.section-label {
+  display: inline-block;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.35rem 0.5rem;
+  margin: 0;
+  font: 500 0.8rem/1 "Geist", sans-serif;
+}
+
+.section-label a {
+  text-decoration: underline;
+}
+
+.block {
+  margin-bottom: 3.5rem;
+}
+
+.block-body {
+  border-top: var(--line);
+}
+
+.page-title {
+  font: 700 clamp(2.2rem, 6vw, 3.8rem)/1 var(--title-font);
+  letter-spacing: -0.035em;
   margin: 0 0 1.25rem;
-  padding-bottom: 5px;
-  border-bottom: 1px dotted var(--rule);
+}
+
+.intro {
+  font-size: 1.2rem;
+  max-width: 40em;
+  margin: 0 0 3rem;
+  color: #333;
+}
+
+.intro p {
+  margin: 0 0 1rem;
+}
+
+/* invito a scrivere: blocco nero subito sotto la descrizione */
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  margin: -1.5rem 0 3.5rem;
+  background: var(--ink);
+  color: #fff;
+}
+
+.cta p {
+  margin: 0;
+  font: 600 1.3rem/1.2 var(--title-font);
+}
+
+.cta a {
+  border: 1.5px solid #fff;
+  padding: 0.5rem 0.8rem;
+  text-decoration: none;
+}
+
+.cta a:hover,
+.cta a:focus-visible {
+  background: #fff;
+  color: var(--ink);
+}
+
+/* fascia di card divise da filetti (home e contatti) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: var(--line);
+  border-bottom: var(--line);
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  padding: 1.25rem;
+}
+
+.card + .card {
+  border-left: var(--line);
+}
+
+.card h3 {
+  font: 700 1.25rem/1.15 var(--title-font);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.card .card-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  opacity: 1;
+}
+
+/* tabella: data | titolo | testata */
+.rows > * {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr auto;
+  gap: 1.5rem;
+  padding: 0.8rem 0;
+  text-decoration: none;
+  align-items: baseline;
+}
+
+.rows > * + * {
+  border-top: var(--thin);
+}
+
+.rows a:hover,
+.rows a:focus-visible {
+  background: none;
+  color: inherit;
+}
+
+.row-title {
+  font: 600 1.1rem/1.25 var(--title-font);
+}
+
+/* all'hover si annerisce solo il titolo, non tutta la riga */
+.rows a:hover .row-title span,
+.rows a:focus-visible .row-title span {
+  background: var(--ink);
+  color: #fff;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.row-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.more {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* righe chiave | valore (consulenza, ricerca) */
+.kv {
+  margin: 0;
+}
+
+.kv > div {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+}
+
+.kv > div + div {
+  border-top: var(--thin);
+}
+
+.kv dt {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.kv dd {
+  margin: 0;
 }
 
 /* ===== HOME ===== */
 
-.home {
-  width: calc(100% - 50px);
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 6rem 0 4rem;
+.hero h1 {
+  font: 700 clamp(2.6rem, 8vw, 5.5rem)/0.95 var(--title-font);
+  letter-spacing: -0.035em;
+  margin: 0 0 1.5rem;
 }
 
-.home-intro h1 {
-  font-size: var(--text);
-  font-weight: 400;
-  margin: 0 0 0.5rem;
+.hero mark {
+  background: var(--ink);
+  color: #fff;
+  padding: 0 0.08em;
 }
 
-.home-intro p {
-  max-width: 40ch;
-  font-size: var(--text);
-  line-height: 1.4;
+.hero p {
+  font-size: 1.25rem;
+  max-width: 34ch;
+  margin: 0 0 3.5rem;
+  color: #333;
+}
+
+a.card:hover,
+a.card:focus-visible {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* schede testuali "articoli" / "àlea" */
+.tabs {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0 0.4rem;
+}
+
+.tab {
+  background: none;
+  border: 0;
+  padding: 0 0 0.2rem;
+  cursor: pointer;
+  font: 600 1.15rem/1 var(--title-font);
   color: var(--muted);
-  margin: 0;
 }
 
-/* i link restano neri sul testo grigio, con sottolineatura piena */
-.home-intro p a {
-  color: var(--fg);
-  text-decoration-color: currentColor;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 3px;
+.tab[aria-selected="true"] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
 }
 
-.home-intro p a:hover,
-.home-intro p a:focus-visible {
-  text-decoration-color: transparent;
+.tab:hover {
+  color: var(--ink);
 }
 
-/* ===== DATA JOURNALISM PAGE ===== */
+/* ===== DATA JOURNALISM ===== */
 
-.dj-section {
-  margin-bottom: 4rem;
+.featured {
+  padding-top: 1.5rem;
 }
-
-/* introduzione in cima alle pagine (data journalism, consulenza), prima dei lavori */
-.page-intro {
-  max-width: 760px;
-}
-
-/* più spazio solo tra l'ultimo paragrafo dell'introduzione e i lavori */
-.page-intro + :not(.page-intro) {
-  margin-top: 3rem;
-}
-
-/* ===== EMBED ===== */
 
 .featured-main {
   margin-bottom: 2.5rem;
@@ -175,7 +367,7 @@ a:focus-visible {
 
 .featured-row {
   display: grid;
-  gap: 2.5rem 2rem;
+  gap: 2.5rem 1.5rem;
   grid-template-columns: 1fr;
 }
 
@@ -204,22 +396,19 @@ a:focus-visible {
 }
 
 .embed-card-title {
-  font-size: var(--text);
-  font-weight: 400;
+  font: 600 1.05rem/1.25 var(--title-font);
   margin: 0;
-  letter-spacing: 0;
 }
 
 .embed-card-subtitle {
   margin: 0.25rem 0 0;
-  font-size: var(--text);
+  font-size: 0.9rem;
   color: var(--muted);
 }
 
 .embed-card-link {
   white-space: nowrap;
-  font-size: var(--text);
-  font-weight: 400;
+  font-size: 0.9rem;
   flex-shrink: 0;
 }
 
@@ -241,169 +430,124 @@ a:focus-visible {
   max-width: 100% !important;
 }
 
-/* ===== ARTICLES / PROJECTS LIST ===== */
-
-.articles-list,
-.projects-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 1.75rem 2.5rem;
+/* filtri per testata */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 1rem 0;
 }
 
-.article-card,
-.project-card {
-  display: block;
-  text-decoration: none;
+.filters button {
+  font: 500 0.85rem/1 "Geist", sans-serif;
+  padding: 0.4rem 0.6rem;
+  background: #fff;
+  color: var(--ink);
+  border: var(--thin);
+  cursor: pointer;
 }
 
-.article-card h3,
-.project-card h3 {
-  margin: 0 0 0.3rem;
-  font-size: var(--text);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.3;
+.filters button[aria-pressed="true"],
+.filters button:hover {
+  background: var(--ink);
+  color: #fff;
 }
 
-/* sottolineatura ed evidenziazione sullo span, così si fermano alla fine del testo */
-.article-card h3 span,
-.project-card h3 span {
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 0, 0, 0.3);
-  text-underline-offset: 3px;
-  transition: text-decoration-color 0.15s, background 0.15s;
-}
-
-.article-card:hover h3 span,
-.project-card:hover h3 span {
-  text-decoration-color: transparent;
-  background: var(--highlight);
-}
-
-.article-card .dek,
-.project-card .dek {
-  margin: 0 0 0.3rem;
-  font-size: var(--text);
-  color: var(--muted);
-  line-height: 1.45;
-}
-
-.article-card .meta,
-.project-card .meta {
+.year {
+  font: 700 1.6rem/1 var(--title-font);
+  letter-spacing: -0.02em;
+  padding: 1.75rem 0 0.5rem;
   margin: 0;
-  font-size: var(--text);
-  font-weight: 400;
-  color: var(--faint);
+  border-bottom: var(--line);
 }
 
 /* ===== ABOUT ===== */
 
-.about-layout--photo {
+.about {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  gap: 4rem;
+  grid-template-columns: 1fr 220px;
+  gap: 3rem;
   align-items: start;
+  margin-bottom: 3.5rem;
 }
 
-.about-body {
-  max-width: 720px;
+/* senza foto: una colonna sola */
+.about--single {
+  grid-template-columns: 1fr;
 }
 
-.about-text {
-  font-size: var(--text);
-  line-height: 1.4;
-  margin: 0 0 1.25rem;
-}
-
-.about-lede {
-  font-size: var(--text);
-  font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 1.25rem;
+.about p {
+  font-size: 1.15rem;
+  margin: 0 0 1rem;
+  max-width: 36em;
 }
 
 .about-photo {
   margin: 0;
   aspect-ratio: 3 / 4;
   overflow: hidden;
+  border: var(--line);
 }
 
 .about-photo img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.about-buttons {
+.about-links {
   display: flex;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  gap: 0.75rem 1.75rem;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
-/* ex bottoni: ora semplici link in grassetto */
-.btn {
-  font-weight: 400;
-  font-size: var(--text);
+.about-links a {
+  border: var(--line);
+  padding: 0.45rem 0.75rem;
+  text-decoration: none;
+  font-size: 0.95rem;
 }
 
-/* ===== COLLABORAZIONI (about) ===== */
-
-.collab {
-  margin-top: 4.5rem;
-}
-
-.collab-grid {
+/* collaborazioni: fascia di loghi divisa da filetti */
+.logos {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 2rem;
-  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  border-bottom: var(--line);
 }
 
-.collab-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90px;
-  opacity: 0.75;
-  transition: opacity 0.15s;
+.logos a {
+  display: grid;
+  place-items: center;
+  height: 100px;
+  padding: 1rem;
 }
 
-.collab-card:hover,
-.collab-card:focus-visible {
-  opacity: 1;
+.logos a + a {
+  border-left: var(--line);
 }
 
-.collab-logo {
-  display: block;
-  max-width: 100%;
+.logos img {
   height: auto;
-}
-
-/* logo originale chiaro (per sfondi scuri): lo porto a nero come gli altri */
-.collab-logo--mono {
   filter: brightness(0);
 }
 
-/* ===== FOOTER ===== */
-
-.footer {
-  width: calc(100% - 50px);
-  max-width: var(--wrap);
-  margin: auto auto 0; /* spinge il footer in fondo alla finestra */
-  padding: 1.5rem 0 2rem;
-  font-size: var(--text);
-  border-top: 1px dotted var(--rule);
+/* all'hover il riquadro diventa nero e il logo bianco */
+.logos a:hover img,
+.logos a:focus-visible img {
+  filter: brightness(0) invert(1);
 }
 
-.footer-links {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  align-items: center;
+/* ===== CONTATTI ===== */
+
+.mail {
+  display: inline-block;
+  font: 700 clamp(1.6rem, 5.5vw, 3.4rem)/1.05 var(--title-font);
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  padding: 0 0.08em;
+  margin-bottom: 3rem;
+  overflow-wrap: anywhere;
 }
 
 /* ===== CASE STUDY (consulenza) ===== */
@@ -412,10 +556,12 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  margin-top: 1.5rem;
 }
 
 .case-title {
-  font-size: var(--text);
+  font: 700 clamp(1.9rem, 5vw, 3rem)/1.05 var(--title-font);
+  letter-spacing: -0.03em;
   margin: 0 0 1.25rem;
   max-width: 900px;
 }
@@ -423,22 +569,23 @@ a:focus-visible {
 .case-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  font-size: var(--text);
+  gap: 0.5rem 1.5rem;
   color: var(--muted);
 }
 
+.case-meta strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
 .case-description {
-  max-width: 720px;
-  font-size: var(--text);
-  line-height: 1.4;
+  max-width: 40em;
+  font-size: 1.15rem;
   margin: 0;
 }
 
 .case-note {
-  max-width: 720px;
-  font-size: var(--text);
-  line-height: 1.4;
+  max-width: 40em;
   color: var(--muted);
   margin: 0;
 }
@@ -446,27 +593,29 @@ a:focus-visible {
 .case-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  border-top: var(--line);
+  border-bottom: var(--line);
 }
 
 .case-stat {
-  border-top: 1px dotted var(--rule);
-  padding-top: 1rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
 
+.case-stat + .case-stat {
+  border-left: var(--line);
+}
+
 .stat-value {
-  font-size: var(--text);
-  font-weight: 400;
-  line-height: 1.3;
+  font: 700 2.4rem/1 var(--title-font);
+  letter-spacing: -0.03em;
 }
 
 .stat-label {
-  font-size: var(--text);
   color: var(--muted);
-  line-height: 1.4;
+  font-size: 0.95rem;
 }
 
 .case-charts {
@@ -482,12 +631,10 @@ a:focus-visible {
 .case-chart img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
 .case-chart figcaption {
-  font-size: var(--text);
-  font-style: italic;
+  font-size: 0.9rem;
   color: var(--muted);
   margin-top: 0.75rem;
 }
@@ -495,96 +642,171 @@ a:focus-visible {
 .case-section {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+}
+
+/* l'etichetta resta della sua larghezza, non si allunga su tutta la colonna */
+.case-section .section-label {
+  align-self: flex-start;
 }
 
 .case-press {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem 2.5rem;
+  border-top: var(--line);
 }
 
 .press-card {
-  display: block;
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1.5rem;
+  padding: 0.8rem 0;
   text-decoration: none;
+  align-items: baseline;
+}
+
+.press-card + .press-card {
+  border-top: var(--thin);
+}
+
+.press-card:hover,
+.press-card:focus-visible {
+  background: none;
+  color: inherit;
 }
 
 .press-outlet {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-size: var(--text);
-  font-weight: 400;
-  color: var(--faint);
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .press-title {
-  font-size: var(--text);
-  font-weight: 400;
-  line-height: 1.3;
-  text-decoration: underline;
-  text-decoration-color: rgba(0, 0, 0, 0.3);
-  text-underline-offset: 3px;
+  font: 600 1.05rem/1.3 var(--title-font);
 }
 
 .press-card:hover .press-title {
-  text-decoration-color: transparent;
-  background: var(--highlight);
+  background: var(--ink);
+  color: #fff;
 }
 
 .pdf-link {
   display: inline-block;
-  font-size: var(--text);
-  font-weight: 400;
+  border-top: var(--line);
+  padding-top: 0.8rem;
 }
 
-/* ===== TABLET ===== */
+/* ===== PROGETTI (pagina non linkata) ===== */
 
-@media (max-width: 960px) {
-  .collab-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.projects-list {
+  border-top: var(--line);
+}
+
+.project-card {
+  display: block;
+  padding: 0.9rem 0;
+  text-decoration: none;
+}
+
+.project-card + .project-card {
+  border-top: var(--thin);
+}
+
+.project-card:hover {
+  background: none;
+  color: inherit;
+}
+
+.project-card h3 {
+  font: 600 1.1rem/1.25 var(--title-font);
+  margin: 0 0 0.25rem;
+}
+
+.project-card:hover h3 span {
+  background: var(--ink);
+  color: #fff;
+}
+
+.project-card .dek,
+.project-card .meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  margin-top: auto; /* spinge il footer in fondo alla finestra */
+  padding: 1.25rem 0 2rem;
+  border-top: var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.footer nav {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
 /* ===== MOBILE ===== */
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
+  .page-content,
   .home {
-    padding-top: 3.5rem;
-  }
-
-  .page-content {
     padding: 2rem 0 4rem;
   }
 
-  .articles-list,
-  .projects-list {
+  .cards,
+  .case-stats {
     grid-template-columns: 1fr;
   }
 
-  .about-text {
-    font-size: var(--text);
+  .card + .card,
+  .case-stat + .case-stat {
+    border-left: 0;
+    border-top: var(--line);
   }
 
-  .about-layout--photo {
+  /* una sotto l'altra, senza filetti laterali: il testo si allinea al resto della pagina */
+  .card,
+  .case-stat {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .about {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
   .about-photo {
     order: -1;
-    width: 140px;
+    width: 160px;
   }
 
-  .collab {
-    margin-top: 3.5rem;
+  .logos {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .collab-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
+  .logos a + a {
+    border-left: 0;
   }
 
-  .case-stats {
+  .logos a:nth-child(even) {
+    border-left: var(--line);
+  }
+
+  .logos a:nth-child(n + 3) {
+    border-top: var(--line);
+  }
+}
+
+@media (max-width: 640px) {
+  .rows > *,
+  .kv > div,
+  .press-card {
     grid-template-columns: 1fr;
+    gap: 0.15rem;
   }
 }

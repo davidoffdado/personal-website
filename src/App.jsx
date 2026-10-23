@@ -1,8 +1,9 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import DataJournalism from "./pages/DataJournalism";
-import Universita from "./pages/Universita";
+import Ricerca from "./pages/Ricerca";
 import Consulenza from "./pages/Consulenza";
 import ConsulenzaInterzero from "./pages/ConsulenzaInterzero";
 import ConsulenzaCoopservice from "./pages/ConsulenzaCoopservice";
@@ -16,9 +17,12 @@ function App() {
   return (
     <div className="app">
       <CursorFollower />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/universita" element={<Universita />} />
+        <Route path="/ricerca" element={<Ricerca />} />
+        {/* vecchio indirizzo della pagina ricerca */}
+        <Route path="/universita" element={<Navigate to="/ricerca" replace />} />
         <Route path="/data-journalism" element={<DataJournalism />} />
         <Route path="/consulenza" element={<Consulenza />} />
         <Route path="/consulenza/interzero" element={<ConsulenzaInterzero />} />

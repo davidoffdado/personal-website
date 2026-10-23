@@ -1,17 +1,16 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { EMAIL } from "../data/contatti";
 
 function Footer() {
-  // in home niente link a home (si è già lì) né indirizzo mail (c'è già nella bio)
-  const isHome = useLocation().pathname === "/";
-
   // data-nosnippet: Google non usa il footer come descrizione del sito nei risultati di ricerca
   return (
     <footer className="footer" data-nosnippet>
-      <div className="footer-links">
-        {!isHome && <a href="mailto:davidruffini98@gmail.com">davidruffini98@gmail.com</a>}
-        {!isHome && <Link to="/">home</Link>}
+      <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+      <nav>
         <Link to="/about">about</Link>
-        <Link to="/contatti">contatti</Link>      </div>
+        <Link to="/contatti">contatti</Link>
+        <a href="https://alea.news" target="_blank" rel="noopener noreferrer">àlea</a>
+      </nav>
     </footer>
   );
 }

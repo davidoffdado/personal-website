@@ -532,3 +532,6 @@ export const articles = [
 }
 ];
 
+
+// adatta un articolo alla tabella data | titolo | testata (tags = [testata, data])
+export const fromArticle = (a) => ({ title: a.title, url: a.url, outlet: a.tags[0], date: a.tags[1] });
