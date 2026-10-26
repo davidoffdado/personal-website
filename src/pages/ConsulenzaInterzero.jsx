@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cta from "../components/Cta";
 
 const press = [
   {
@@ -60,6 +61,10 @@ export default function ConsulenzaInterzero() {
           e tipologia di rifiuto - è stata sintetizzata in un report e in un comunicato stampa poi
           distribuito agli organi di informazione.
         </p>
+
+        <Cta subject="Analisi e report">
+          Ti serve un'analisi dei dati per un report o per la comunicazione?
+        </Cta>
 
         {/* Key stats */}
         <div className="case-stats">

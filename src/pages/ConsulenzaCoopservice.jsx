@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cta from "../components/Cta";
 
 const charts = [
   {
@@ -42,6 +43,10 @@ export default function ConsulenzaCoopservice() {
           dati del Corpo nazionale dei Vigili del Fuoco su cause, luoghi e sostanze all'origine degli
           incendi, a livello sia regionale sia provinciale.
         </p>
+
+        <Cta subject="Analisi e report">
+          Ti serve un'analisi dei dati per un report o per la comunicazione?
+        </Cta>
 
         {/* Key stats */}
         <div className="case-stats">

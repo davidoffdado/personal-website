@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cta from "../components/Cta";
 
 const metodo = [
   ["la domanda", "Il modello SIR, la base di molti modelli epidemici, assume che ogni persona abbia lo stesso numero di contatti. Nella realtà ci sono i superspreader. Cosa cambia se si toglie questa ipotesi, e quali parametri contano davvero?"],
@@ -43,6 +44,10 @@ export default function ConsulenzaSuperspreader() {
           quanto ogni parametro pesa sulle previsioni. Lo stesso approccio vale per qualsiasi modello
           previsivo, dal rischio di credito alla domanda di un prodotto.
         </p>
+
+        <Cta subject="Consulenza statistica">
+          Ti serve un modello statistico o un parere su uno che usi già?
+        </Cta>
 
         <div className="case-stats">
           <div className="case-stat">

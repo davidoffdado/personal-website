@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cta from "../components/Cta";
 import { Embed } from "../components/EmbedCard";
 import { featuredWorks } from "../data/featured-works";
 
@@ -78,6 +79,10 @@ export default function ConsulenzaCarceri() {
           2025 lo storico cresce da solo, e lo stesso schema si applica a prezzi, bandi, annunci o
           qualsiasi fonte da tenere sotto controllo.
         </p>
+
+        <Cta subject="Raccolta e automazione dei dati">
+          Hai dei dati da raccogliere o aggiornare in automatico?
+        </Cta>
 
         <div className="case-stats">
           <div className="case-stat">

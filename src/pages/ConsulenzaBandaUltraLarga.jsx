@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cta from "../components/Cta";
 
 const metodo = [
   ["la domanda", "Il Piano Banda Ultra Larga porta la fibra nelle aree bianche, dove nessun operatore privato avrebbe investito. I lavori dovevano chiudersi tra il 2020 e il 2022: quali regioni sono più indietro, e in quale fase si bloccano?"],
@@ -43,6 +44,10 @@ export default function ConsulenzaBandaUltraLarga() {
           lavoro, non solo sull'ultima. Il risultato: a fine 2024 nessuna regione aveva chiuso tutti i
           cantieri, e i ritardi non nascono ovunque nello stesso punto.
         </p>
+
+        <Cta subject="Analisi dei dati">
+          Hai dei dati e vuoi capire cosa raccontano?
+        </Cta>
 
         <div className="case-stats">
           <div className="case-stat">

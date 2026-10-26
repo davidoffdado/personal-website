@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Cta from "../components/Cta";
 
 const metodo = [
   ["la domanda", "Chi finanzia o gestisce un piano di investimenti ha bisogno di sapere a che punto è, dove si è fermato e quanto è già stato speso, senza aspettare un report. Ho preso i dati del Piano Banda Ultra Larga e li ho trasformati in una dashboard che risponde da sola a queste domande, per l'Italia e per ogni regione."],
@@ -47,6 +48,10 @@ export default function ConsulenzaPowerBI() {
           risposte a portata di filtro: quanti cantieri sono chiusi, in quale fase si blocca ogni
           regione, quanto valgono i lavori già contabilizzati.
         </p>
+
+        <Cta subject="Dashboard">
+          Ti serve una dashboard per tenere sotto controllo i tuoi dati?
+        </Cta>
 
         <div className="case-stats">
           <div className="case-stat">
