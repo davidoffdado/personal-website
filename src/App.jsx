@@ -11,6 +11,7 @@ import ConsulenzaBandaUltraLarga from "./pages/ConsulenzaBandaUltraLarga";
 import ConsulenzaSuperspreader from "./pages/ConsulenzaSuperspreader";
 import ConsulenzaCarceri from "./pages/ConsulenzaCarceri";
 import ConsulenzaPowerBI from "./pages/ConsulenzaPowerBI";
+import ConsulenzaControlloGestione from "./pages/ConsulenzaControlloGestione";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contatti from "./pages/Contatti";
@@ -35,6 +36,7 @@ function App() {
         <Route path="/consulenza/superspreader" element={<ConsulenzaSuperspreader />} />
         <Route path="/consulenza/carceri" element={<ConsulenzaCarceri />} />
         <Route path="/consulenza/power-bi" element={<ConsulenzaPowerBI />} />
+        <Route path="/consulenza/controllo-di-gestione" element={<ConsulenzaControlloGestione />} />
         <Route path="/progetti" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/contatti" element={<Contatti />} />

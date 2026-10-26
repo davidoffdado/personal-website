@@ -582,6 +582,11 @@ a.card:focus-visible {
   color: var(--ink);
 }
 
+/* il banner "scrivimi" dentro un caso studio segue la spaziatura della colonna */
+.case-study .cta {
+  margin: 0;
+}
+
 .case-description {
   max-width: 40em;
   font-size: 1.15rem;
