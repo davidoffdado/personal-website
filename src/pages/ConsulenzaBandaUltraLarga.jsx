@@ -91,7 +91,8 @@ export default function ConsulenzaBandaUltraLarga() {
 
         <p className="case-note">
           I dati sono pubblici. I grafici di questa pagina sono rielaborazioni fatte per il sito a
-          partire dal dataset del progetto.
+          partire dal dataset del progetto. Con gli stessi dati ho costruito anche
+          una <Link to="/consulenza/power-bi">dashboard Power BI</Link>.
         </p>
 
       </div>
