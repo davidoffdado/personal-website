@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { consulenza } from "../data/consulenza";
+import { consulenza, fromCaso } from "../data/consulenza";
 import Cta from "../components/Cta";
+import Rows from "../components/Rows";
 
 const competenze = [
   ["strumenti", "R, Python, Stata, SQL, Excel, Power BI, GitHub, D3.js"],
@@ -21,25 +21,19 @@ export default function Consulenza() {
       <Cta topic="consulenza">Hai dei dati e non sai da dove partire?</Cta>
 
       <section className="block">
+        <p className="section-label">casi studio</p>
+        <div className="block-body">
+          <Rows items={consulenza.map(fromCaso)} />
+        </div>
+      </section>
+
+      <section className="block">
         <p className="section-label">competenze</p>
         <dl className="kv block-body">
           {competenze.map(([k, v]) => (
             <div key={k}><dt>{k}</dt><dd>{v}</dd></div>
           ))}
         </dl>
-      </section>
-
-      <section className="block">
-        <p className="section-label">lavori</p>
-        <div className="rows block-body">
-          {consulenza.map((p) => (
-            <Link key={p.to} to={p.to}>
-              <span className="row-meta">{p.client}</span>
-              <span className="row-title"><span>{p.title}</span></span>
-              <span className="row-meta">{p.year}</span>
-            </Link>
-          ))}
-        </div>
       </section>
     </div>
   );

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { articles, fromArticle } from "../data/articles";
 import { alea } from "../data/alea";
+import { consulenza, fromCaso } from "../data/consulenza";
 import Rows from "../components/Rows";
 
 const SECTIONS = [
@@ -45,6 +46,14 @@ export default function Home() {
               <p>{s.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="block">
+        <p className="section-label">casi studio</p>
+        <div className="block-body">
+          <Rows items={consulenza.slice(0, 4).map(fromCaso)} />
+          <Link className="more" to="/consulenza">tutti i casi studio</Link>
         </div>
       </section>
 

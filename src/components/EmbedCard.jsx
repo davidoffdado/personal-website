@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-function Embed({ html }) {
+export function Embed({ html }) {
   const ref = useRef(null);
 
   useEffect(() => {

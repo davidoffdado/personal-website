@@ -653,7 +653,8 @@ a.card:focus-visible {
   align-self: flex-start;
 }
 
-.case-press {
+.case-press,
+.case-section .kv {
   border-top: var(--line);
 }
 
