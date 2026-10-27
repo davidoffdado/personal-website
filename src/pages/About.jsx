@@ -74,15 +74,21 @@ function About() {
             >
               curriculum
             </a>
+            <a
+              href="https://www.linkedin.com/in/david-ruffini-56a5a1161/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin
+            </a>
             {/*
             <a
-             
               href="https://github.com/davidoffdado"
               target="_blank"
               rel="noopener noreferrer"
             >
               github
-            </a> 
+            </a>
             <a
              
               href="https://linktr.ee/davidruffini"
