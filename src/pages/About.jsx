@@ -23,10 +23,22 @@ function About() {
             Sono David.
           </p> */}
           <p>
-            Lavoro come data analyst in una società di consulenza e come data journalist,
-            collaborando principalmente con Il Sole 24 Ore. Tra i miei lavori c'è uno scraper
-            che aggiorna quotidianamente, in maniera automatica, i dati sul sovraffollamento
-            carcerario italiano; il progetto è stato segnalato dal{" "}
+            Sono uno statistico e un data journalist. Frequento il dottorato in Quantitative
+            Methods in Economics all'Università di Macerata, scrivo per Il Sole 24 Ore e curo
+            la newsletter{" "}
+            <a href="https://alea.news" target="_blank" rel="noopener noreferrer">
+              àlea
+            </a>.
+          </p>
+          <p>
+            Come consulente lavoro con aziende, redazioni, centri di ricerca e altri enti che
+            hanno dei dati e una domanda a cui rispondere. Seguo l'intero ciclo del dato, dalla
+            raccolta e pulizia fino all'analisi, consegnando i risultati nella forma più utile:
+            un modello statistico, una dashboard, un report o un articolo.
+          </p>
+          <p>
+            Tra i miei lavori da data journalist c'è uno scraper che aggiorna ogni giorno, in automatico, i dati
+            sul sovraffollamento carcerario italiano; il progetto è stato segnalato dal{" "}
             <a
               href="https://gijn.org/stories/europes-deadly-heatwave-middle-east-ceasefires/"
               target="_blank"
@@ -36,8 +48,14 @@ function About() {
             </a>.
           </p>
           <p>
-            In passato, sono stato un assegnista di ricerca e ho collaborato con Wired Italia,
-            Aliseo Editoriale e SEC Newgate.
+            In passato sono stato assegnista di ricerca all'Università Politecnica delle Marche,
+            ho lavorato come data analyst e data engineer in una società di consulenza per clienti del settore
+            finanziario e assicurativo e ho collaborato con Wired Italia, Aliseo Editoriale e
+            SEC Newgate.
+          </p>
+          <p>
+            Fuori dal lavoro mi trovi a fare calisthenics o muay thai, a leggere, a guardare un
+            film o a cucinare.
           </p>
           {/*
           <p>
