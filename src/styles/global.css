@@ -200,6 +200,10 @@ a:focus-visible {
   border-bottom: var(--line);
 }
 
+.cards-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .card {
   display: block;
   text-decoration: none;

@@ -50,14 +50,6 @@ export default function Home() {
       </section>
 
       <section className="block">
-        <p className="section-label">casi studio</p>
-        <div className="block-body">
-          <Rows items={consulenza.slice(0, 4).map(fromCaso)} />
-          <Link className="more" to="/consulenza">tutti i casi studio</Link>
-        </div>
-      </section>
-
-      <section className="block">
         <p className="section-label">ultimi lavori</p>
         <div className="block-body">
           <div className="tabs" role="tablist">
@@ -75,6 +67,14 @@ export default function Home() {
           </div>
           <Rows items={TABS[tab].items} />
           {TABS[tab].more}
+        </div>
+      </section>
+
+      <section className="block">
+        <p className="section-label">casi studio</p>
+        <div className="block-body">
+          <Rows items={consulenza.slice(0, 4).map(fromCaso)} />
+          <Link className="more" to="/consulenza">tutti i casi studio</Link>
         </div>
       </section>
     </div>

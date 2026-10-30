@@ -1,10 +1,25 @@
+import { Link } from "react-router-dom";
 import { consulenza, fromCaso } from "../data/consulenza";
 import Cta from "../components/Cta";
 import Rows from "../components/Rows";
 
+// pagine di servizio, una per tipo di cliente
+const servizi = [
+  {
+    to: "/consulenza/pmi",
+    title: "Dati e automazione per le PMI",
+    desc: "Dati in ordine, lavori ripetitivi automatizzati e cruscotti che si aggiornano da soli.",
+  },
+  {
+    to: "/consulenza/analisi-statistiche",
+    title: "Analisi statistiche",
+    desc: "Per aziende, enti e centri di ricerca: modelli, previsioni e valutazioni di impatto.",
+  },
+];
+
 const competenze = [
   ["strumenti", "R, Python, Stata, SQL, Excel, Power BI, GitHub, D3.js"],
-  ["attività", "modelli statistici, statistica bayesiana, web scraping, visualizzazioni e dashboard interattive"],
+  ["attività", "modelli statistici, web scraping, visualizzazioni e dashboard interattive"],
 ];
 
 export default function Consulenza() {
@@ -19,6 +34,18 @@ export default function Consulenza() {
         </p>
       </div>
       <Cta topic="consulenza">Hai dei dati e non sai da dove partire?</Cta>
+
+      <section className="block">
+        <p className="section-label">servizi</p>
+        <div className="cards cards-2">
+          {servizi.map((s) => (
+            <Link key={s.to} className="card" to={s.to}>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <section className="block">
         <p className="section-label">casi studio</p>
