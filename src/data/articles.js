@@ -1,5 +1,14 @@
 export const articles = [
   {
+  title: "Il Nutri-Score racconta uno scaffale più verde di quello reale",
+  dek: "",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "30.10.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/10/30/il-nutri-score-racconta-uno-scaffale-piu-verde-di-quello-reale/",
+  cover: ""
+  },
+  {
   title: "Ragazzi e ragazze si stanno allontanando politicamente",
   dek: "I giovani più conservatori e le giovani più progressiste",
   role: "Data Journalist",

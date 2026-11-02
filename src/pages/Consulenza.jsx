@@ -6,15 +6,15 @@ import Rows from "../components/Rows";
 // pagine di servizio, una per tipo di cliente
 const servizi = [
   {
-    to: "/consulenza/pmi",
-    title: "Dati e automazione per le PMI",
-    desc: "Dati in ordine, lavori ripetitivi automatizzati e cruscotti che si aggiornano da soli.",
-  },
-  {
     to: "/consulenza/analisi-statistiche",
     title: "Analisi statistiche",
-    desc: "Per aziende, enti e centri di ricerca: modelli, previsioni e valutazioni di impatto.",
+    desc: "Per aziende, enti e centri di ricerca: modelli, previsioni e supporto nell'analisi.",
   },
+  {
+    to: "/consulenza/pmi",
+    title: "Dati e automazione",
+    desc: "Dati in ordine, lavori ripetitivi automatizzati e cruscotti che si aggiornano da soli.",
+  }
 ];
 
 const competenze = [
