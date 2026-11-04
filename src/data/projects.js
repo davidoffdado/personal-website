@@ -14,7 +14,7 @@ dek: 'Un web scraper che aggiorna quotidianamente lo stato dei penitenziari ital
 role: '',
 year: 2025,
 tags: [],
-url: 'https://davidoffdado.github.io/progetto-carceri/',
+url: 'https://www.davidruffini.com/stato-delle-carceri/',
 cover: 'https://images.pexels.com/photos/33784055/pexels-photo-33784055.jpeg'
 },
 {

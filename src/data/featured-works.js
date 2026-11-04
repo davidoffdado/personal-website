@@ -5,7 +5,7 @@ export const featuredWorks = [
     title: "Progetto personale & Il Sole 24 Ore • updating daily",
     subtitle: "Scraper automatico per il monitoraggio del sovraffollamento carcerario italiano",
     embed: `<iframe title="" aria-label="Line chart" id="datawrapper-chart-71MG8" src="https://datawrapper.dwcdn.net/71MG8/26/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="373" data-external="1"></iframe><script type="text/javascript">window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});</script>`,
-    link: "https://davidoffdado.github.io/progetto-carceri/",
+    link: "https://www.davidruffini.com/stato-delle-carceri/",
   },
   {
     id: "a",

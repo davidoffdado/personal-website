@@ -17,7 +17,7 @@ const links = [
   {
     outlet: "Pagina interattiva",
     title: "Lo stato delle carceri italiane",
-    url: "https://www.davidruffini.com/stato-delle-carceri.html",
+    url: "https://www.davidruffini.com/stato-delle-carceri/",
   },
   {
     outlet: "Codice",
