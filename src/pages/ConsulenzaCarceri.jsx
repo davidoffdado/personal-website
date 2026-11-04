@@ -8,9 +8,12 @@ const storico = featuredWorks.find((w) => w.id === "main");
 
 const metodo = [
   ["la domanda", "Il Ministero della Giustizia pubblica i dati di ogni carcere su una pagina separata e mostra solo la situazione del giorno: niente storico, niente file da scaricare. Come si misura il sovraffollamento nel tempo, istituto per istituto?"],
-  ["la raccolta", "Uno scraper in R visita ogni giorno le schede di tutti gli istituti e raccoglie detenuti, posti, personale e servizi. Aggiunge regione e coordinate, calcola il tasso di sovraffollamento di ogni carcere e quello nazionale, e integra l'elenco delle morti in carcere di Ristretti Orizzonti."],
-  ["l'automazione", "Lo script gira da solo ogni mattina su GitHub Actions, con raccolta in parallelo e nuovi tentativi in caso di errore, e scrive i risultati su Google Sheets. Da lì li legge una pagina interattiva con mappe e serie storiche, che quindi si aggiorna senza interventi manuali."],
-  ["strumenti", "R (rvest, furrr, googlesheets4), GitHub Actions, Google Sheets, Svelte"],
+  ["la raccolta", "Uno scraper in R visita ogni giorno le schede di tutti gli istituti e raccoglie detenuti, posti, personale e servizi. Aggiunge regione e coordinate, calcola il tasso di sovraffollamento di ogni carcere, di ogni regione e quello nazionale, e integra l'elenco delle morti in carcere di Ristretti Orizzonti."],
+  ["lo storico", "La fotografia quotidiana di ogni istituto si aggiunge a un archivio che cresce da solo. I mesi in cui veniva salvato solo il dato nazionale li ho recuperati dalle versioni pubblicate dei grafici del progetto, così lo storico di ogni carcere parte da giugno 2025."],
+  ["i controlli", "Prima di scrivere, lo script verifica di aver letto quasi tutti gli istituti e che i totali siano plausibili. Se il sito del Ministero risponde male si ferma e manda un avviso, lasciando intatti i dati del giorno prima; un singolo istituto che non risponde mantiene il suo ultimo dato invece di risultare vuoto."],
+  ["l'automazione", "Lo script gira da solo ogni mattina su GitHub Actions, con raccolta in parallelo e nuovi tentativi in caso di errore, e scrive i risultati su Google Sheets e su un archivio CSV versionato."],
+  ["la pagina", "Mappe con zoom, tabelle con ricerca e grafici disegnati in D3 leggono i dati ogni volta che la pagina viene aperta, quindi non c'è niente da ripubblicare. Per ognuno dei 190 istituti c'è una scheda con i dati del giorno, il confronto con regione e Italia e l'andamento nel tempo."],
+  ["strumenti", "R (rvest, furrr, googlesheets4), GitHub Actions, Google Sheets, SvelteKit, D3"],
 ];
 
 const links = [
@@ -18,6 +21,11 @@ const links = [
     outlet: "Pagina interattiva",
     title: "Lo stato delle carceri italiane",
     url: "https://www.davidruffini.com/stato-delle-carceri/",
+  },
+  {
+    outlet: "Esempio",
+    title: "La scheda di un istituto: Milano San Vittore",
+    url: "https://www.davidruffini.com/stato-delle-carceri/istituto/milano-san-vittore/",
   },
   {
     outlet: "Codice",
@@ -75,9 +83,9 @@ export default function ConsulenzaCarceri() {
         <p className="case-description">
           Molti dati utili esistono già, ma sparsi su pagine web e senza memoria del passato. Per le
           carceri italiane ho costruito una raccolta automatica che ogni giorno scarica i dati di tutti
-          gli istituti, li pulisce, calcola gli indicatori e alimenta una pagina pubblica. Da giugno
-          2025 lo storico cresce da solo, e lo stesso schema si applica a prezzi, bandi, annunci o
-          qualsiasi fonte da tenere sotto controllo.
+          gli istituti, li controlla, calcola gli indicatori e alimenta una pagina pubblica con una
+          scheda per ogni carcere. Da giugno 2025 lo storico cresce da solo, e lo stesso schema si
+          applica a prezzi, bandi, annunci o qualsiasi fonte da tenere sotto controllo.
         </p>
 
         <Cta subject="Raccolta e automazione dei dati">
@@ -87,7 +95,7 @@ export default function ConsulenzaCarceri() {
         <div className="case-stats">
           <div className="case-stat">
             <span className="stat-value">190</span>
-            <span className="stat-label">istituti penitenziari controllati ogni giorno</span>
+            <span className="stat-label">istituti penitenziari controllati ogni giorno, ognuno con la sua scheda</span>
           </div>
           <div className="case-stat">
             <span className="stat-value">0</span>
