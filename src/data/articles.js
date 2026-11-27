@@ -1,5 +1,32 @@
 export const articles = [
   {
+  title: "Prevedere il dissesto dei Comuni? Così gli algoritmi (e i dati giornalieri di cassa) battono i vecchi bilanci",
+  dek: "",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "27.11.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/11/27/prevedere-il-dissesto-dei-comuni-cosi-gli-algoritmi-e-i-dati-giornalieri-di-cassa-battono-i-vecchi-bilanci/",
+  cover: ""
+  },
+  {
+  title: "Proteste in piazza, i titoli raccontano gli scontri ma dimenticano i motivi: solo nell’8% dei casi",
+  dek: "",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "23.11.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/11/23/proteste-in-piazza-i-titoli-raccontano-gli-scontri-ma-dimenticano-i-motivi-solo-nell8-dei-casi/",
+  cover: ""
+  },
+  {
+  title: "Autobus, nel 2024 oltre la metà era ancora diesel: la mappa di 14 grandi città italiane",
+  dek: "",
+  role: "Data Journalist",
+  year: 2026,
+  tags: ["Il Sole 24 Ore", "05.11.2026"],
+  url: "https://www.infodata.ilsole24ore.com/2026/11/05/autobus-nel-2024-oltre-la-meta-era-ancora-diesel-la-mappa-di-14-grandi-citta-italiane/",
+  cover: ""
+  },
+  {
   title: "Il Nutri-Score racconta uno scaffale più verde di quello reale",
   dek: "",
   role: "Data Journalist",
